@@ -9,8 +9,8 @@
 /*   Updated: 2023/10/03 15:56:03 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_isalpha.c"
-#include "ft_isdigit.c"
+
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
