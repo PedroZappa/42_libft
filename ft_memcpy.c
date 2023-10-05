@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcopy.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 21:07:39 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/05 21:39:19 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/05 21:44:30 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcopy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
 	// Tests
 	printf("src => '%s'	|	n => %ld\n", src, n);
-	ft_memcopy(dest, src, n);
+	ft_memcpy(dest, src, n);
 	printf("dest => '%s'\n", dest);
 
 	return (0);
