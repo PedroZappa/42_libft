@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:33:20 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/05 11:59:56 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/05 19:15:32 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 /*
-#include <stdio.h>	// printf()
-#include <string.h> // strlen()
 
 int main(int argc, char *argv[])
 {
