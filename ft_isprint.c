@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 11:18:44 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/05 11:24:00 by zedr0            ###   ########.fr       */
+/*   Created: 2023/10/05 11:18:44 by passunca          #+#    #+#             */
+/*   Updated: 2023/10/06 10:23:40 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@ int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
-/*
+
 #include <ctype.h>  // isprint()
 #include <stdio.h>  // printf()
-
+/*
 int main(int argc, char *argv[])
 {
 	char c = '*';
