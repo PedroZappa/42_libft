@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:55:28 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/06 18:39:19 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/06 20:11:06 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (len);
 	}
 }
+/*
+int main(void)
+{
+	char	dest[42] = "42\t";
+	char	*src = "zedr0";
+	size_t	size = 9;
+
+	// Tests
+	printf("ft_strlcat('%s', '%s', %ld)\n", dest, src, size);
+	ft_strlcat(dest, src, size);
+	printf("dest\t=> '%s'\n", dest);
+	printf("length\t=> %ld\n", ft_strlcat(dest, src, size));
+
+	return (0);
+}
+*/
