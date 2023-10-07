@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 21:13:33 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/07 21:18:56 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/07 21:32:31 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,17 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+/*
+int main(int argc, char *argv[])
+{
+	if (argc != 4)
+	{
+		printf("Usage: %s s1 s2 n\n", argv[0]);
+		return EXIT_FAILURE;
+	}
+
+	printf("%d\n", ft_strncmp(argv[1], argv[2], atoi(argv[3])));
+
+	return EXIT_SUCCESS;
+}
+*/
