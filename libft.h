@@ -6,16 +6,16 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:48:04 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/06 21:16:26 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/07 10:22:13 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H			
 # define LIBFT_H
 
+# include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 int		ft_isalpha(int c);
@@ -33,6 +33,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
