@@ -1,10 +1,9 @@
 <a name="readme-top"></a>
 <div align="center">
-<h1>Libft 📔</h1>
+<h1>libft 📔</h1>
 
-<a href="https://github.com/42School" target="_blank">
-	<p>( 42 Born2code Project )</p>
-</a>
+<p>( a <a href="https://github.com/42School" target="_blank">42 School</a> Project )</p>
+
 <p>
     <img src="https://img.shields.io/badge/score-...%20%2F%20100-success?style=for-the-badge" />
     <img src="https://img.shields.io/github/repo-size/PedroZappa/libft?style=for-the-badge&logo=github">
