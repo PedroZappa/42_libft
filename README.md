@@ -3,7 +3,7 @@
 <h1>Libft 📔</h1>
 
 <a href="https://github.com/42School" target="_blank">
-	<p>42 Born2code Project</p>
+	<p>( 42 Born2code Project )</p>
 </a>
 <p>
     <img src="https://img.shields.io/badge/score-...%20%2F%20100-success?style=for-the-badge" />
@@ -65,35 +65,15 @@ make
 ___
 ## Makefile rules 📃
 
-- To compile `libft` with **mandatory** files:
+- To compile `libft` with **mandatory** files: `make`
 
-```sh
-make
-```
+- To compile `libft` with **bonus** files: `make bonus`
 
-- To compile `libft` with **bonus** files:
+- To compile **mandatory** & **bonus** files: `make all`
 
-```sh
-make bonus
-```
+- To clean the working directory of **object files** (**.o**): `make clean`
 
-- To compile **mandatory** & **bonus** files:
-
-```sh
-make all
-```
-
-- To clean the working directory of **object files** (**.o**):
-
-```sh
-make clean
-```
-
-- To clean the working directory of **object files** (**.o**) and **executable** (**.a**) files:
-
-```sh
-make fclean
-```
+- To clean the working directory of **object files** (**.o**) and **executable** (**.a**) files: `make fclean`
 
 ___
 ## Implementation
