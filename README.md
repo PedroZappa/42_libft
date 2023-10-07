@@ -31,7 +31,7 @@ ___
 
 # About 📌
 
-The first foundational project of the `Common Core` curriculum at 42, `libft`. A learning exploration of the inner workings of standard (and non-standard) C language functions by writing them from scratch into a custom personal library, `libft`. This is a crucial project as this library will be useful in many of the following projects of the `Common Core`.
+The first foundational project of the `Common Core` curriculum at 42, `libft`. A learning exploration of the inner workings of standard (and non-standard) C language functions by writing them from scratch into a custom personal library. This is a crucial project as this library will be useful in many of the following projects of the `Common Core`.
 
 > **Disclaimer**: This code base follows a peculiar coding style, to pass [Norminette](https://github.com/42School/norminette)'s' queer syntactical tests, a requirement at 42.
 
