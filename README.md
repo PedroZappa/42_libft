@@ -9,7 +9,8 @@
 	<a href="#license">License</a>
 	~
 </p>
-___
+
+__
 
 # About 
 
@@ -17,7 +18,7 @@ The first foundational project of the `Common Core` curriculum at [[42]], `libft
 
 **Disclaimer**: This base code follows a peculiar coding style, to pass the [Norminette](https://github.com/42School/norminette) test, a requirement at [[42]].
 
-	Important: If you happen to be a student at 42, you are encouraged to go trough the process of writing these functions and testing them yourself. Feel free to use this repository as a research source, but beware of `copy paste`, do not use code you only understand partially! If you passed the piscine you should be able to complete this project successfully. Be thorough, be persistent and be patient!
+> Important: If you happen to be a student at 42, you are encouraged to go trough the process of writing these functions and testing them yourself. Feel free to use this repository as a research source, but beware of `copy paste`, do not use code you only understand partially! If you passed the piscine you should be able to complete this project successfully. Be thorough, be persistent and be patient!
 
 [Add Project Subject]
 
@@ -46,7 +47,7 @@ make
 ```
 
 ___
-## [[Makefile]] rules
+## Makefile rules
 
 - To compile `libft` with **mandatory** files:
 
@@ -142,4 +143,4 @@ ___
 ___
 ### License
 
-This work is published under the terms of <a href="">42 Unlicense</a>.
+This work is published under the terms of <a href="https://github.com/PedroZappa/libft/blob/master/LICENSE">42 Unlicense</a>.
