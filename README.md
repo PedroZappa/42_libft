@@ -1,29 +1,33 @@
-# libft
-
+<a name="readme-top"></a>
+<div align="center">
+<h1>Libft 📔</h1>
 <h3 align=center>Table o´Contents</h3>
-<p align="center">
-	~
-	<a href="#about">About</a> ~
-	<a href="#usage">Usage</a> ~
-	<a href="#implementation">Implementation</a> ~
-	<a href="#license">License</a>
-	~
-</p>
+	<p>
+		~
+		<a href="#about">About</a> ~
+		<a href="#usage">Usage</a> ~
+		<a href="#implementation">Implementation</a> ~
+		<a href="#license">License</a> ~
+	</p>
+<div/>
 
-# About 
+___
 
-The first foundational project of the `Common Core` curriculum at [[42]], `libft`. A learning exploration of the inner workings of standard (and non-standard) C language functions by writing them from scratch into a custom personal library, `libft`. This is a crucial project as this library will be useful in many of the following projects of the `Common Core`.
+<div align=left>
 
-**Disclaimer**: This base code follows a peculiar coding style, to pass the [Norminette](https://github.com/42School/norminette) test, a requirement at [[42]].
+# About 📌
 
-> Important: If you happen to be a student at 42, you are encouraged to go through the process of writing these functions and testing them yourself. Feel free to use this repository as a research source, but beware of `copy paste`, do not use code you only understand partially! If you passed the piscine you should be able to complete this project successfully. Be thorough, be persistent and be patient with yourself!
+The first foundational project of the `Common Core` curriculum at 42, `libft`. A learning exploration of the inner workings of standard (and non-standard) C language functions by writing them from scratch into a custom personal library, `libft`. This is a crucial project as this library will be useful in many of the following projects of the `Common Core`.
+
+> **Disclaimer**: This code base follows a peculiar coding style, to pass [Norminette](https://github.com/42School/norminette)'s' queer syntactical tests, a requirement at 42.
+
+>> ❗ **Important**: If you happen to be a student at 42, you are encouraged to go through the process of writing these functions and testing them yourself. Feel free to use this repository as a research source, but beware of the `copy paste` moster, do not use code you only understand partially, it will make later projects much harder to manage! If you passed the piscine you should be able to complete this project successfully. Be thorough, be persistent and be patient with yourself!
 
 [Add Project Subject]
 
-___
 # Usage
 
-## Setup & Compilation 
+## Setup & Compilation 🖇️
 
 1. Clone repository:
 
@@ -45,7 +49,7 @@ make
 ```
 
 ___
-## Makefile rules
+## Makefile rules 📃
 
 - To compile `libft` with **mandatory** files:
 
@@ -78,12 +82,12 @@ make fclean
 ```
 
 ___
-## Implementation Details
+## Implementation
 
-This project is divided in three sections:
+This project comprises `43` functions divided into three sections:
 - **Mandatory Part 1**, a selection of `23` `libc` functions;
 - **Mandatory Part 2**, `11` more non-standard or modified-standard functions;
-- plus a **Bonus Part** implementing a final set of `9` functions to facilitate the manipulation of lists;
+- plus a **Bonus Part**, a final set of `9` functions helpful for manipulating lists;
 
 ___
 ### Mandatory Part 1
@@ -112,6 +116,8 @@ ___
 - [ ] `ft_calloc`
 - [ ] `ft_strdup`
 
+___
+
 ### Mandatory Part 2
 
 - [ ] `ft_substr`
@@ -126,6 +132,7 @@ ___
 - [ ] `ft_putendl_fd`
 - [ ] `ft_putnbr_fd`
 
+___
 ### Bonus Part
 
 - [ ] `ft_lstnew`
@@ -138,7 +145,12 @@ ___
 - [ ] `ft_lstiter`
 - [ ] `ft_lstmap`
 
+</div>
+
 ___
+
 ### License
 
 This work is published under the terms of <a href="https://github.com/PedroZappa/libft/blob/master/LICENSE">42 Unlicense</a>.
+
+<p align="right">(<a href="#readme-top">get to top</a>)</p>
