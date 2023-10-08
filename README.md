@@ -83,8 +83,9 @@ This project comprises `43` functions divided into three sections:
 - plus a **Bonus Part**, a final set of `9` functions helpful for manipulating lists;
 
 ___
-### Mandatory Part 1
 
+<details>
+	<summary style="font-size: 18px; font-weight: bold;">Mandatory Part 1 📝</summary>
 <ul>
 <details>
 	<summary> ✅ ft_isalpha</summary>
@@ -168,7 +169,7 @@ ___
 </details>
 <details>
 	<summary> [ ] ft_atoi</summary>
-	<p>...</p>
+	<p>Converts the initial portion of the string pointed to by 'nptr' to int; Returns the converted value or '0' on error;</p>
 </details>
 <details>
 	<summary> [ ] ft_calloc</summary>
@@ -179,100 +180,104 @@ ___
 	<p>...</p>
 </details>
 </ul>
+</details>
 
 ___
 
-### Mandatory Part 2
-
-<ul>
 <details>
-	<summary> [ ] ft_substr</summary>
-	<p>...</p>
+	<summary style="font-size: 18px; font-weight: bold;">Mandatory Part 2 📝</summary>
+	<ul>
+	<details>
+		<summary> [ ] ft_substr</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_strjoin</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_strtrim</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_split</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_itoa</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_strmapi</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_striteri</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_putchar_fd</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_putstr_fd</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_putendl_fd</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_putnbr_fd</summary>
+		<p>...</p>
+	</details>
+	</ul>
 </details>
-<details>
-	<summary> [ ] ft_strjoin</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_strtrim</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_split</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_itoa</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_strmapi</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_striteri</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_putchar_fd</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_putstr_fd</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_putendl_fd</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_putnbr_fd</summary>
-	<p>...</p>
-</details>
-</ul>
 
 ___
-### Bonus Part
 
-<ul>
 <details>
-	<summary> [ ] ft_lstnew</summary>
-	<p>...</p>
+	<summary style="font-size: 18px; font-weight: bold;">Bonus Part 📝</summary>
+	<ul>
+	<details>
+		<summary> [ ] ft_lstnew</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_lstadd_front</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_lstsize</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_lstlast</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_lstadd_back</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_lstdelone</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_lstclear</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_lstiter</summary>
+		<p>...</p>
+	</details>
+	<details>
+		<summary> [ ] ft_lstmap</summary>
+		<p>...</p>
+	</details>
+	</ul>
+	</div>
 </details>
-<details>
-	<summary> [ ] ft_lstadd_front</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_lstsize</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_lstlast</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_lstadd_back</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_lstdelone</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_lstclear</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_lstiter</summary>
-	<p>...</p>
-</details>
-<details>
-	<summary> [ ] ft_lstmap</summary>
-	<p>...</p>
-</details>
-</ul>
-</div>
 
 ___
 
