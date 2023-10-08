@@ -103,7 +103,7 @@ ___
 - [x] `ft_strrchr`
 - [x] `ft_strncmp`
 - [x] `ft_memchr`
-- [ ] `ft_memcmp`
+- [x] `ft_memcmp`
 - [ ] `ft_strnstr`
 - [ ] `ft_atoi`
 - [ ] `ft_calloc`
