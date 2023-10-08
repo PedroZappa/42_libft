@@ -88,83 +88,83 @@ ___
 <ul>
 <details>
 	<summary> ✅ ft_isalpha</summary>
-	<p>...</p>
+	<p>Checks if a given character is a letter of the alphabet (a-z or A-Z);<p>
 </details>
 <details>
 	<summary> ✅ ft_isdigit</summary>
-	<p>...</p>
+	<p>Checks if a given character is a digit (0-9);</p>
 </details>
 <details>
 	<summary> ✅ ft_isalnum</summary>
-	<p>...</p>
+	<p>Checks if a character is alphanumeric (a-z, A-Z or 0-9);</p>
 </details>
 <details>
 	<summary> ✅ ft_isascii</summary>
-	<p>...</p>
+	<p>Checks if a given character is within the ASCII character set (0-127);</p>
 </details>
 <details>
 	<summary> ✅ ft_isprint</summary>
-	<p>...</p>
+	<p>Checks if a a given character is within the printing ASCII character set (32-126);</p>
 </details>
 <details>
 	<summary> ✅ ft_strlen</summary>
-	<p>...</p>
+	<p>Calculates the length of a null-terminated string;</p>
 </details>
 <details>
 	<summary> ✅ ft_memset</summary>
-	<p>...</p>
+	<p>Sets a given block of memory to a specific value/character;</p>
 </details>
 <details>
 	<summary> ✅ ft_bzero</summary>
-	<p>...</p>
+	<p>Sets a given block of memory to zero;</p>
 </details>
 <details>
 	<summary> ✅ ft_memcpy</summary>
-	<p>...</p>
+	<p>Copies a specified number of bytes from one memory location to another;</p>
 </details>
 <details>
 	<summary> ✅ ft_memmove</summary>
-	<p>...</p>
+	<p>Moves/Copies a specified number of bytes from one memory location to another, even when the source and destination regions overlap;</p>
 </details>
 <details>
 	<summary> ✅ ft_strlcpy</summary>
-	<p>...</p>
+	<p>Copies a string with a given length, ensuring that the destination buffer is not overrun; Returns the total length of 'src';</p>
 </details>
 <details>
 	<summary> ✅ ft_strlcat</summary>
-	<p>...</p>
+	<p>Appends a null-terminated string 'src' to the end of 'dst', appending at most `size - strlen(dst) - 1` bytes, null-terminating the result; Returns the initial length of 'dst' plus the length of 'src';</p>
 </details>
 <details>
 	<summary> ✅ ft_toupper</summary>
-	<p>...</p>
+	<p>Converts a given character to uppercase;</p>
 </details>
 <details>
 	<summary> ✅ ft_tolower</summary>
-	<p>...</p>
+	<p>Converts a given character to lowercase;</p>
 </details>
 <details>
 	<summary> ✅ ft_strchr</summary>
-	<p>...</p>
+	<p>Searches for the first occurrence of a given character in a string, returning a pointer to its location in memory; If no match is found returns NULL;</p>
 </details>
 <details>
 	<summary> ✅ ft_strrchr</summary>
-	<p>...</p>
+	<p>Searches for the last occurrence of a given character in a string, returning a pointer to its location in memory; If no match is found returns NULL;</p>
 </details>
 <details>
 	<summary> ✅ ft_strncmp</summary>
-	<p>...</p>
+	<p>Compares two strings up to a given number of characters, returns '0' if they are equal, or returns the difference between the first two characters that do not match;</p>
 </details>
 <details>
 	<summary> ✅ ft_memchr</summary>
-	<p>...</p>
+	<p>Searches the initial 'n' bytes within a block of memory for a specific byte value, returning a pointer to its location in memory; If no match is found returns NULL;</p>
 </details>
 <details>
 	<summary> ✅ ft_memcmp</summary>
-	<p>...</p>
+	<p>Compares two strings up to a given number of bytes, returning '0' if they are equal, or returns the difference between the first two characters that do not match;</p>
 </details>
 <details>
 	<summary> [ ] ft_strnstr</summary>
-	<p>...</p>
+	<p>Searches 'len' characters for the first occurrence of the null-terminated string 'little' in the string 'big'; If 'little' is empty 'big' is returned, if no match is found returns NULL, otherwise returns a pointer to the first character of the first occurrence of 'little' in 'big';</p>
 </details>
 <details>
 	<summary> [ ] ft_atoi</summary>
