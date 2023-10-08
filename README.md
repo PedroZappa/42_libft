@@ -85,29 +85,100 @@ This project comprises `43` functions divided into three sections:
 ___
 ### Mandatory Part 1
 
-- [x] `ft_isalpha`
-- [x] `ft_isdigit`
-- [x] `ft_isalnum`
-- [x] `ft_isascii`
-- [x] `ft_isprint`
-- [x] `ft_strlen`
-- [x] `ft_memset`
-- [x] `ft_bzero`
-- [x] `ft_memcpy`
-- [x] `ft_memmove`
-- [x] `ft_strlcpy`
-- [x] `ft_strlcat`
-- [x] `ft_toupper`
-- [x] `ft_tolower`
-- [x] `ft_strchr`
-- [x] `ft_strrchr`
-- [x] `ft_strncmp`
-- [x] `ft_memchr`
-- [x] `ft_memcmp`
-- [ ] `ft_strnstr`
-- [ ] `ft_atoi`
-- [ ] `ft_calloc`
-- [ ] `ft_strdup`
+<ul>
+<details>
+	<summary>- [x] `ft_isalpha`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_isdigit`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_isalnum`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_isascii`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_isprint`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_strlen`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_memset`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_bzero`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_memcpy`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_memmove`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_strlcpy`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_strlcat`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_toupper`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_tolower`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_strchr`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_strrchr`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_strncmp`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_memchr`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [x] `ft_memcmp`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [ ] `ft_strnstr`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [ ] `ft_atoi`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [ ] `ft_calloc`</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary>- [ ] `ft_strdup`</summary>
+	<p>...</p>
+</details>
+</ul>
 
 ___
 
