@@ -6,11 +6,12 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 17:35:30 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/08 18:52:00 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/08 20:44:14 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <endian.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -35,3 +36,33 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+/*
+int main(int argc, char *argv[])
+{
+	char	*big; 
+	char	*little;
+	char	*result;
+	size_t	len;
+
+	if (argc != 4)
+	{
+		printf("Usage: %s big little len\n", argv[0]);
+		return (0);
+	}
+	big = argv[1];
+	little = argv[2];
+	len = ft_atoi(argv[3]);
+	result = ft_strnstr(big, little, len);
+	
+	printf("big : \'%s\'\tlittle: \'%s\'\tlen: %lu\n", big, little, len);
+	printf("Address of first char in big :\n\'%p\'\n", big);
+	
+	if (!result)
+		printf("\'%s\' is not in any %lu bytes of \'%s\'\n", little, len, big);
+	else
+		printf("\'%s\' exists in \'%s\'\n", result, big);
+	printf("Address of first char in result :\n\'%p\'\n", result);
+
+	return (0);
+}
+*/
