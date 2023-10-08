@@ -164,12 +164,12 @@ ___
 	<p>Compares two strings up to a given number of bytes, returning '0' if they are equal, or returns the difference between the first two characters that do not match;</p>
 </details>
 <details>
-	<summary> [x] ft_strnstr</summary>
+	<summary> ✅ ft_strnstr</summary>
 	<p>Searches 'len' characters for the first occurrence of the null-terminated string 'little' in the string 'big'; If 'little' is empty 'big' is returned, if no match is found returns NULL, otherwise returns a pointer to the first character of the first occurrence of 'little' in 'big';</p>
 </details>
 <details>
-	<summary> [ ] ft_atoi</summary>
-	<p>Converts the initial portion of the string pointed to by 'nptr' to int; Returns the converted value or '0' on error;</p>
+	<summary> ✅ ft_atoi</summary>
+	<p>Converts the initial portion of the string pointed to by 'nptr' to int; The string may begin with an arbitrary amount of whitespace (as determined by isspace(3)) followed by a single optional'+' or '-' sign. Returns the converted value or '0' on error;</p>
 </details>
 <details>
 	<summary> [ ] ft_calloc</summary>
