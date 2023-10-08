@@ -62,7 +62,7 @@ make
 ```
 
 ___
-## Makefile rules 📃🔧
+## Makefile rules 🔧
 
 - To compile `libft` with **mandatory** files: `make`
 
