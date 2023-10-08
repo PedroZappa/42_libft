@@ -87,95 +87,95 @@ ___
 
 <ul>
 <details>
-	<summary>- [x] `ft_isalpha`</summary>
+	<summary> ✅ ft_isalpha</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_isdigit`</summary>
+	<summary> ✅ ft_isdigit</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_isalnum`</summary>
+	<summary> ✅ ft_isalnum</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_isascii`</summary>
+	<summary> ✅ ft_isascii</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_isprint`</summary>
+	<summary> ✅ ft_isprint</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_strlen`</summary>
+	<summary> ✅ ft_strlen</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_memset`</summary>
+	<summary> ✅ ft_memset</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_bzero`</summary>
+	<summary> ✅ ft_bzero</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_memcpy`</summary>
+	<summary> ✅ ft_memcpy</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_memmove`</summary>
+	<summary> ✅ ft_memmove</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_strlcpy`</summary>
+	<summary> ✅ ft_strlcpy</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_strlcat`</summary>
+	<summary> ✅ ft_strlcat</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_toupper`</summary>
+	<summary> ✅ ft_toupper</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_tolower`</summary>
+	<summary> ✅ ft_tolower</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_strchr`</summary>
+	<summary> ✅ ft_strchr</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_strrchr`</summary>
+	<summary> ✅ ft_strrchr</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_strncmp`</summary>
+	<summary> ✅ ft_strncmp</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_memchr`</summary>
+	<summary> ✅ ft_memchr</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [x] `ft_memcmp`</summary>
+	<summary> ✅ ft_memcmp</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [ ] `ft_strnstr`</summary>
+	<summary> [ ] ft_strnstr</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [ ] `ft_atoi`</summary>
+	<summary> [ ] ft_atoi</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [ ] `ft_calloc`</summary>
+	<summary> [ ] ft_calloc</summary>
 	<p>...</p>
 </details>
 <details>
-	<summary>- [ ] `ft_strdup`</summary>
+	<summary> [ ] ft_strdup</summary>
 	<p>...</p>
 </details>
 </ul>
@@ -184,31 +184,94 @@ ___
 
 ### Mandatory Part 2
 
-- [ ] `ft_substr`
-- [ ] `ft_strjoin`
-- [ ] `ft_strtrim`
-- [ ] `ft_split`
-- [ ] `ft_itoa`
-- [ ] `ft_strmapi`
-- [ ] `ft_striteri`
-- [ ] `ft_putchar_fd`
-- [ ] `ft_putstr_fd`
-- [ ] `ft_putendl_fd`
-- [ ] `ft_putnbr_fd`
+<ul>
+<details>
+	<summary> [ ] ft_substr</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_strjoin</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_strtrim</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_split</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_itoa</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_strmapi</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_striteri</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_putchar_fd</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_putstr_fd</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_putendl_fd</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_putnbr_fd</summary>
+	<p>...</p>
+</details>
+</ul>
 
 ___
 ### Bonus Part
 
-- [ ] `ft_lstnew`
-- [ ] `ft_lstadd_front`
-- [ ] `ft_lstsize`
-- [ ] `ft_lstlast`
-- [ ] `ft_lstadd_back`
-- [ ] `ft_lstdelone`
-- [ ] `ft_lstclear`
-- [ ] `ft_lstiter`
-- [ ] `ft_lstmap`
-
+<ul>
+<details>
+	<summary> [ ] ft_lstnew</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_lstadd_front</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_lstsize</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_lstlast</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_lstadd_back</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_lstdelone</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_lstclear</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_lstiter</summary>
+	<p>...</p>
+</details>
+<details>
+	<summary> [ ] ft_lstmap</summary>
+	<p>...</p>
+</details>
+</ul>
 </div>
 
 ___
