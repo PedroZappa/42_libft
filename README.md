@@ -164,7 +164,7 @@ ___
 	<p>Compares two strings up to a given number of bytes, returning '0' if they are equal, or returns the difference between the first two characters that do not match;</p>
 </details>
 <details>
-	<summary> [ ] ft_strnstr</summary>
+	<summary> [x] ft_strnstr</summary>
 	<p>Searches 'len' characters for the first occurrence of the null-terminated string 'little' in the string 'big'; If 'little' is empty 'big' is returned, if no match is found returns NULL, otherwise returns a pointer to the first character of the first occurrence of 'little' in 'big';</p>
 </details>
 <details>
