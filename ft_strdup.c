@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:32:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/09 19:54:07 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/09 20:48:28 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,24 @@ char	*ft_strdup(const char *s)
 	dst[i] = '\0';
 	return (dst);
 }
+/*
+int main(int argc, char *argv[])
+{
+	char *dst = NULL;
+	char *src = NULL;
+	
+	if (argc != 2)
+	{
+		printf("Usage: %s [s]\n", argv[0]);
+		return (0);
+	}
+
+	src = argv[1];
+	dst = ft_strdup(src);
+	printf("ft_strdup('%s')\n", src);
+	printf("dst => '%s'\n", dst);
+
+	// Free memory
+	free(dst);
+}
+*/
