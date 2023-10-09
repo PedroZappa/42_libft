@@ -177,7 +177,7 @@ ___
 </details>
 <details>
 	<summary> [ ] ft_strdup</summary>
-	<p>...</p>
+	<p>Returns a pointer to a new string, a duplicate of the string 's', or returns NULL if insufficient memory was available.</p>
 </details>
 </ul>
 </details>
