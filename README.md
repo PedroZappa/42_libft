@@ -172,12 +172,13 @@ ___
 	<p>Converts the initial portion of the string pointed to by 'nptr' to int; The string may begin with an arbitrary amount of whitespace (as determined by isspace(3)) followed by a single optional'+' or '-' sign. Returns the converted value or '0' on error;</p>
 </details>
 <details>
-	<summary>  ✅ ft_calloc</summary>
-	<p>Allocates memory for an array of 'nmemb' elements of 'size' bytes each and returns a pointer to the allocated memory. The memory is set to zero;</p>
+        <summary> ✅ ft_calloc</summary>
+	<p>Allocates memory for an array of 'nmemb' elements of 'size' bytes each; Returns a pointer to the allocated memory, or NULL if the allocation fails; The memory is set to zero.</p>
 </details>
 <details>
-	<summary> [ ] ft_strdup</summary>
-	<p>Returns a pointer to a new string, a duplicate of the string 's', or returns NULL if insufficient memory was available.</p>
+	<summary> ✅ ft_strdup</summary>
+	<p>Returns a pointer to a new string, a duplicate of the string pointed to by 's', or NULL if the allocation fails; Memory for the string is obtained with 'malloc(3)', and can be freed using 'free(3)';</p>
+
 </details>
 </ul>
 </details>
@@ -286,3 +287,5 @@ ___
 This work is published under the terms of <a href="https://github.com/PedroZappa/libft/blob/master/LICENSE">42 Unlicense</a>.
 
 <p align="right">(<a href="#readme-top">get to top</a>)</p>
+
+
