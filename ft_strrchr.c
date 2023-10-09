@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 10:14:39 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/07 20:38:43 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/09 21:01:19 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (s[len] == c)
 			return ((char *)s + len);
-		len--;
+		--len;
 	}
 	return (NULL);
 }
@@ -36,6 +36,7 @@ int main(int argc, char **argv)
 
 	// Tests
 	printf("ft_strrchr => %s\n", ft_strrchr(argv[1], argv[2][0]));
+	printf("%c", 1024);
 	return (0);
 }
 */
