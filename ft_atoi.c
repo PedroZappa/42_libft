@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/08 19:19:22 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/08 19:50:33 by zedr0            ###   ########.fr       */
+/*   Created: 2023/10/08 19:19:22 by passunca          #+#    #+#             */
+/*   Updated: 2023/10/09 09:54:38 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,16 @@ int	ft_atoi(const char *nptr)
 		nb = nb * 10 + (*nptr++ - '0');
 	return (nb * sign);
 }
+/*
+int main (int argc, char **argv)
+{
+	if (argc != 2)
+	{
+		printf("Usage: %s <string>\n", argv[0]);
+		return (0);
+	}
+	
+	printf("Input string:\t\'%s\'\n", argv[1]);
+	printf("ft_atoi return:\t\'%i\'\n", ft_atoi(argv[1]));
+}
+*/
