@@ -172,8 +172,8 @@ ___
 	<p>Converts the initial portion of the string pointed to by 'nptr' to int; The string may begin with an arbitrary amount of whitespace (as determined by isspace(3)) followed by a single optional'+' or '-' sign. Returns the converted value or '0' on error;</p>
 </details>
 <details>
-	<summary> [ ] ft_calloc</summary>
-	<p>...</p>
+	<summary>  ✅ ft_calloc</summary>
+	<p>Allocates memory for an array of 'nmemb' elements of 'size' bytes each and returns a pointer to the allocated memory. The memory is set to zero;</p>
 </details>
 <details>
 	<summary> [ ] ft_strdup</summary>
