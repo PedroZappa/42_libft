@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:39:33 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/10 17:58:56 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/10 20:00:20 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!str)
 		return (NULL);
 	ft_memcpy(str, s1, s1_len);
-	ft_memcpy(str + s1_len, s2, s2_len);
+	ft_memcpy((str + s1_len), s2, s2_len);
 	str[s1_len + s2_len] = '\0';
 	return (str);
 }
