@@ -217,12 +217,12 @@ ___
 		<p>...</p>
 	</details>
 	<details>
-		<summary> [ ] ft_putchar_fd</summary>
-		<p>Outputs the character ’c’ to the given file descriptor.</p>
+		<summary> ✅ ft_putchar_fd</summary>
+		<p>Outputs the character ’c’ to the given file descriptor;</p>
 	</details>
 	<details>
 		<summary> [ ] ft_putstr_fd</summary>
-		<p>...</p>
+		<p>Outputs the string 's' to the given file descriptor;<p>
 	</details>
 	<details>
 		<summary> [ ] ft_putendl_fd</summary>
