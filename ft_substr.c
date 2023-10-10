@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 12:45:13 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/10 17:27:27 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/10 17:33:24 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sub[i] = s[start + i];
 		i++;
 	}
-	sub[i] = 0;
+	sub[i] = '\0';
 	return (sub);
 }
