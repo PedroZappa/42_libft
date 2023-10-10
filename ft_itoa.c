@@ -6,61 +6,57 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 20:01:54 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/10 20:26:35 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/10 20:42:06 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_strrev(char *str)
+static char	*ft_char(char *str, unsigned int nb, long int len)
 {
-	int		start;
-	int		end;
-	char	temp;
-
-	start = 0;
-	end = ft_strlen(str) - 1;
-	while (start < end)
+	while (nb > 0)
 	{
-		temp = str[start];
-		str[start] = str[end];
-		str[end] = temp;
-		++start;
-		--end;
+		str[len--] = (nb % 10) + '0';
+		nb /= 10;
 	}
+	return (str);
+}
+
+static long int	ft_numlen(int n)
+{
+	long int	len;
+
+	len = 0;
+	if (n <= 0)
+		len = 1;
+	while (n)
+	{
+		n /= 10;
+		++len;
+	}
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		sign;
-	int		remainder;
-	size_t	i;
+	unsigned int	nb;
+	long int		len;
+	char			*str;
 
+	len = ft_numlen(n);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len--] = '\0';
+	if (n == 0)
+		str[0] = '0';
 	if (n < 0)
 	{
-		sign = 1;
-		n = -n;
+		nb = -n;
+		str[0] = '-';
 	}
-	i = 0;
-	str = (char *)malloc(sizeof(char) * (i + 1));
-	if (str == NULL)
-		return (NULL);
-	str[i++] = '\0';
-	if (n == 0)
-		str[i++] = '0';
-	while (n != 0)
-	{
-		remainder = n % 10;
-		if (remainder > 9)
-			str[i++] = (remainder - 10) + 'a';
-		else
-			str[i++] = remainder + '0';
-		n /= 10;
-	}
-	if (sign == 1)
-		str[i++] = '-';
-	str[i] = '\0';
-	ft_strrev(str);
+	else
+		nb = n;
+	str = ft_char(str, nb, len);
 	return (str);
 }

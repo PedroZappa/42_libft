@@ -205,7 +205,7 @@ ___
 		<p>Allocates memory (with malloc(3)) and returns an array of strings obtained by splitting 's' using the  chracter 'c' as de limiter. The array must end with a NULL pointer. If allocation fails  returns NULL;</p>
 	</details>
 	<details>
-		<summary> [ ] ft_itoa</summary>
+		<summary> ✅ ft_itoa</summary>
 		<p>Allocates memory (with malloc(3)) and returns a string representing the integer received as an argument. Negative numbers must be handled. If allocation fails return NULL;</p>
 	</details>
 	<details>
