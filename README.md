@@ -189,11 +189,11 @@ ___
 	<summary style="font-size: 18px; font-weight: bold;">Mandatory Part 2 📝</summary>
 	<ul>
 	<details>
-		<summary> [ ] ft_substr</summary>
+		<summary> ✅ ft_substr</summary>
 		<p>Allocates memory (with malloc(3)) and returns a substring from the string 's'. Starting at index 'start' and is of maximum size 'len'; If allocation fails returns NULL;</p>
 	</details>
 	<details>
-		<summary> [ ] ft_strjoin</summary>
+		<summary> ✅ ft_strjoin</summary>
 		<p>Allocates memory (with malloc(3)) and returns a new string, which is the result of the concatenation of 's1' and 's2'. If the allocation fails returns NULL;</p>
 	</details>
 	<details>
