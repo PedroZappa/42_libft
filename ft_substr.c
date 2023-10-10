@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 12:45:13 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/10 14:41:38 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/10 17:27:27 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub = malloc(sizeof(char) * ft_total_len(s_len, start, len));
 	if (!sub)
 		return (NULL);
-	// ft_strlcpy(sub, s + start, len + 1);
 	i = 0;
 	while (s[start + i] && i < len)
 	{
 		sub[i] = s[start + i];
 		i++;
 	}
-	sub[i] = 0;	
+	sub[i] = 0;
 	return (sub);
 }
