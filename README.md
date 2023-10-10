@@ -218,7 +218,7 @@ ___
 	</details>
 	<details>
 		<summary> [ ] ft_putchar_fd</summary>
-		<p>...</p>
+		<p>Outputs the character ’c’ to the given file descriptor.</p>
 	</details>
 	<details>
 		<summary> [ ] ft_putstr_fd</summary>
