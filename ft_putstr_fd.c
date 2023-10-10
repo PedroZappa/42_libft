@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:07:56 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/10 11:35:46 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/10 11:37:01 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main (int argc, char **argv)
 
 	if (argc != 3)
 	{
-		printf("Usage: %s <char> <fd>\n", argv[0]);
+		printf("Usage: %s <str> <fd>\n", argv[0]);
 		return (0);
 	}
 	s = argv[1];
