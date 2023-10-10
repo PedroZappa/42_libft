@@ -197,11 +197,11 @@ ___
 		<p>Allocates memory (with malloc(3)) and returns a new string, which is the result of the concatenation of 's1' and 's2'. If the allocation fails returns NULL;</p>
 	</details>
 	<details>
-		<summary> [ ] ft_strtrim</summary>
+		<summary> ✅ ft_strtrim</summary>
 		<p>Allocates memory (with malloc(3)) and returns a copy of 's1' with the characters specified in 'set' removed from the beginning and the end of the string; Returns NULL if the allocation fails;</p>
 	</details>
 	<details>
-		<summary> [ ] ft_split</summary>
+		<summary> ✅ ft_split</summary>
 		<p>Allocates memory (with malloc(3)) and returns an array of strings obtained by splitting 's' using the  chracter 'c' as de limiter. The array must end with a NULL pointer. If allocation fails  returns NULL;</p>
 	</details>
 	<details>
