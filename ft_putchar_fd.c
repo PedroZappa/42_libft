@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:01:10 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/10 11:32:13 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/10 11:44:07 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
+/*
 int main (int argc, char *argv[])
 {
 	char c;
@@ -36,4 +36,4 @@ int main (int argc, char *argv[])
 	ft_putchar_fd('\n', fd);
 	return (0);
 }
-
+*/
