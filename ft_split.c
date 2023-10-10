@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:26:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/10 19:54:27 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/10 19:58:20 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ static int	ft_segcount(char const *s, char sep)
 	while (s[i])
 	{
 		if (s[i] == sep && i > 0)
-			if (s[i - 1] != sep)
-				++count;
+			++count;
 		++i;
 	}
 	if (!s[i])
