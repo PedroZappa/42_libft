@@ -10,7 +10,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 INCLUDE = -I .
 RM = rm -f
-AR = ar rcs
+AR = ar rc
 
 
 .o:.c
