@@ -221,16 +221,16 @@ ___
 		<p>Outputs the character ’c’ to the given file descriptor;</p>
 	</details>
 	<details>
-		<summary> [ ] ft_putstr_fd</summary>
+		<summary> ✅ ft_putstr_fd</summary>
 		<p>Outputs the string 's' to the given file descriptor;<p>
 	</details>
 	<details>
-		<summary> [ ] ft_putendl_fd</summary>
-		<p>...</p>
+		<summary> ✅ ft_putendl_fd</summary>
+		<p>Outputs the string 's' followed by a newline to the given file descriptor;</p>
 	</details>
 	<details>
 		<summary> [ ] ft_putnbr_fd</summary>
-		<p>...</p>
+		<p>Outputs the integer 'n' to the given file descriptor;</p>
 	</details>
 	</ul>
 </details>
