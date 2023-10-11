@@ -14,7 +14,7 @@ AR = ar rc
 
 
 .o:.c
-	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< 
 
 $(NAME): $(OBJS) 
 	$(AR) $(NAME) $(OBJS)
