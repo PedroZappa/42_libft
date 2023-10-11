@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 20:53:48 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/11 14:39:09 by passunca         ###   ########.fr       */
+/*   Created: 2023/10/10 20:53:48 by passunca          #+#    #+#             */
+/*   Updated: 2023/10/11 20:53:07 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,30 +33,27 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-char conv(unsigned int n, char c)
-{
-	if ((n % 2) == 0)
-		c = ft_toupper(c);
-	return (c);
+/*
+char	addn(unsigned int n, char c)
+{	
+	return (c + n);
 }
 
 int main(int argc, char *argv[])
 {
 	char *str;
-	char (*func)(unsigned int, char);
-	char c;
-	int i;
 
-	if (argc != 3)
+	if (argc != 2)
 	{
 		printf("Usage: %s <string>", argv[0]);
 		return (1);
 	}
 	str = argv[1];
-	func = argv[2];
+
 	// Tests
-	printf("strmapi(%s, %s) = ", str, func);
-	printf("%s\n", ft_strmapi(str, func));
+	printf("strmapi(%s, rotn) = ", str);
+	printf("%s\n", ft_strmapi(str, addn));
+
 	return (0);
 }
+*/
