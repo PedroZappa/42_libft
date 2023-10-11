@@ -6,11 +6,12 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:26:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/11 11:24:08 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/11 12:49:02 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 static int	ft_segcount(char const *s, char sep)
@@ -61,3 +62,32 @@ char	**ft_split(char const *s, char c)
 	strs[sub_str] = NULL;
 	return (strs);
 }
+/*
+int main(int argc, char *argv[])
+{
+	char **strs;
+	char *str;
+	char c;
+	size_t i;
+	
+	if (argc != 3)
+	{
+		printf("Usage: %s <string> <char>\n", argv[0]);
+		return (1);
+	}
+	str = argv[1];
+	c = argv[2][0];
+	strs = ft_split(str, c);
+	
+	// Test 
+	printf("ft_split(\"%s\", '%s') =\n{", argv[1], argv[2]); 
+	i = 0;
+	while (strs[i])
+	{
+		printf("\n\t\"%s\"", strs[i]);
+		i++;
+	}
+	printf("\n}\n");
+	return (0);
+}
+*/
