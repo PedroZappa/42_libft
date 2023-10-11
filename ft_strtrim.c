@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:00:57 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/10 18:22:38 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/11 12:15:22 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,24 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, start, ((end - start) + 1));
 	return (str);
 }
+/*
+int main(int argc, char *argv[])
+{
+	char *str;
+	char *set;
+	char *trimmed;
+
+	if (argc != 3)
+	{
+		printf("Usage: %s <string> <set>\n", argv[0]);
+		return (1);
+	}
+	str = argv[1];
+	set = argv[2];
+	trimmed = ft_strtrim(str, set);
+
+	// Test
+	printf("ft_strtrim('%s', '%s') => ", str, set);
+	printf("'%s'\n", trimmed); 
+}
+*/
