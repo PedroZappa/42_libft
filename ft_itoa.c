@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 20:01:54 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/10 20:42:06 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/11 12:58:49 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,23 @@ char	*ft_itoa(int n)
 		nb = n;
 	str = ft_char(str, nb, len);
 	return (str);
+}
+
+int main(int argc, char *argv[])
+{
+	int		n;
+	char	*str;
+
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (0);
+	}
+	n = ft_atoi(argv[1]);
+	str = ft_itoa(n);
+	// Test
+	printf("%s\n", str);
+	free(str);
+	return (0);
+
 }
