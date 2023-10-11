@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 20:01:54 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/11 12:58:49 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/11 13:59:38 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*ft_itoa(int n)
 	str = ft_char(str, nb, len);
 	return (str);
 }
-
+/*
 int main(int argc, char *argv[])
 {
 	int		n;
@@ -79,3 +79,4 @@ int main(int argc, char *argv[])
 	return (0);
 
 }
+*/
