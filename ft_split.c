@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:26:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/10 19:58:20 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/11 11:24:08 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ static int	ft_segcount(char const *s, char sep)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**strs;
-	size_t	sub_str;
-	size_t	sub_len;
-	size_t	i;
+	char		**strs;
+	size_t		sub_str;
+	size_t		sub_len;
+	long long	i;
 
 	strs = malloc(sizeof(char *) * (ft_segcount(s, c) + 1));
 	if (!strs)
