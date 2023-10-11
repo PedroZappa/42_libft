@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:19:22 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/09 09:54:38 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/11 09:41:19 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_atoi(const char *nptr)
 	return (nb * sign);
 }
 /*
-int main (int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	if (argc != 2)
 	{

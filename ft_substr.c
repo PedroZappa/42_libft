@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 12:45:13 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/10 17:33:24 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/11 09:56:16 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,30 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
+/*
+int main(int argc, char *argv[])
+{
+	unsigned int	start;
+	size_t			len;
+	char			*str;
+	char			*sub_str;
+
+	if (argc != 4)
+	{
+		printf("Usage: %s <string> <start> <length>\n", argv[0]);
+		return (1);
+	}
+	str = argv[1];
+	start = ft_atoi(argv[2]);
+	len = ft_atoi(argv[3]);
+	sub_str = ft_substr(str, start, len);
+	// Tests
+	printf("ft_substr(%s, %u, %lu) = ", str, start, len);
+	printf("%s\n", sub_str);
+
+	// free memory
+	free(sub_str);
+
+	return (0);
+}
+*/
