@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 12:45:13 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/11 09:56:16 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/11 11:07:01 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
 	size_t			len;
 	char			*str;
 	char			*sub_str;
-
+ 
 	if (argc != 4)
 	{
 		printf("Usage: %s <string> <start> <length>\n", argv[0]);
