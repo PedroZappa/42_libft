@@ -189,34 +189,34 @@ ___
 	<summary style="font-size: 18px; font-weight: bold;">Mandatory Part 2 📝</summary>
 	<ul>
 	<details>
-		<summary> [ ] ft_substr</summary>
-		<p>Allocates (with malloc(3)) and returns a substring from the string 's'. Starting at index 'start' and is of maximum size 'len'; If allocation fails returns NULL;</p>
+		<summary> ✅ ft_substr</summary>
+		<p>Allocates memory (with malloc(3)) and returns a substring from the string 's'. Starting at index 'start' and is of maximum size 'len'; If allocation fails returns NULL;</p>
 	</details>
 	<details>
-		<summary> [ ] ft_strjoin</summary>
-		<p>Allocates (with malloc(3)) and returns a new string, which is the result of the concatenation of 's1' and 's2'. If the allocation fails returns NULL;</p>
+		<summary> ✅ ft_strjoin</summary>
+		<p>Allocates memory (with malloc(3)) and returns a new string, which is the result of the concatenation of 's1' and 's2'. If the allocation fails returns NULL;</p>
 	</details>
 	<details>
-		<summary> [ ] ft_strtrim</summary>
-		<p>Allocates (with malloc(3)) and returns a copy of 's1' with the characters specified in 'set' removed from the beginning and the end of the string; Returns NULL if the allocation fails;</p>
+		<summary> ✅ ft_strtrim</summary>
+		<p>Allocates memory (with malloc(3)) and returns a copy of 's1' with the characters specified in 'set' removed from the beginning and the end of the string; Returns NULL if the allocation fails;</p>
 	</details>
 	<details>
-		<summary> [ ] ft_split</summary>
-		<p>Allocates (with malloc(3)) and returns an array of strings obtained by splitting 's' using the  chracter 'c' as de limiter. The array must end with a NULL pointer. If allocation fails  returns NULL;</p>
+		<summary> ✅ ft_split</summary>
+		<p>Allocates memory (with malloc(3)) and returns an array of strings obtained by splitting 's' using the  chracter 'c' as de limiter. The array must end with a NULL pointer. If allocation fails  returns NULL;</p>
 	</details>
 	<details>
-		<summary> [ ] ft_itoa</summary>
-		<p>Allocates (with malloc(3)) and returns a string representing the integer received as an argument. Negative numbers must be handled. If allocation fails return NULL;</p>
+		<summary> ✅ ft_itoa</summary>
+		<p>Allocates memory (with malloc(3)) and returns a string representing the integer received as an argument. Negative numbers must be handled. If allocation fails return NULL;</p>
 	</details>
 	<details>
-		<summary> [ ] ft_strmapi</summary>
+		<summary> ✅ ft_strmapi</summary>
 		<p>Applies the function ’f’ to each character of the string ’s’, and passing its index as first argument to create a new string (with malloc(3)) resulting from successive applications of ’f’. Returns NULL if the allocation fails;</p>
 	</details>
 	<details>
-		<summary> [ ] ft_striteri</summary>
+		<summary> ✅ ft_striteri</summary>
 		<p>Applies the function ’f’ on each character of the string passed as argument, passing its index as first argument. Each character is passed by address to ’f’ to be modified if necessary. Returns nothing;</p>
 	</details>
-	<details>
+        <details>
 		<summary> ✅ ft_putchar_fd</summary>
 		<p>Outputs the character ’c’ to the given file descriptor;</p>
 	</details>

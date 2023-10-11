@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:14:56 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/10 11:11:01 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/10 17:27:06 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n / 10, fd);
 		ft_putnbr_fd(n % 10, fd);
 	}
-	else 
+	else
 		ft_putchar_fd(n + '0', fd);
 }
