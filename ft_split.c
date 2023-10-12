@@ -6,13 +6,11 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:26:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/12 15:45:25 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/12 19:45:13 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	ft_segcount(char const *s, char sep)
 {
@@ -34,14 +32,14 @@ static int	ft_segcount(char const *s, char sep)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_getseg(char const *s, char sep)
 {
 	char		**strs;
 	size_t		sub_str;
 	size_t		sub_len;
 	long long	i;
 
-	strs = malloc(sizeof(char *) * (ft_segcount(s, c) + 1));
+	strs = malloc(sizeof(char *) * (ft_segcount(s, sep) + 1));
 	if (!strs)
 		return (NULL);
 	i = -1;
@@ -49,9 +47,9 @@ char	**ft_split(char const *s, char c)
 	sub_len = 0;
 	while (s[++i])
 	{
-		if (s[i] != c)
+		if (s[i] != sep)
 			++sub_len;
-		else if (sub_len > 0 && s[i] == c)
+		else if (sub_len > 0 && s[i] == sep)
 		{
 			strs[sub_str++] = ft_substr(s, i - sub_len, sub_len);
 			sub_len = 0;
@@ -63,6 +61,16 @@ char	**ft_split(char const *s, char c)
 	return (strs);
 }
 
+char	**ft_split(char const *s, char c)
+{
+	char		**strs;
+
+	strs = ft_getseg(s, c);
+	if (!strs)
+		return (NULL);
+	return (strs);
+}
+/*
 int main(int argc, char *argv[])
 {
 	char **strs;
@@ -93,4 +101,4 @@ int main(int argc, char *argv[])
 	free(strs);
 	return (0);
 }
-
+*/
