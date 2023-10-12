@@ -241,40 +241,40 @@ ___
 	<summary style="font-size: 18px; font-weight: bold;">Bonus Part 📝</summary>
 	<ul>
 	<details>
-		<summary> [ ] ft_lstnew</summary>
-		<p>...</p>
+		<summary> ✅ ft_lstnew</summary>
+		<p>Allocates (with malloc(3)) and returns a new node. The member variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL.<p>
 	</details>
 	<details>
 		<summary> [ ] ft_lstadd_front</summary>
-		<p>...</p>
+		<p>Adds the node ’new’ at the beginning of the list.</p>
 	</details>
 	<details>
 		<summary> [ ] ft_lstsize</summary>
-		<p>...</p>
+		<p>Counts the number of nodes in a list.</p>
 	</details>
 	<details>
 		<summary> [ ] ft_lstlast</summary>
-		<p>...</p>
+		<p>Returns the last node of the list.</p>
 	</details>
 	<details>
 		<summary> [ ] ft_lstadd_back</summary>
-		<p>...</p>
+		<p>Adds the node ’new’ at the end of the list.</p>
 	</details>
 	<details>
 		<summary> [ ] ft_lstdelone</summary>
-		<p>...</p>
+		<p>Takes as a parameter a node and frees the memory of the node’s content using the function ’del’ given as a parameter and free the node. The memory of ’next’ must not be freed.</p>
 	</details>
 	<details>
 		<summary> [ ] ft_lstclear</summary>
-		<p>...</p>
+		<p>Deletes and frees the given node and every successor of that node, using the function ’del’ and free(3). Finally, the pointer to the list must be set to NULL.</p>
 	</details>
 	<details>
 		<summary> [ ] ft_lstiter</summary>
-		<p>...</p>
+		<p>Iterates the list ’lst’ and applies the function ’f’ on the content of each node.</p>
 	</details>
 	<details>
 		<summary> [ ] ft_lstmap</summary>
-		<p>...</p>
+		<p>Iterates the list ’lst’ and applies the function ’f’ on the content of each node. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of a node if needed.</p>
 	</details>
 	</ul>
 	</div>
