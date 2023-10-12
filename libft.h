@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/12 09:46:05 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/12 10:20:59 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,6 @@ void	ft_putnbr_fd(int n, int fd);
 
 // Bonus Part
 t_list	*ft_lstnew(void *content);
+t_list	*ft_lstadd_front(void *content);
 
 #endif
