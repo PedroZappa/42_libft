@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:14:56 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/10 17:27:06 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/12 09:35:25 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,19 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + '0', fd);
 }
+/*
+int main(int argc, char *argv[])
+{
+	int n;
+
+	if (argc != 2)
+	{
+		printf("Usage: %s <number>\n", argv[0]);
+		return (1);
+	}
+	n = ft_atoi(argv[1]);
+	ft_putnbr_fd(n, 1);
+	printf("\n");
+	return (0);
+}
+*/
