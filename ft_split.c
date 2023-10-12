@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:26:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/12 19:45:13 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/12 20:57:31 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,25 @@ static int	ft_segcount(char const *s, char sep)
 	if (!s[i])
 		++count;
 	return (count);
+}
+
+char	**ft_free(char **strs)
+{
+	size_t	str;
+
+	str = 0;
+	while (strs[str])
+		free(strs[str++]);
+	free(strs);
+	return (NULL);
+}
+
+void	*ft_memalloc(char **strs, char const *s, char sep)
+{
+	strs = malloc(sizeof(char *) * (ft_segcount(s, sep) + 1));
+	if (!strs)
+		return (NULL);
+	return (strs);
 }
 
 static char	**ft_getseg(char const *s, char sep)
