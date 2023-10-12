@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:19:22 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/11 17:52:23 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/12 09:23:45 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_atoi(const char *nptr)
 		nb = nb * 10 + (*nptr++ - '0');
 	return (nb * sign);
 }
-
+/*
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
@@ -45,4 +45,4 @@ int main(int argc, char *argv[])
 	printf("Input string:\t\'%s\'\n", argv[1]);
 	printf("ft_atoi return:\t%i\n", ft_atoi(argv[1]));
 }
-
+*/
