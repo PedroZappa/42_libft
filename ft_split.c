@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:26:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/11 12:49:02 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/12 15:45:25 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	**ft_split(char const *s, char c)
 	strs[sub_str] = NULL;
 	return (strs);
 }
-/*
+
 int main(int argc, char *argv[])
 {
 	char **strs;
@@ -88,6 +88,9 @@ int main(int argc, char *argv[])
 		i++;
 	}
 	printf("\n}\n");
+
+	// Free Memory 
+	free(strs);
 	return (0);
 }
-*/
+
