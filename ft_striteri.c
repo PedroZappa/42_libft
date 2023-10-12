@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 20:59:59 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/11 21:21:13 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/12 09:23:30 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,10 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		++i;
 	}
 }
-
-void	ft_change(unsigned int i, char *str)
+/*
+void	ft_print(unsigned int i, char *str)
 {
-	while (str[i])
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] = str[i] + 32;
-		else if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] = str[i] - 32;
-	}
+	printf("s[%d] = \'%c\'\n", i, *(str));
 }
 
 int main(int argc, char *argv[])
@@ -49,9 +43,10 @@ int main(int argc, char *argv[])
 	str = argv[1];
 
 	// Tests
-	printf("striteri(%s, change) = ", str);
-	ft_striteri(str, ft_change);
-	printf("%s\n", str);
+	printf("striteri(\"%s\", ft_print) =>\n", str);
+	ft_striteri(str, &ft_print);
+	printf("str : %s\n", str);
 
 	return (0);
 }
+*/
