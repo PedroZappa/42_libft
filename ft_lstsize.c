@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 11:15:18 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/13 10:46:59 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/13 10:48:51 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-
+/*
 int main(int argc, char *argv[])
 {
 	t_list	*node;
@@ -53,3 +53,4 @@ int main(int argc, char *argv[])
 	node_n = ft_lstsize(node);
 	printf("List Size: %zu\n", node_n);
 }
+*/
