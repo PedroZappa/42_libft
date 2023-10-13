@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 09:47:32 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/13 08:45:08 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/13 08:50:51 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,22 @@ int main(int argc, char *argv[])
 	content = argv[1];
 	
 	node = ft_lstnew(content);
-	printf("ft_lstnew(\"%s\") returns:\n", content);
-	printf("node:\n");
-	printf("\tAddress: %p\n", node);
+	if (node)
+	{
+		printf("ft_lstnew(\"%s\") returns:\n", content);
+		printf("node:\n");
+		printf("\tAddress: %p\n", node);
 
-	printf("node->content:\n");
-	printf("\tAddress: %p\n", node->content);
-	printf("\tValue :\t\"%s\"\n", (char *) node->content);
+		printf("node->content:\n");
+		printf("\tAddress: %p\n", node->content);
+		printf("\tValue :\t\"%s\"\n", (char *) node->content);
 
-	printf("node->next:\n");
-	printf("\tAddress: %p\n", node->next);
+		printf("node->next:\n");
+		printf("\tAddress: %p\n", node->next);
+	}
+	else 
+	{
+		printf("node is NULL");
+	}
 }
 */
