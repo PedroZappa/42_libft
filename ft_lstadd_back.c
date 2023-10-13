@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:00:06 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/13 10:33:26 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/13 10:36:26 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		ptr = ptr->next;
 	ptr->next = new;
 }
-
+/*
 int main(int argc, char *argv[])
 {
 	t_list	*node;
@@ -64,3 +64,4 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
+*/
