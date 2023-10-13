@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 09:47:32 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/13 08:56:07 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/13 08:57:25 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
-
+/*
 int main(int argc, char *argv[])
 {
 	t_list	*node;
@@ -58,4 +58,4 @@ int main(int argc, char *argv[])
 	// Free Memory
 	free(node);
 }
-
+*/
