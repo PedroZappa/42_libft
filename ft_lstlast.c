@@ -6,12 +6,11 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 11:56:55 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/13 13:08:56 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/14 16:28:10 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*ft_lstlast(t_list *lst)
 {
@@ -25,6 +24,7 @@ t_list	*ft_lstlast(t_list *lst)
 int main(int argc, char *argv[])
 {
 	t_list	*node;
+	t_list	*last_node;
 	size_t	node_n;
 	long	content;
 	size_t	i;
@@ -37,15 +37,14 @@ int main(int argc, char *argv[])
 	content = ft_atoi(argv[1]);
 	node_n = ft_atoi(argv[2]);
 	//// Create List
-	node = ft_lstnew(&content);
+	node = ft_lstnew((void *)content);
 	if (!node)
 		return (1);
 	i = node_n;
 	while (i--)
 	{
 		++content;
-		printf("%ld\n", content);
-		ft_lstadd_back(&node, ft_lstnew(&content));	
+		ft_lstadd_back(&node, ft_lstnew((void *)content));	
 	}
 
 	//// Print List
@@ -53,11 +52,21 @@ int main(int argc, char *argv[])
 	i = 1;
 	while (node->next)
 	{
-		printf("Node %zu : %ld\n", i, (long)node->content);
-		printf("Address %p\n", node->next);
+		printf("Node %zu\n", i);
+		printf("\tValue\t%ld\n", (long)node->content);
+		printf("\tAddress %p\n", node->next);
 		node = node->next;
 		++i;
 	}
+	printf("Node %zu\n", i);
+	printf("\tValue\t%ld\n", (long)node->content);
+	printf("\tAddress %p\n", node->next);
+
+	// Print last member
+	last_node = ft_lstlast(node);
+	printf("\nLast Node : %ld\n", (long)last_node->content);
+	printf("\tValue\t%ld\n", (long)node->content);
+	printf("\tAddress %p\n", node->next);
 
 	return (0);
 }
