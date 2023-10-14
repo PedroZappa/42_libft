@@ -245,19 +245,19 @@ ___
 		<p>Allocates (with malloc(3)) and returns a new node. The member variable ’content’ is initialized with the value of the parameter ’content’. The variable ’next’ is initialized to NULL.<p>
 	</details>
 	<details>
-		<summary> [ ] ft_lstadd_front</summary>
+		<summary> ✅ ft_lstadd_front</summary>
 		<p>Adds the node ’new’ at the beginning of the list.</p>
 	</details>
 	<details>
-		<summary> [ ] ft_lstsize</summary>
+		<summary> ✅ ft_lstsize</summary>
 		<p>Counts the number of nodes in a list.</p>
 	</details>
 	<details>
-		<summary> [ ] ft_lstlast</summary>
+		<summary> ✅ ft_lstlast</summary>
 		<p>Returns the last node of the list.</p>
 	</details>
 	<details>
-		<summary> [ ] ft_lstadd_back</summary>
+		<summary> ✅ ft_lstadd_back</summary>
 		<p>Adds the node ’new’ at the end of the list.</p>
 	</details>
 	<details>
