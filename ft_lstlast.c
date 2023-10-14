@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 11:56:55 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/14 16:28:10 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/14 19:05:15 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,16 +36,14 @@ int main(int argc, char *argv[])
 	}
 	content = ft_atoi(argv[1]);
 	node_n = ft_atoi(argv[2]);
+	
 	//// Create List
 	node = ft_lstnew((void *)content);
 	if (!node)
 		return (1);
 	i = node_n;
 	while (i--)
-	{
-		++content;
-		ft_lstadd_back(&node, ft_lstnew((void *)content));	
-	}
+		ft_lstadd_back(&node, ft_lstnew((void *)++content));	
 
 	//// Print List
 	printf("Print List:\n");
