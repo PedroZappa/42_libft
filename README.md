@@ -261,7 +261,7 @@ ___
 		<p>Adds the node ’new’ at the end of the list.</p>
 	</details>
 	<details>
-		<summary> [ ] ft_lstdelone</summary>
+		<summary> ✅ ft_lstdelone</summary>
 		<p>Takes as a parameter a node and frees the memory of the node’s content using the function ’del’ given as a parameter and free the node. The memory of ’next’ must not be freed.</p>
 	</details>
 	<details>

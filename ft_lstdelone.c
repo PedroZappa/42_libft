@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 12:53:16 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/14 21:49:16 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/14 21:55:49 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@ void	ft_lstdelone(t_list *list, void (*del)(void*))
 	(*del)(list->content);
 	free(list);
 }
-
+/*
 void	ft_del(void *content)
 {
 	(void)content;
-    content = NULL;
 }
 
 void ft_print_list(t_list *list)
@@ -62,4 +61,4 @@ int main(void)
 
 	return (0);
 }
-
+*/
