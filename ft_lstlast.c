@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 11:56:55 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/14 19:05:15 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/14 21:45:36 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,25 @@ t_list	*ft_lstlast(t_list *lst)
 	while (lst->next)
 		lst = lst->next;
 	return (lst);
+}
+/*
+void ft_print_list(t_list *node)
+{
+	size_t	i;
+
+	printf("Print List:\n");
+	i = 1;
+	while (node->next)
+	{
+		printf("Node %zu\n", i);
+		printf("\tValue\t%ld\n", (long)node->content);
+		printf("\tAddress %p\n", node->next);
+		node = node->next;
+		++i;
+	}
+	printf("Node %zu\n", i);
+	printf("\tValue\t%ld\n", (long)node->content);
+	printf("\tNext Address %p\n", node->next);
 }
 
 int main(int argc, char *argv[])
@@ -42,30 +61,18 @@ int main(int argc, char *argv[])
 	if (!node)
 		return (1);
 	i = node_n;
-	while (i--)
+	while (i-- > 1)
 		ft_lstadd_back(&node, ft_lstnew((void *)++content));	
 
 	//// Print List
-	printf("Print List:\n");
-	i = 1;
-	while (node->next)
-	{
-		printf("Node %zu\n", i);
-		printf("\tValue\t%ld\n", (long)node->content);
-		printf("\tAddress %p\n", node->next);
-		node = node->next;
-		++i;
-	}
-	printf("Node %zu\n", i);
-	printf("\tValue\t%ld\n", (long)node->content);
-	printf("\tAddress %p\n", node->next);
+	ft_print_list(node);
 
 	// Print last member
 	last_node = ft_lstlast(node);
-	printf("\nLast Node : %ld\n", (long)last_node->content);
-	printf("\tValue\t%ld\n", (long)node->content);
-	printf("\tAddress %p\n", node->next);
+	printf("\nLast Node : %ld\n", node_n);
+	printf("\tValue\t%ld\n", (long)last_node->content);
+	printf("\tNext Address %p\n", last_node->next);
 
 	return (0);
 }
-
+*/
