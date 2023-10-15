@@ -265,7 +265,7 @@ ___
 		<p>Takes as a parameter a node and frees the memory of the node’s content using the function ’del’ given as a parameter and free the node. The memory of ’next’ must not be freed.</p>
 	</details>
 	<details>
-		<summary> [ ] ft_lstclear</summary>
+		<summary> ✅ ft_lstclear</summary>
 		<p>Deletes and frees the given node and every successor of that node, using the function ’del’ and free(3). Finally, the pointer to the list must be set to NULL.</p>
 	</details>
 	<details>
