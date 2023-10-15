@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:10:00 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/15 12:24:55 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/15 19:46:37 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,6 @@ void ft_print_list(t_list *node)
 	printf("\n");
 }
 
-void test_ft_lstiter(t_list *lst, void (*f)(void *))
-{
-    printf("Testing ft_lstiter with list:\n");
-    ft_print_list(lst);
-    ft_lstiter(lst, f);
-    printf("After applying function:\n");
-    ft_print_list(lst);
-}
-
 int main(int argc, char *argv[])
 {
 	t_list	*node;
@@ -75,6 +66,8 @@ int main(int argc, char *argv[])
 	node_n = ft_atoi(argv[2]);
 	
 	//// Create List
+	long *content_ptr = malloc(sizeof(long));
+	*content_ptr = content;
 	node = ft_lstnew((void *)content);
 	if (!node)
 		return (1);
@@ -83,7 +76,12 @@ int main(int argc, char *argv[])
 		ft_lstadd_back(&node, ft_lstnew((void *)++content));	
 
 	//// Test 
-	test_ft_lstiter(node, ft_add42);
+    printf("Testing ft_lstiter with list:\n");
+    ft_print_list(node);
+	printf("Applying function...\n");
+    ft_lstiter(node, ft_add42);
+    printf("After applying function:\n");
+    ft_print_list(node);
 
 	return (0);
 }
