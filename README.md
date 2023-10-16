@@ -269,11 +269,11 @@ ___
 		<p>Deletes and frees the given node and every successor of that node, using the function ’del’ and free(3). Finally, the pointer to the list must be set to NULL.</p>
 	</details>
 	<details>
-		<summary> [ ] ft_lstiter</summary>
+		<summary> ✅ ft_lstiter</summary>
 		<p>Iterates the list ’lst’ and applies the function ’f’ on the content of each node.</p>
 	</details>
 	<details>
-		<summary> [ ] ft_lstmap</summary>
+		<summary> ✅ ft_lstmap</summary>
 		<p>Iterates the list ’lst’ and applies the function ’f’ on the content of each node. Creates a new list resulting of the successive applications of the function ’f’. The ’del’ function is used to delete the content of a node if needed.</p>
 	</details>
 	</ul>
