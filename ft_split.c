@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:26:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/13 09:21:13 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/16 13:14:34 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,35 +32,12 @@ static int	ft_segcount(char const *s, char sep)
 	return (count);
 }
 
-// static char	**ft_free(char **strs)
-// {
-// 	size_t	str;
-
-// 	str = 0;
-// 	while (strs[str])
-// 		free(strs[str++]);
-// 	free(strs);
-// 	return (NULL);
-// }
-
-// static void	*ft_memalloc(char **strs, char const *s, char sep)
-// {
-// 	strs = malloc(sizeof(char *) * (ft_segcount(s, sep) + 1));
-// 	if (!strs)
-// 		return (NULL);
-// 	return (strs);
-// }
-
-static char	**ft_getseg(char const *s, char sep)
+static char	**ft_getseg(char **strs, char const *s, char sep)
 {
-	char		**strs;
 	size_t		sub_str;
 	size_t		sub_len;
 	long long	i;
 
-	strs = malloc(sizeof(char *) * (ft_segcount(s, sep) + 1));
-	if (!strs)
-		return (NULL);
 	i = -1;
 	sub_str = 0;
 	sub_len = 0;
@@ -84,7 +61,10 @@ char	**ft_split(char const *s, char c)
 {
 	char		**strs;
 
-	strs = ft_getseg(s, c);
+	strs = malloc(sizeof(char *) * (ft_segcount(s, c) + 1));
+	if (!strs)
+		return (NULL);
+	strs = ft_getseg(strs, s, c);
 	if (!strs)
 		return (NULL);
 	return (strs);
