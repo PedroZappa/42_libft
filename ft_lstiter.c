@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:10:00 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/15 19:46:37 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/16 11:23:56 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,25 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 /*
 void ft_add42(void *content)
 {
-	long *val = (long *)content;
-	*val += 42;
+	int *val = (int *)content;
+	*val = 42;
 }
 
 void ft_print_list(t_list *node)
 {
 	size_t	i;
 
-	printf("Print List:\n");
+	printf("====> Print List:\n");
+	printf("Root node's Address:\n\t%p\n", node);
 	i = 1;
 	while (node)
 	{
 		printf("Node %zu\n", i);
 		if (node->content)
-			printf("\tValue\t%ld\n", (long)node->content);
+			printf("\tValue\t%d\n", (*(int *)(node->content)));
 		else
 			printf("\tValue\tNULL\n");
-		printf("\tAddress %p\n", node->next);
+		printf("\tNext Address %p\n", node->next);
 		node = node->next;
 		++i;
 	}
@@ -54,7 +55,7 @@ int main(int argc, char *argv[])
 {
 	t_list	*node;
 	size_t	node_n;
-	long	content;
+	int		content;
 	size_t	i;
 
 	if (argc != 3)
@@ -66,21 +67,21 @@ int main(int argc, char *argv[])
 	node_n = ft_atoi(argv[2]);
 	
 	//// Create List
-	long *content_ptr = malloc(sizeof(long));
+	int *content_ptr = malloc(sizeof(int));
 	*content_ptr = content;
-	node = ft_lstnew((void *)content);
+	node = ft_lstnew(content_ptr);
 	if (!node)
 		return (1);
 	i = node_n;
 	while (i-- > 1)
-		ft_lstadd_back(&node, ft_lstnew((void *)++content));	
+		ft_lstadd_back(&node, ft_lstnew(content_ptr));	
 
 	//// Test 
     printf("Testing ft_lstiter with list:\n");
     ft_print_list(node);
 	printf("Applying function...\n");
-    ft_lstiter(node, ft_add42);
-    printf("After applying function:\n");
+    ft_lstiter(node, &ft_add42);
+    printf("\nAfter applying function:\n\n");
     ft_print_list(node);
 
 	return (0);
