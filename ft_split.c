@@ -6,12 +6,11 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:26:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/16 14:20:36 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/16 17:40:30 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 static int	ft_segcount(char const *s, char sep)
 {
