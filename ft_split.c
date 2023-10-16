@@ -6,67 +6,100 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:26:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/16 13:14:34 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/16 14:20:36 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 static int	ft_segcount(char const *s, char sep)
 {
-	int	i;
-	int	count;
+	size_t	segs;
+	size_t	i;
+	int		counting;
 
-	if (!s)
-		return (0);
 	i = 0;
-	count = 0;
+	segs = 0;
+	counting = 0;
 	while (s[i])
 	{
-		if (s[i] == sep && i > 0)
-			++count;
+		if (s[i] != sep && !counting)
+		{
+			counting = 1;
+			++segs;
+		}
+		if (s[i] == sep && counting)
+			counting = 0;
 		++i;
 	}
-	if (!s[i])
-		++count;
-	return (count);
+	return (segs);
 }
 
-static char	**ft_getseg(char **strs, char const *s, char sep)
+static size_t	ft_seglen(char const *s, char sep)
 {
-	size_t		sub_str;
-	size_t		sub_len;
-	long long	i;
+	size_t	i;
 
-	i = -1;
-	sub_str = 0;
-	sub_len = 0;
-	while (s[++i])
+	i = 0;
+	while (s[i] && s[i] != sep)
+		++i;
+	return (i);
+}
+
+static	char	**ft_free(char **strs, size_t seg)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < seg)
 	{
-		if (s[i] != sep)
-			++sub_len;
-		else if (sub_len > 0 && s[i] == sep)
-		{
-			strs[sub_str++] = ft_substr(s, i - sub_len, sub_len);
-			sub_len = 0;
-		}
+		free(strs[i]);
+		++i;
 	}
-	if (sub_len > 0)
-		strs[sub_str++] = ft_substr(s, i - sub_len, sub_len);
-	strs[sub_str] = NULL;
+	free(strs);
+	return (0);
+}
+
+static char	**ft_alloc(char **strs, char const *s, char sep, size_t segs)
+{
+	size_t	i;
+	size_t	j;
+	size_t	seg;
+
+	i = 0;
+	seg = 0;
+	while (seg < segs)
+	{
+		j = 0;
+		while (s[i] && s[i] == sep)
+			++i;
+		strs[seg] = malloc(ft_seglen(&s[i], sep) + 1);
+		if (!strs[seg])
+			return (ft_free(strs, seg));
+		while (s[i] && s[i] != sep)
+		{
+			strs[seg][j] = s[i];
+			++i;
+			++j;
+		}
+		strs[seg][j] = '\0';
+		++seg;
+	}
 	return (strs);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char		**strs;
+	char	**strs;
+	size_t	segs;
 
-	strs = malloc(sizeof(char *) * (ft_segcount(s, c) + 1));
+	segs = ft_segcount(s, c);
+	strs = malloc((segs + 1) * sizeof(char *));
 	if (!strs)
-		return (NULL);
-	strs = ft_getseg(strs, s, c);
-	if (!strs)
-		return (NULL);
+		return (0);
+	strs[segs] = 0;
+	if (segs > 0)
+		strs = ft_alloc(strs, s, c, segs);
 	return (strs);
 }
 /*
