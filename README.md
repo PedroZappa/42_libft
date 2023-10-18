@@ -36,7 +36,7 @@ The first foundational project of the `Common Core` curriculum at 42, `libft`. A
 
 >> ❗ **Important**: If you happen to be a student at 42, you are encouraged to go through the process of writing these functions and testing them yourself. Feel free to use this repository as a research source, but beware of the `copy paste` monster! Do not use code you only understand partially, it will make later projects much harder to manage! If you passed the piscine you should be able to complete this project successfully. Be thorough, be persistent and be patient with yourself!
 
-[Add Project Subject]
+[libft Subject (English)](/libft.en.subject.pdf)
 
 # Usage
 
