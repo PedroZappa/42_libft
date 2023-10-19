@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 20:01:54 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/11 13:59:38 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/19 20:18:19 by zedr0            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static char	*ft_char(char *str, unsigned int nb, long int len)
 	return (str);
 }
 
-static long int	ft_numlen(int n)
+static long int	ft_nlen(int n)
 {
 	long int	len;
 
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	long int		len;
 	char			*str;
 
-	len = ft_numlen(n);
+	len = ft_nlen(n);
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
