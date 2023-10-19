@@ -9,8 +9,11 @@ SRC =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
+EXTRA = ft_putnchar_fd.c
+
 OBJS =			$(SRC:.c=.o) 
 BONUS_OBJS =	$(BONUS:.c=.o)
+EXTRA_OBJS =	$(EXTRA:.c=.o)
 
 CFLAGS	= -Wall -Wextra -Werror
 INCLUDE = -I .
@@ -30,8 +33,11 @@ all: $(NAME)
 bonus: $(OBJS) $(BONUS_OBJS)
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 
+extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
+	
 clean: 
-	$(RM) $(OBJS) $(BONUS_OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
