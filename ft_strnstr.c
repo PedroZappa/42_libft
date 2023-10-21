@@ -6,12 +6,11 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 17:35:30 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/08 20:44:14 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/21 15:53:25 by zedro            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <endian.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
