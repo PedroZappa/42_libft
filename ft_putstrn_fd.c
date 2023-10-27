@@ -6,11 +6,12 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 18:21:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/27 11:51:45 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/27 11:56:16 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_putstrn_fd(char *str, int fd, int n)
 {
@@ -29,6 +30,7 @@ int	ft_putstrn_fd(char *str, int fd, int n)
 // 	char *str;
 // 	int fd;
 // 	int n;
+// 	int len;
 //
 // 	if (argc != 4)
 // 	{
@@ -40,5 +42,6 @@ int	ft_putstrn_fd(char *str, int fd, int n)
 // 	fd = ft_atoi(argv[2]);
 // 	n = ft_atoi(argv[3]);
 //
-// 	ft_putstrn_fd(str, fd, n);
+// 	len = ft_putstrn_fd(str, fd, n);
+// 	printf("\nft_printf: %d\n", len);
 // }
