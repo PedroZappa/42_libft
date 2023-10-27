@@ -6,15 +6,15 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 18:21:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/27 10:30:00 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/27 10:53:41 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_putstrn_fd(char *str, int fd, int n)
+int	ft_putstrn_fd(char *str, int fd, int n)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (n < 0)

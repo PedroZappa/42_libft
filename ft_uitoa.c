@@ -6,13 +6,13 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 19:58:55 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/19 20:10:40 by zedr0            ###   ########.fr       */
+/*   Updated: 2023/10/27 10:47:14 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_alloc_n(char* str, int len, unsigned int n, unsigned int n_bak);
+static char	*ft_alloc_n(char *str, int len, unsigned int n, unsigned int n_bak);
 
 char	*ft_uitoa(unsigned int n)
 {
@@ -29,7 +29,7 @@ char	*ft_uitoa(unsigned int n)
 	return (str);
 }
 
-static char	*ft_alloc_n(char* str, int len, unsigned int n, unsigned int n_bak)
+static char	*ft_alloc_n(char *str, int len, unsigned int n, unsigned int n_bak)
 {
 	if (n_bak == 0)
 		len = 1;
