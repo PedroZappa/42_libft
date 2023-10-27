@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 18:21:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/27 11:56:16 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/27 19:52:28 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,8 @@
 
 int	ft_putstrn_fd(char *str, int fd, int n)
 {
-	int	len;
-
-	len = 0;
 	if (n < 0)
-		return (-1);
+		return (0);
 	if (str)
 		return ((int)write(fd, str, n));
 	return (0);
