@@ -6,16 +6,19 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:07:56 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/10 11:37:01 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/27 20:12:42 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
+	int	len;
+
 	while (*s)
-		ft_putchar_fd(*s++, fd);
+		len += ft_putchar_fd(*s++, fd);
+	return (len);
 }
 /*
 int main (int argc, char **argv)
