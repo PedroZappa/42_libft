@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 19:58:55 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/27 10:47:14 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/29 20:54:22 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static char	*ft_alloc_n(char *str, int len, unsigned int n, unsigned int n_bak)
 	str = malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
-	str[len] = '\0';
+	str[len--] = '\0';
 	while (len-- > 0)
 	{
 		str[len] = (n % 10) + '0';
