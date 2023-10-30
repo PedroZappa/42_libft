@@ -6,14 +6,13 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 10:20:43 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 10:22:00 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H			
 # define LIBFT_H
 
-# include <limits.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
