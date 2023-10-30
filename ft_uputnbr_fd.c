@@ -1,53 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uitoa.c                                         :+:      :+:    :+:   */
+/*   ft_uputnbr_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 10:51:55 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 11:16:25 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_alloc_n(char *str, int len, unsigned int n);
-
-char	*ft_uitoa(unsigned int n)
+int	ft_uputnbr_fd(unsigned int n, int fd)
 {
-	char			*str;
-	int				len;
-
-
-	len = ft_numlen(n, 10);
-	str = NULL;
-	str = ft_alloc_n(str, len, n);
-	if (str == NULL)
-		return (NULL);
-	return (str);
-}
-
-static char	*ft_alloc_n(char *str, int len, unsigned int n)
-{
-	if (n == 0)
-		len = 1;
-	str = malloc(sizeof(char) * (len + 1));
-	if (str == NULL)
-		return (NULL);
-	str[len] = '\0';
-	while (len-- > 0)
+	if (n > 10)
 	{
-		str[len] = (n % 10) + '0';
-		n /= 10;
+		ft_uputnbr_fd(n / 10, 1);
+		ft_uputnbr_fd(n % 10, 1);
 	}
-	return (str);
+	else
+		ft_putchar_fd((n + '0'), 1);
 }
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	char *nbr;
-	int	n;
+	unsigned int	n;
+	int				len;
+	char			*nbr;
 
 	if (argc != 2)
 	{
@@ -55,7 +35,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	n = ft_atoi(argv[1]);
-	nbr = ft_uitoa(n);
+	len = ft_uputnbr_fd(n, 1);
 	ft_putstr_fd(nbr, 1);
 	printf("\n");
 	free(nbr);
