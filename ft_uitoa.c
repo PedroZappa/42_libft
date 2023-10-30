@@ -6,21 +6,19 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 10:05:02 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 10:20:30 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_alloc_n(char *str, int len, int n);
+static char	*ft_alloc_n(char *str, int len, unsigned int n);
 
-char	*ft_uitoa(int n)
+char	*ft_uitoa(unsigned int n)
 {
 	char			*str;
 	int				len;
 
-	if (n < 0)
-		n = -n;
 	len = ft_numlen(n, 10);
 	str = NULL;
 	str = ft_alloc_n(str, len, n);
@@ -29,7 +27,7 @@ char	*ft_uitoa(int n)
 	return (str);
 }
 
-static char	*ft_alloc_n(char *str, int len, int n)
+static char	*ft_alloc_n(char *str, int len, unsigned int n)
 {
 	if (n == 0)
 		len = 1;
@@ -44,21 +42,21 @@ static char	*ft_alloc_n(char *str, int len, int n)
 	}
 	return (str);
 }
-//
-// int main(int argc, char *argv[])
-// {
-// 	char *nbr;
-// 	int	n;
-//
-// 	if (argc != 2)
-// 	{
-// 		printf("Usage: %s <number>\n", argv[0]);
-// 		return (1);
-// 	}
-// 	n = ft_atoi(argv[1]);
-// 	nbr = ft_uitoa(n);
-// 	ft_putstr_fd(nbr, 1);
-// 	printf("\n");
-// 	free(nbr);
-// 	return (0);
-// }
+
+int main(int argc, char *argv[])
+{
+	char *nbr;
+	int	n;
+
+	if (argc != 2)
+	{
+		printf("Usage: %s <number>\n", argv[0]);
+		return (1);
+	}
+	n = ft_atoi(argv[1]);
+	nbr = ft_uitoa(n);
+	ft_putstr_fd(nbr, 1);
+	printf("\n");
+	free(nbr);
+	return (0);
+}
