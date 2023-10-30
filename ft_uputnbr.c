@@ -6,14 +6,17 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 15:20:42 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:39:09 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_uputnbr(unsigned int n, int *count)
+void	ft_uputnbr(unsigned int n)
 {
+	int count;
+
+	count = ft_numlen(n, 10);
 	if (n >= 10)
 	{
 		ft_uputnbr(n / 10, count);
@@ -21,7 +24,7 @@ void	ft_uputnbr(unsigned int n, int *count)
 	}
 	else 
 	{
-		ft_putchar(n + '0', count);
+		ft_putchar(n + '0');
 	}
 }
 //
