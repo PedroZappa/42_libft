@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:41:37 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 16:03:18 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 20:03:18 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	ft_putnbr(int n)
 	{
 		ft_putchar_fd('-', 1);
 		n *= -1;
+		++len;
 	}
 	else if (n >= 10)
 	{
