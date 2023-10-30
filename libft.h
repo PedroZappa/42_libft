@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/29 21:07:30 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 09:59:08 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_putnchar_fd(char c, int fd, int n);
 int		ft_putstrn_fd(char *str, int fd, int n);
 int		ft_numlen(int n, int base);
-char	*ft_uitoa(unsigned int n);
+char	*ft_uitoa(int n);
 
 #endif
