@@ -6,13 +6,13 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 12:50:49 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 13:02:41 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_uputnbr(unsigned int n)
+void	ft_uputnbr(unsigned int n, int *count)
 {
 	if (n == UINT_MAX)
 	{
@@ -22,12 +22,12 @@ void	ft_uputnbr(unsigned int n)
 	else if (n < 0)
 	{
 		n = -n;
-		ft_uputnbr(n);
+		ft_uputnbr(n, count);
 	}
 	else if (n >= 10)
 	{
-		ft_uputnbr(n / 10);
-		ft_uputnbr(n % 10);
+		ft_uputnbr(n / 10, count);
+		ft_uputnbr(n % 10, count);
 	}
 	else
 		ft_putchar_fd((n + '0'), 1);
