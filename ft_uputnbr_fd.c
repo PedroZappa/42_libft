@@ -6,13 +6,13 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 11:16:25 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 11:19:06 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_uputnbr_fd(unsigned int n, int fd)
+void	ft_uputnbr_fd(unsigned int n, int fd)
 {
 	if (n > 10)
 	{
@@ -21,6 +21,7 @@ int	ft_uputnbr_fd(unsigned int n, int fd)
 	}
 	else
 		ft_putchar_fd((n + '0'), 1);
+
 }
 
 int	main(int argc, char *argv[])
