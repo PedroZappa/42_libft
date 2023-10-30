@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 15:16:26 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:22:27 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int		ft_putnchar_fd(char c, int fd, int n);
 int		ft_putstrn_fd(char *str, int fd, int n);
 int		ft_numlen(int n, int base);
 void	ft_uputnbr(unsigned int n, int *count);
-int		ft_putchar(char c);
+int		ft_putchar(char c, int *count);
 int		ft_putnbr(int n);
 
 #endif
