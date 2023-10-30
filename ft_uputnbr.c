@@ -6,13 +6,13 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 15:40:39 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:42:18 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_uputnbr(unsigned int n)
+int	ft_uputnbr(unsigned int n)
 {
 	int count;
 
