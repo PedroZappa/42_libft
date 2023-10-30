@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:14:56 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 14:44:47 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:29:19 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putchar_fd('-', fd);
 		n = -n;
-		//ft_putnbr_fd(n, fd);
-		//return ;
 	}
 	if (n >= 10)
 	{
