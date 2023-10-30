@@ -9,7 +9,8 @@ SRC =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-EXTRA = ft_putnchar_fd.c ft_putstrn_fd.c ft_numlen.c ft_uputnbr.c ft_putchar.c
+EXTRA = ft_putnchar_fd.c ft_putstrn_fd.c ft_numlen.c ft_uputnbr.c ft_putchar.c \
+		ft_putnbr.c
 
 OBJS =			$(SRC:.c=.o) 
 BONUS_OBJS =	$(BONUS:.c=.o)
