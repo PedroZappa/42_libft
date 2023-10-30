@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 15:39:09 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:40:39 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	ft_uputnbr(unsigned int n)
 	count = ft_numlen(n, 10);
 	if (n >= 10)
 	{
-		ft_uputnbr(n / 10, count);
-		ft_uputnbr(n % 10, count);
+		ft_uputnbr(n / 10);
+		ft_uputnbr(n % 10);
 	}
 	else 
 	{
