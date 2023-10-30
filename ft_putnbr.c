@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:41:37 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 20:03:18 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 20:09:37 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,16 @@ int	ft_putnbr(int n)
 {
 	int	len;
 
-	len = ft_numlen(n, 10);
+	//len = ft_numlen(n, 10);
 	if (n == -2147483648)
+	{
 		len = ft_putstr_fd("-2147483648", 1);
+		return (len + 1);
+	}
 	else if (n < 0)
 	{
 		ft_putchar_fd('-', 1);
 		n *= -1;
-		++len;
 	}
 	else if (n >= 10)
 	{
