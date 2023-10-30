@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 10:24:36 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 10:51:55 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	*ft_uitoa(unsigned int n)
 {
 	char			*str;
 	int				len;
+
 
 	len = ft_numlen(n, 10);
 	str = NULL;
@@ -42,21 +43,21 @@ static char	*ft_alloc_n(char *str, int len, unsigned int n)
 	}
 	return (str);
 }
-//
-// int main(int argc, char *argv[])
-// {
-// 	char *nbr;
-// 	int	n;
-//
-// 	if (argc != 2)
-// 	{
-// 		printf("Usage: %s <number>\n", argv[0]);
-// 		return (1);
-// 	}
-// 	n = ft_atoi(argv[1]);
-// 	nbr = ft_uitoa(n);
-// 	ft_putstr_fd(nbr, 1);
-// 	printf("\n");
-// 	free(nbr);
-// 	return (0);
-// }
+
+int main(int argc, char *argv[])
+{
+	char *nbr;
+	int	n;
+
+	if (argc != 2)
+	{
+		printf("Usage: %s <number>\n", argv[0]);
+		return (1);
+	}
+	n = ft_atoi(argv[1]);
+	nbr = ft_uitoa(n);
+	ft_putstr_fd(nbr, 1);
+	printf("\n");
+	free(nbr);
+	return (0);
+}
