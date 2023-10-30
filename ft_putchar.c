@@ -6,16 +6,15 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:34:19 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 11:45:24 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 11:58:46 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c, int *count)
+int	ft_putchar(char c)
 {
-	write(1, &c, 1);
-	++(*count);
+	return (write(1, &c, 1));
 }
 //
 // int main(int argc, char *argv[])
