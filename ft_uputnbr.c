@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 15:42:18 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:44:47 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_uputnbr(unsigned int n)
 {
-	int count;
+	int len;
 
-	count = ft_numlen(n, 10);
+	len = ft_numlen(n, 10);
 	if (n >= 10)
 	{
 		ft_uputnbr(n / 10);
@@ -26,14 +26,15 @@ int	ft_uputnbr(unsigned int n)
 	{
 		ft_putchar(n + '0');
 	}
+	return (len);
 }
 //
 // int	main(int argc, char *argv[])
 // {
 // 	unsigned int	n;
-// 	int				*count;
+// 	int				*len;
 //
-// 	count = NULL;
+// 	len = NULL;
 // 	if (argc != 2)
 // 	{
 // 		printf("Usage: %s <number>\n", argv[0]);
