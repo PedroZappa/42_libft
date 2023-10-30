@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 12:08:06 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 12:13:00 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_uputnbr(unsigned int n)
 {
+	if (n == UINT_MAX)
 	if (n >= 10)
 	{
 		ft_uputnbr(n / 10);

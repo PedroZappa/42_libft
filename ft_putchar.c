@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:34:19 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 11:58:46 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 12:14:10 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putchar(char c)
 {
-	return (write(1, &c, 1));
+	return ((int)write(1, &c, 1));
 }
 //
 // int main(int argc, char *argv[])

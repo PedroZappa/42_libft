@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 12:07:02 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 12:13:54 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+# define UINT_MAX	4294967295
 
 typedef struct s_list
 {
