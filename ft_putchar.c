@@ -1,44 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uputnbr_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 11:24:26 by passunca         ###   ########.fr       */
+/*   Created: 2023/10/30 11:34:19 by passunca          #+#    #+#             */
+/*   Updated: 2023/10/30 11:45:24 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_uputnbr_fd(unsigned int n)
+void	ft_putchar(char c, int *count)
 {
-	if (n > 10)
-	{
-		ft_uputnbr_fd(n / 10);
-		ft_uputnbr_fd(n % 10);
-	}
-	else
-		ft_putchar_fd((n + '0'));
-
+	write(1, &c, 1);
+	++(*count);
 }
 //
-// int	main(int argc, char *argv[])
+// int main(int argc, char *argv[])
 // {
-// 	unsigned int	n;
-// 	int				len;
-// 	char			*nbr;
+// 	int count;
 //
+// 	count = 0;
 // 	if (argc != 2)
 // 	{
 // 		printf("Usage: %s <number>\n", argv[0]);
 // 		return (1);
 // 	}
-// 	n = ft_atoi(argv[1]);
-// 	len = ft_uputnbr_fd(n, 1);
-// 	ft_putstr_fd(nbr, 1);
-// 	printf("\n");
-// 	free(nbr);
+// 	ft_putchar(ft_atoi(argv[1]), &count);
+// 	printf("\nCount: %d\n", count);
 // 	return (0);
 // }
