@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 16:00:11 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:04:44 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_uputnbr(size_t n)
 {
-	int len;
+	int	len;
 
 	len = ft_numlen(n, 10);
 	if (n >= 10)
