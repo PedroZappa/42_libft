@@ -6,25 +6,25 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:14:56 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/29 21:06:02 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 08:42:41 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_putnbr_fd(int n, int fd)
+void		ft_putnbr_fd(int n, int fd)
 {
-	int	len;
-
-	len = 0;
 	if (n == -2147483648)
-		return (ft_putstr_fd("-2147483648", fd));
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return ;
+	}
 	else if (n < 0)
 	{
-		len += ft_putchar_fd('-', fd);
+		ft_putchar_fd('-', fd);
 		n = -n;
-		len += ft_putnbr_fd(n, fd);
-		return (len);
+		ft_putnbr_fd(n, fd);
+		return ;
 	}
 	else if (n >= 10)
 	{
