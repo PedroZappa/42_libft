@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 09:53:54 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 13:02:41 by passunca         ###   ########.fr       */
+/*   Updated: 2023/10/30 13:08:14 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_uputnbr(unsigned int n, int *count)
 		ft_uputnbr(n % 10, count);
 	}
 	else
-		ft_putchar_fd((n + '0'), 1);
+		ft_putchar((n + '0'), count);
 }
 //
 // int	main(int argc, char *argv[])
