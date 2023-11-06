@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 08:40:20 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/31 08:41:07 by passunca         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:08:56 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_uitoa(unsigned int n)
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
-	while (n > 0)
+	while (n >= 0)
 	{
 		str[--len] = (n % 10) + '0';
 		n /= 10;
