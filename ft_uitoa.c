@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 08:40:20 by passunca          #+#    #+#             */
-/*   Updated: 2023/11/07 10:58:44 by passunca         ###   ########.fr       */
+/*   Updated: 2023/11/07 11:02:00 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,15 @@ char	*ft_uitoa(unsigned int n)
 	}
 	return (str);
 }
-
-int main(void)
-{
-	unsigned int	n = 0;
-	char			*nbrstr = NULL;
-
-	nbrstr = ft_uitoa(n);
-	printf("n = %u\n", n);
-	printf("'%s'\n", nbrstr);
-	free(nbrstr);
-	return (0);
-}
+//
+// int main(void)
+// {
+// 	unsigned int	n = 0;
+// 	char			*nbrstr = NULL;
+//
+// 	nbrstr = ft_uitoa(n);
+// 	printf("n = %u\n", n);
+// 	printf("'%s'\n", nbrstr);
+// 	free(nbrstr);
+// 	return (0);
+// }
