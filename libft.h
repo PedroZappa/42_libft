@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2023/11/03 17:11:21 by passunca         ###   ########.fr       */
+/*   Updated: 2023/11/09 14:45:52 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,6 @@ int		ft_putchar(char c);
 int		ft_putnbr(int n);
 int		ft_unumlen(unsigned int n, int base);
 char	*ft_uitoa(unsigned int n);
+char	*ft_xtoa(unsigned long int nb, int is_upper);
 
 #endif
