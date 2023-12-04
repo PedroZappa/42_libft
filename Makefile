@@ -12,10 +12,14 @@ BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
 EXTRA = ft_putnchar_fd.c ft_putstrn_fd.c ft_numlen.c ft_uputnbr.c ft_putchar.c \
 		ft_putnbr.c ft_unumlen.c ft_uitoa.c ft_xtoa.c
 
+GNL_PATH = ./get_next_line
+GNL = $(GNL_PATH)/get_next_line.a
+
 OBJS =			$(SRC:.c=.o) 
 BONUS_OBJS =	$(BONUS:.c=.o)
 EXTRA_OBJS =	$(EXTRA:.c=.o)
 
+MAKE	= make -C
 CFLAGS	= -Wall -Wextra -Werror
 INCLUDE = -I .
 CC =	cc
@@ -35,7 +39,11 @@ bonus: $(OBJS) $(BONUS_OBJS)
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 
 extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
+	@echo "Getting get_next_line"
+	$(MAKE) $(GNL_PATH) bonus
+	@echo "Compiling libft w/ extra:"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
+
 	
 clean: 
 	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
