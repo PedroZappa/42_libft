@@ -41,6 +41,7 @@ bonus: $(OBJS) $(BONUS_OBJS)
 extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
 	@echo "Getting get_next_line"
 	$(MAKE) $(GNL_PATH) bonus
+	cp $(GNL) $(NAME)
 	@echo "Compiling libft w/ extra:"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
 
