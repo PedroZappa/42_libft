@@ -1,0 +1,3 @@
+[submodule "get_next_line"]
+	path = get_next_line
+	url = git@github.com:PedroZappa/get_next_line.git
