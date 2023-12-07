@@ -68,7 +68,7 @@ ___
 
 - To compile `libft` with **bonus** files: `make bonus`
 
-- To compile **mandatory** & **bonus** files: `make all`
+- To compile `libft` with **ft_printf** **get_nextline** files: `make extra`
 
 - To clean the working directory of **object files** (**.o**): `make clean`
 
