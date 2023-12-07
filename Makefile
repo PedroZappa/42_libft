@@ -12,24 +12,32 @@ BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
 EXTRA = ft_putnchar_fd.c ft_putstrn_fd.c ft_numlen.c ft_uputnbr.c ft_putchar.c \
 		ft_putnbr.c ft_unumlen.c ft_uitoa.c ft_xtoa.c
 
-GNL_PATH = ./get_next_line
-GNL = $(GNL_PATH)/get_next_line.c $(GNL_PATH)/get_next_line_utils.c
+PRINTF_PATH = ./ft_printf
+PRINTF 		= $(PRINTF_PATH)/ft_printf.c $(PRINTF_PATH)/ft_flag_utils.c \
+				$(PRINTF_PATH)/ft_flags.c $(PRINTF_PATH)/ft_parse.c \
+				$(PRINTF_PATH)/ft_print_c.c $(PRINTF_PATH)/ft_print_di.c \
+				$(PRINTF_PATH)/ft_print_hex.c $(PRINTF_PATH)/ft_print_p.c \
+				$(PRINTF_PATH)/ft_print_s.c $(PRINTF_PATH)/ft_print_u.c
 
-OBJS			= $(SRC:.c=.o) 
-BONUS_OBJS		= $(BONUS:.c=.o)
-EXTRA_OBJS		= $(EXTRA:.c=.o)
-GNL_OBJS		= $(GNL:.c=.o)
+GNL_PATH	= ./get_next_line
+GNL 		= $(GNL_PATH)/get_next_line.c $(GNL_PATH)/get_next_line_utils.c
 
-MAKE	= make -C
-CFLAGS	= -Wall -Wextra -Werror
-INCLUDE = -I .
-CC =	cc
-RM =	rm -f	
-AR =	ar rcs
+OBJS		= $(SRC:.c=.o) 
+BONUS_OBJS	= $(BONUS:.c=.o)
+EXTRA_OBJS	= $(EXTRA:.c=.o)
+PRINTF_OBJS	= $(PRINTF:.c=.o)
+GNL_OBJS	= $(GNL:.c=.o)
+
+MAKE		= make -C
+CFLAGS		= -Wall -Wextra -Werror
+INCLUDE 	= -I .
+CC 			= cc
+RM 			= rm -f	
+AR 			= ar rcs
 
 
 .o:.c
-	$(CC) $(CFLAGS) $(INCLUDE) -c $<
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 $(NAME): $(OBJS) 
 	$(AR) $(NAME) $(OBJS)
@@ -39,12 +47,12 @@ all: $(NAME)
 bonus: $(OBJS) $(BONUS_OBJS)
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 
-extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS)
+extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 	@echo "Compiling libft w/ extra:"
-	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 
 clean: 
-	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
