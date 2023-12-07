@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
+# include "get_next_line/get_next_line.h"
 
 # define UINT_MAX	4294967295
 
