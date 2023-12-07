@@ -13,11 +13,12 @@ EXTRA = ft_putnchar_fd.c ft_putstrn_fd.c ft_numlen.c ft_uputnbr.c ft_putchar.c \
 		ft_putnbr.c ft_unumlen.c ft_uitoa.c ft_xtoa.c
 
 GNL_PATH = ./get_next_line
-GNL = $(GNL_PATH)/get_next_line.a
+GNL = $(GNL_PATH)/get_next_line.c $(GNL_PATH)/get_next_line_utils.c
 
-OBJS =			$(SRC:.c=.o) 
-BONUS_OBJS =	$(BONUS:.c=.o)
-EXTRA_OBJS =	$(EXTRA:.c=.o)
+OBJS			= $(SRC:.c=.o) 
+BONUS_OBJS		= $(BONUS:.c=.o)
+EXTRA_OBJS		= $(EXTRA:.c=.o)
+GNL_OBJS		= $(GNL:.c=.o)
 
 MAKE	= make -C
 CFLAGS	= -Wall -Wextra -Werror
@@ -38,16 +39,12 @@ all: $(NAME)
 bonus: $(OBJS) $(BONUS_OBJS)
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 
-extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
-	@echo "Getting get_next_line"
-	$(MAKE) $(GNL_PATH) bonus
-	cp $(GNL) $(NAME)
+extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS)
 	@echo "Compiling libft w/ extra:"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
 
-	
 clean: 
-	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
