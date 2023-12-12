@@ -8,10 +8,10 @@ SRC =	$(addprefix $(LIBFT_PATH)/, ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isas
 		ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
 		ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c)
 
-BONUS = $(addprefix $(LIBFT_PATH), ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+BONUS = $(addprefix $(LIBFT_PATH)/, ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c)
 
-EXTRA = $(addprefix $(LIBFT_PATH), ft_putendl_fd.c ft_putnchar_fd.c ft_putstrn_fd.c \
+EXTRA = $(addprefix $(LIBFT_PATH)/, ft_putendl_fd.c ft_putnchar_fd.c ft_putstrn_fd.c \
 		ft_numlen.c ft_uputnbr.c ft_putchar.c ft_putnbr.c ft_unumlen.c ft_uitoa.c ft_xtoa.c)
 
 PRINTF_PATH	= ./ft_printf
@@ -43,13 +43,16 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 all: $(NAME)
+	@echo "SUCCESS compiling libft! 🖔"
 
 bonus: $(OBJS) $(BONUS_OBJS)
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+	@echo "SUCCESS compiling libft with bonus! 🖔"
 
 extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 	@echo "Compiling libft w/ extra:"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
+	@echo "SUCCESS compiling libft with extras! 🖔"
 
 clean: 
 	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
@@ -57,6 +60,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all	
+re: fclean extra	
 
 .PHONY: all clean fclean re bonus
