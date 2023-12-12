@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../libft/libft.h"
 #include "ft_printf.h"
 
 int	ft_print_uint(char *nbrstr, t_format p);

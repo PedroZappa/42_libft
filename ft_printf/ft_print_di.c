@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../libft/libft.h"
 #include "ft_printf.h"
 
 static int		ft_print_sign_precision(int n, t_format *p);

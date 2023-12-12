@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../libft/libft.h"
 #include "ft_printf.h"
 
 static int	ft_print_hexa(char *nbrstr, size_t n, int is_upper, t_format *p);
