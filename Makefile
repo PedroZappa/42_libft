@@ -56,9 +56,11 @@ extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 
 clean: 
 	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
+	@echo "SUCCESS cleaning libft binaries! 🖔" 
 
 fclean: clean
 	$(RM) $(NAME)
+	@echo "SUCCESS cleaning libft archive! 🖔" 
 
 re: fclean extra	
 
