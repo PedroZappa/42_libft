@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 10:07:56 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/30 08:45:15 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/01 21:04:55 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_putstr_fd(char *s, int fd)
 {
 	int	len;
 
+	if (!s || (fd < 0))
+		return (0);
 	len = 0;
 	while (*s)
 		len += ft_putchar_fd(*s++, fd);
