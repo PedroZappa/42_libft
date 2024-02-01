@@ -6,23 +6,23 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 20:46:10 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/06 20:53:02 by zedr0            ###   ########.fr       */
+/*   Updated: 2024/02/01 21:16:26 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+char	ft_tolower(char c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if ((c >= 'A') && (c <= 'Z'))
 		c += 32;
 	return (c);
 }
 /*
-int main(int argc, char *argv[])
+char main(char argc, char *argv[])
 {
 	char *str = NULL;
-	int i;
+	char i;
 
 	if (argc == 2)
 		str = argv[1];
