@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/01 19:24:57 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/01 19:51:55 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,10 @@ int		ft_putnbr(int n);
 int		ft_unumlen(unsigned int n, int base);
 char	*ft_uitoa(unsigned int n);
 char	*ft_xtoa(unsigned long int nb, int is_upper);
-int		ft_rgb(int red, int green, int blue);
+int		ft_argb(int alpha, int red, int green, int blue);
+int		ft_get_alpha(int argb);
+int		ft_get_red(int argb);
+int		ft_get_green(int argb);
+int		ft_get_blue(int argb);
 
 #endif
