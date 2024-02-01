@@ -28,8 +28,8 @@ GNL_SRC		= $(addprefix $(GNL_PATH)/, get_next_line.c get_next_line_utils.c)
 OBJS		= $(SRC:.c=.o) 
 BONUS_OBJS	= $(BONUS:.c=.o)
 EXTRA_OBJS	= $(EXTRA:.c=.o)
-PRINTF_OBJS	= $(PRINTF:.c=.o)
-GNL_OBJS	= $(GNL:.c=.o)
+PRINTF_OBJS	= $(PRINTF_SRC:.c=.o)
+GNL_OBJS	= $(GNL_SRC:.c=.o)
 
 MAKE		= make -C
 CFLAGS		= -Wall -Wextra -Werror
