@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/01 21:16:00 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/02 12:10:20 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,7 @@ int		ft_get_alpha(int argb);
 int		ft_get_red(int argb);
 int		ft_get_green(int argb);
 int		ft_get_blue(int argb);
+int		ft_perror(char *str);
+int		ft_perror_color(char *str, char *color);
 
 #endif

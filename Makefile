@@ -16,7 +16,7 @@ BONUS = $(addprefix $(LIBFT_PATH)/, ft_lstnew.c ft_lstadd_front.c ft_lstsize.c f
 
 EXTRA = $(addprefix $(LIBFT_PATH)/, ft_putendl_fd.c ft_putnchar_fd.c ft_putstrn_fd.c \
 		ft_numlen.c ft_uputnbr.c ft_putchar.c ft_putnbr.c ft_unumlen.c ft_uitoa.c ft_xtoa.c \
-		ft_argb.c)
+		ft_argb.c ft_perror.c)
 
 PRINTF_PATH	= ./ft_printf
 PRINTF_SRC 	= $(addprefix $(PRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
