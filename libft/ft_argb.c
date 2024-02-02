@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/01 19:10:07 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/01 19:51:47 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/02 12:08:23 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
  *				and blue. this operation concatenated the bits of the shiftend
  *				values with the bits of blue;
  *	*/
-int		ft_argb(int alpha, int red, int green, int blue)
+int	ft_argb(int alpha, int red, int green, int blue)
 {
 	return (alpha << 24 | red << 16 | green << 8 | blue);
 }
@@ -51,4 +51,3 @@ int	ft_get_blue(int argb)
 {
 	return (argb & 0xFF);
 }
-
