@@ -19,7 +19,8 @@
 # include <stddef.h>
 # include "../ft_printf/ft_printf.h"
 # include "../get_next_line/get_next_line.h"
-# include "../ansi/color_codes.h"
+# include "../color_codes/ansi.h"
+# include "../color_codes/hexa.h"
 
 # define UINT_MAX	4294967295
 
