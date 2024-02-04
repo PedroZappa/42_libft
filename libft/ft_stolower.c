@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 11:02:32 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/04 11:21:51 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/04 11:22:28 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_stolower(char *str)
 			str[i] = ft_tolower(str[i]);
 	return (str);
 }
-
+/*
 int main(int argc, char **argv)
 {
 	(void)argc;
@@ -32,3 +32,4 @@ int main(int argc, char **argv)
 	printf("%s\n", ft_stolower(argv[1]));
 	return 0;
 }
+*/
