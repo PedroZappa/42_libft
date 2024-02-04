@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/04 10:47:09 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/04 11:07:33 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ typedef struct s_list
 
 // Mandatory Part 1
 int		ft_isalpha(int c);
+int		ft_isupper(int c);
+int		ft_islower(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
@@ -100,5 +102,6 @@ int		ft_perror_color(char *str, char *color);
 int		ft_isspace(char c);
 double	ft_atod(char *str);
 int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_stolower(char *c);
 
 #endif
