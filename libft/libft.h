@@ -103,5 +103,7 @@ int		ft_isspace(char c);
 double	ft_atod(char *str);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_stolower(char *c);
+void	ft_sep(char bookends, char sep, int len);
+void	ft_sep_color(char bookends, char sep, int len, char *color);
 
 #endif
