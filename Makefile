@@ -1,22 +1,41 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/02/05 15:30:06 by passunca          #+#    #+#              #
+#    Updated: 2024/02/05 15:44:30 by passunca         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 #### LIBFT ####
+#==============================================================================#
+#                                NAMES & PATHS                                 #
+#==============================================================================#
 
 NAME =	libft.a
 
+BUILD_PATH	= .build
 LIBFT_PATH = ./libft
-SRC =	$(addprefix $(LIBFT_PATH)/, ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
-		ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
-		ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c \
-		ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c \
-		ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
-		ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c)
+SRC =	$(addprefix $(LIBFT_PATH)/, ft_isalpha.c ft_isdigit.c ft_isalnum.c \
+		ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
+		ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c \
+		ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c \
+		ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c \
+		ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
+		ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
+		ft_putnbr_fd.c)
 
-BONUS = $(addprefix $(LIBFT_PATH)/, ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c)
+BONUS = $(addprefix $(LIBFT_PATH)/, ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
+		ft_lstiter.c ft_lstmap.c)
 
-EXTRA = $(addprefix $(LIBFT_PATH)/, ft_putendl_fd.c ft_putnchar_fd.c ft_putstrn_fd.c \
-		ft_numlen.c ft_uputnbr.c ft_putchar.c ft_putnbr.c ft_unumlen.c ft_uitoa.c ft_xtoa.c \
-		ft_abs.c ft_argb.c ft_perror.c ft_atod.c ft_isspace.c ft_strcmp.c ft_stolower.c)
+EXTRA = $(addprefix $(LIBFT_PATH)/, ft_putendl_fd.c ft_putnchar_fd.c \
+		ft_putstrn_fd.c ft_numlen.c ft_uputnbr.c ft_putchar.c ft_putnbr.c \
+		ft_unumlen.c ft_uitoa.c ft_xtoa.c ft_abs.c ft_argb.c ft_perror.c \
+		ft_atod.c ft_isspace.c ft_strcmp.c ft_stolower.c ft_sep.c)
 
 PRINTF_PATH	= ./ft_printf
 PRINTF_SRC 	= $(addprefix $(PRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
@@ -26,137 +45,105 @@ PRINTF_SRC 	= $(addprefix $(PRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
 GNL_PATH 	= ./get_next_line
 GNL_SRC		= $(addprefix $(GNL_PATH)/, get_next_line.c get_next_line_utils.c)
 
-OBJS		= $(SRC:.c=.o) 
+OBJS		= $(SRC:.c=.o)
 BONUS_OBJS	= $(BONUS:.c=.o)
 EXTRA_OBJS	= $(EXTRA:.c=.o)
 PRINTF_OBJS	= $(PRINTF_SRC:.c=.o)
 GNL_OBJS	= $(GNL_SRC:.c=.o)
 
+#==============================================================================#
+#                            FLAGS & CMDS                                      #
+#==============================================================================#
+
 MAKE		= make -C
 CFLAGS		= -Wall -Wextra -Werror
 INCLUDE 	= -I .
 CC 			= cc
-RM 			= rm -f	
+RM 			= rm -f
 AR 			= ar rcs
 
+#==============================================================================#
+#                                  RULES                                       #
+#==============================================================================#
 
-.o:.c
+##@ Libft Compilation Rules 🏗
+
+$(BUILD_PATH):
+	$(MKDIR_P) $(BUILD_PATH)
+
+$(BUILD_PATH)/%.o: $(LIBFT_PATH)/%.c
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
-$(NAME): $(OBJS) 
+$(NAME): $(OBJS)
+	@echo "[$(YEL)Compiling libft$(D)]"
 	$(AR) $(NAME) $(OBJS)
+	@echo "[$(GRN)SUCCESS$(D) creating $(MAG)libft's archive!$(D) $(YEL)🖔$(D)]"
 
-##@ General
-
-.phony: help
-help: 			## Show help
-	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n"} /^[a-zA-Z_0-9-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' Makefile
-
-##@ Compile Rules 🏗
-
-.PHONY: all
 all: $(NAME)	## Compile Basic libft
-	@echo "==> $(GRN)SUCCESS$(NC) compiling libft! $(YEL)🖔$(NC)"
+	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft!$(D) $(YEL)🖔$(D)]"
 
-.PHONY: bonus
 bonus: $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
+	@echo "[$(YEL)Compiling libft w/ bonus:$(D)]"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
-	@echo "==> $(GRN)SUCCESS$(NC) compiling libft with bonus! $(YEL)🖔$(NC)"
+	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft with bonus!$(D) $(YEL)🖔$(D)]"
 
-.PHONY: extra	## Compile libft with extra
-extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "Compiling libft w/ extra:"
+extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
+	@echo "[$(YEL)Compiling libft w/ extra:$(D)]"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "==> $(GRN)SUCCESS$(NC) compiling libft with extras! $(YEL)🖔$(NC)"
+	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft with extras!$(D) $(YEL)🖔$(D)]"
 
 ##@ Clean-up Rules 󰃢
 
-.PHONY: clean
-clean:			## Clean libft binaries 
+clean:			## Clean libft binaries
+	@echo "[$(RED)Removing libft binaries$(D)]"
 	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "==> $(GRN)SUCCESS$(NC) cleaning libft binaries! $(YEL)🖔$(NC)" 
+	@echo "[$(GRN)SUCCESS$(D) cleaning libft binaries! $(YEL)🖔$(D)]"
 
-.PHONY: fclean
 fclean: clean	## Clean libft archive
 	$(RM) $(NAME)
-	@echo "==> $(GRN)SUCCESS$(NC) cleaning libft archive! $(YEL)🖔$(NC)" 
+	@echo "[$(GRN)SUCCESS$(D) cleaning libft archive! $(YEL)🖔$(D)]"
 
-.PHONY: re
 re: fclean extra	## Clean and re-compile libft
-	@echo "==> $(GRN)SUCCESS$(NC) cleaning re-compiling libft! $(YEL)🖔$(NC)"	
+	@echo "[$(GRN)SUCCESS$(D) cleaning re-compiling libft! $(YEL)🖔$(D)]"
+
+##@ Help 󰛵
+
+help: 			## Display this help page
+	@awk 'BEGIN {FS = ":.*##"; \
+			printf "\n=> Usage:\n\tmake $(GRN)<target>$(D)\n"} \
+		/^[a-zA-Z_0-9-]+:.*?##/ { \
+			printf "\t$(GRN)%-15s$(D) %s\n", $$1, $$2 } \
+		/^##@/ { \
+			printf "\n=> %s\n", substr($$0, 5) } ' Makefile
 
 
-### ANSI Color Codes ###
-# Regular text
-BLK = \033[0;30m
-RED = \033[0;31m
-GRN = \033[0;32m
-YEL = \033[0;33m
-BLU = \033[0;34m
-MAG = \033[0;35m
-CYN = \033[0;36m
-WHT = \033[0;37m
+#==============================================================================#
+#                                  UTILS                                       #
+#==============================================================================#
 
-# Regular bold text
-BBLK = \033[1;30m
-BRED = \033[1;31m
-BGRN = \033[1;32m
-BYEL = \033[1;33m
-BBLU = \033[1;34m
-BMAG = \033[1;35m
-BCYN = \033[1;36m
-BWHT = \033[1;37m
-
-# Regular underline text
-UBLK = \033[4;30m
-URED = \033[4;31m
-UGRN = \033[4;32m
-UYEL = \033[4;33m
-UBLU = \033[4;34m
-UMAG = \033[4;35m
-UCYN = \033[4;36m
-UWHT = \033[4;37m
-
-# Regular background
-BLKB = \033[40m
-REDB = \033[41m
-GRNB = \033[42m
-YELB = \033[43m
-BLUB = \033[44m
-MAGB = \033[45m
-CYNB = \033[46m
-WHTB = \033[47m
-
-# High intensity background 
-BLKHB = \033[0;100m
-REDHB = \033[0;101m
-GRNHB = \033[0;102m
-YELHB = \033[0;103m
-BLUHB = \033[0;104m
-MAGHB = \033[0;105m
-CYNHB = \033[0;106m
-WHTHB = \033[0;107m
-
-# High intensity text
-HBLK = \033[0;90m
-HRED = \033[0;91m
-HGRN = \033[0;92m
-HYEL = \033[0;93m
-HBLU = \033[0;94m
-HMAG = \033[0;95m
-HCYN = \033[0;96m
-HWHT = \033[0;97m
-
-# Bold high intensity text
-BHBLK = \033[1;90m
-BHRED = \033[1;91m
-BHGRN = \033[1;92m
-BHYEL = \033[1;93m
-BHBLU = \033[1;94m
-BHMAG = \033[1;95m
-BHCYN = \033[1;96m
-BHWHT = \033[1;97m
-
-# Reset
-NC=\033[0m
+# Colors
+#
+# Run the following command to get list of available colors
+# bash -c 'for c in {0..255}; do tput setaf $c; tput setaf $c | cat -v; echo =$c; done'
+#
+B  		= $(shell tput bold)
+BLA		= $(shell tput setaf 0)
+RED		= $(shell tput setaf 1)
+GRN		= $(shell tput setaf 2)
+YEL		= $(shell tput setaf 3)
+BLU		= $(shell tput setaf 4)
+MAG		= $(shell tput setaf 5)
+CYA		= $(shell tput setaf 6)
+WHI		= $(shell tput setaf 7)
+GRE		= $(shell tput setaf 8)
+BRED 	= $(shell tput setaf 9)
+BGRN	= $(shell tput setaf 10)
+BYEL	= $(shell tput setaf 11)
+BBLU	= $(shell tput setaf 12)
+BMAG	= $(shell tput setaf 13)
+BCYA	= $(shell tput setaf 14)
+BWHI	= $(shell tput setaf 15)
+D 		= $(shell tput sgr0)
+BEL 	= $(shell tput bel)
+CLR 	= $(shell tput el 1)
 
