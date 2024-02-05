@@ -18,7 +18,7 @@ void	ft_sep(char bookends, char sep, int len)
 	ft_printf("%c", bookends);
 	while (len--)
 		ft_printf("%c", sep);
-	ft_printf("%c", bookends);
+	ft_printf("%c\n", bookends);
 }
 
 void	ft_sep_color(char bookends, char sep, int len, char *color)
@@ -29,7 +29,7 @@ void	ft_sep_color(char bookends, char sep, int len, char *color)
 	while (len--)
 		ft_printf("%c", sep);
 	ft_printf("%c", bookends);
-	ft_printf("%s", NC);
+	ft_printf("%s\n", NC);
 }
 /*
 int	main(int argc, char **argv)
