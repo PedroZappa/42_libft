@@ -41,6 +41,8 @@ double	ft_atod(char *str)
 	}
 	return ((int_part + frac_part) * sign);
 }
+// To test compile with 
+//		cc -Wall -Werror -Wextra ft_atod.c ft_isdigit.c ft_isspace.c -o ft_atod
 /*
 int main(int argc, char **argv)
 {
