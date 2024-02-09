@@ -17,4 +17,6 @@
 # define HEX_LBLUE		0x0066FF	// RGB(0, 102, 255)
 # define HEX_REDORG		0xFF3300	// RGB(255, 51, 0)
 
+# define HEX_BRITSTD	0xFCBE11	// RGB(252, 190, 17)
+
 #endif
