@@ -3,3 +3,4 @@ a.out
 .nfs*
 libft.a
 /.vscode
+.build
