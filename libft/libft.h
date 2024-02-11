@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
+# include <math.h>
 
 // #ifndef FT_PRINTF
 // # define FT_PRINTF_H
