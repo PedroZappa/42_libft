@@ -61,7 +61,7 @@ CFLAGS		+= -g
 INCLUDE 	= -I.
 
 CC 			= cc
-RM 			= rm -f
+RM 			= rm -rf
 AR 			= ar rcs
 MKDIR_P		= mkdir -p
 
@@ -72,7 +72,9 @@ MKDIR_P		= mkdir -p
 ##@ Libft Compilation Rules 🏗
 
 all: $(NAME)	## Compile Basic libft
-	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft!$(D) $(YEL)🖔$(D)]"
+
+$(BUILD_PATH):
+	$(MKDIR_P) $(BUILD_PATH)
 
 $(BUILD_PATH)/%.o: $(LIBFT_PATH)/%.c
 	@echo -n "$(GRN)█$(D)"
@@ -85,12 +87,6 @@ $(BUILD_PATH)/%.o: $(PRINTF_PATH)/%.c
 $(BUILD_PATH)/%.o: $(GNL_PATH)/%.c
 	@echo -n "$(GRN)█$(D)"
 	$(CC) $(CFLAGS) -c $< -o $@
-
-$(BUILD_PATH):
-	$(MKDIR_P) $(BUILD_PATH)
-
-$(BUILD_PATH)/%.o: $(LIBFT_PATH)/%.c
-	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 $(NAME): $(BUILD_PATH) $(OBJS)
 	@echo "[$(YEL)Compiling libft$(D)]"
@@ -117,7 +113,8 @@ clean:			## Clean libft binaries
 
 fclean: clean	## Clean libft archive
 	$(RM) $(NAME)
-	@echo "[$(GRN)SUCCESS$(D) cleaning libft archive! $(YEL)🖔$(D)]"
+	$(RM) $(BUILD_PATH)
+	@echo "[$(GRN)SUCCESS$(D) cleaning libft archive and .build binaries! $(YEL)🖔$(D)]"
 
 re: fclean extra	## Clean and re-compile libft
 	@echo "[$(GRN)SUCCESS$(D) cleaning re-compiling libft! $(YEL)🖔$(D)]"
