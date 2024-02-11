@@ -15,7 +15,7 @@
 
 static void	ft_parse_double(double d, char *numstr, long i);
 static int	ft_getlen(double *d, long *int_part);
-static void	ft_get_fraction(double *d, char *numstr);
+// static void	ft_get_fraction(double *d, char *numstr);
 
 /*	Converts a double to a string.
  *	*/
@@ -72,6 +72,7 @@ static void	ft_parse_double(double d, char *numstr, long i)
 
 static int	ft_getlen(double *d, long *int_part)
 {
+	(void)	d;
 	long	maxlen;
 	long	len;
 	long	m;
@@ -89,23 +90,23 @@ static int	ft_getlen(double *d, long *int_part)
 	return (len);
 }
 
-static void	ft_get_fraction(double *d, char *numstr)
-{
-	long	len;
-	long	bak;
-	int		i;
-
-	i = 0;
-	len = 0;
-	while (len++ < PRECISION)
-	{
-		*d *= 10.0;
-		bak = *d;
-		numstr[i++] = (bak + '0');
-		d -= bak;
-	}
-	numstr[i] = '\0';
-}
+// static void	ft_get_fraction(double *d, char *numstr)
+// {
+// 	long	len;
+// 	long	bak;
+// 	int		i;
+//
+// 	i = 0;
+// 	len = 0;
+// 	while (len++ < PRECISION)
+// 	{
+// 		*d *= 10.0;
+// 		bak = *d;
+// 		numstr[i++] = (bak + '0');
+// 		d -= bak;
+// 	}
+// 	numstr[i] = '\0';
+// }
 /*
 int	main(int argc, char **argv)
 {
