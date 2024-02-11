@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/11 17:38:26 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/11 18:42:15 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # include "../color_codes/hexa.h"
 
 # define UINT_MAX	4294967295
+# define PRECISION	12
 
 typedef struct s_list
 {
