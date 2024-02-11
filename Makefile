@@ -45,11 +45,11 @@ PRINTF_SRC 	= $(addprefix $(PRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
 GNL_PATH 	= ./get_next_line
 GNL_SRC		= $(addprefix $(GNL_PATH)/, get_next_line.c get_next_line_utils.c)
 
-OBJS		= $(SRC:.c=.o)
-BONUS_OBJS	= $(BONUS:.c=.o)
-EXTRA_OBJS	= $(EXTRA:.c=.o)
-PRINTF_OBJS	= $(PRINTF_SRC:.c=.o)
-GNL_OBJS	= $(GNL_SRC:.c=.o)
+OBJS		= $(addprefix $(BUILD_PATH)/, $(notdir $(SRC:.c=.o)))
+BONUS_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(BONUS:.c=.o)))
+EXTRA_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(EXTRA:.c=.o)))
+PRINTF_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(PRINTF_SRC:.c=.o)))
+GNL_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(GNL_SRC:.c=.o)))
 
 #==============================================================================#
 #                            FLAGS & CMDS                                      #
@@ -57,10 +57,13 @@ GNL_OBJS	= $(GNL_SRC:.c=.o)
 
 MAKE		= make -C
 CFLAGS		= -Wall -Wextra -Werror
-INCLUDE 	= -I .
+CFLAGS		+= -g
+INCLUDE 	= -I.
+
 CC 			= cc
 RM 			= rm -f
 AR 			= ar rcs
+MKDIR_P		= mkdir -p
 
 #==============================================================================#
 #                                  RULES                                       #
@@ -68,52 +71,41 @@ AR 			= ar rcs
 
 ##@ Libft Compilation Rules 🏗
 
+all: $(NAME)	## Compile Basic libft
+	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft!$(D) $(YEL)🖔$(D)]"
+
+$(BUILD_PATH)/%.o: $(LIBFT_PATH)/%.c
+	@echo -n "$(GRN)█$(D)"
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(BUILD_PATH)/%.o: $(PRINTF_PATH)/%.c
+	@echo -n "$(GRN)█$(D)"
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(BUILD_PATH)/%.o: $(GNL_PATH)/%.c
+	@echo -n "$(GRN)█$(D)"
+	$(CC) $(CFLAGS) -c $< -o $@
+
 $(BUILD_PATH):
 	$(MKDIR_P) $(BUILD_PATH)
 
 $(BUILD_PATH)/%.o: $(LIBFT_PATH)/%.c
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
-$(NAME): $(OBJS)
+$(NAME): $(BUILD_PATH) $(OBJS)
 	@echo "[$(YEL)Compiling libft$(D)]"
 	$(AR) $(NAME) $(OBJS)
 	@echo "[$(GRN)SUCCESS$(D) creating $(MAG)libft's archive!$(D) $(YEL)🖔$(D)]"
 
-all: $(NAME)	## Compile Basic libft
-	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft!$(D) $(YEL)🖔$(D)]"
-
-bonus: $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
+bonus: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
 	@echo "[$(YEL)Compiling libft w/ bonus:$(D)]"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft with bonus!$(D) $(YEL)🖔$(D)]"
 
-extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
+extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
 	@echo "[$(YEL)Compiling libft w/ extra:$(D)]"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft with extras!$(D) $(YEL)🖔$(D)]"
-
-deps:	## Download/Update ft_printf & get_next_line
-	@if test ! -d "$(FT_PRINTF_PATH_PATH)"; then make get_ft_printf; \
-		else echo "$(YEL)[ft_printf]$(D) folder found"; fi
-	@if test ! -d "$(GNL_PATH)"; then make get_gnl; \
-		else echo "$(YEL)[get_next_line]$(D) folder found"; fi
-	@make update_modules
-
-update_modules:	## Update modules
-	@echo "[$(CYA)Updating submodules$(D)]"
-	git submodule init
-	git submodule update --recursive --remote
-	@echo "[$(GRN)Submodules successfully updated$(D)]"
-
-get_ft_printf:
-	@echo "[$(CYA)Getting ft_printf submodule$(D)]"
-	git clone git@github.com:PedroZappa/ft_printf.git $(LIBFT_PATH)
-	@echo "[$(GRN)ft_printf submodule successfully downloaded$(D)]"
-
-get_gnl:
-	@echo "[$(CYA)Getting get_next_line submodule$(D)]"
-	git clone git@github.com:PedroZappa/get_next_line.git $(LIBFT_PATH)
-	@echo "[$(GRN)get_next_line submodule successfully downloaded$(D)]"
 
 
 ##@ Clean-up Rules 󰃢
@@ -126,13 +118,6 @@ clean:			## Clean libft binaries
 fclean: clean	## Clean libft archive
 	$(RM) $(NAME)
 	@echo "[$(GRN)SUCCESS$(D) cleaning libft archive! $(YEL)🖔$(D)]"
-
-libclean: fclean	## Remove libft & mlx
-	@echo "[$(RED)Cleaning ft_printf 󰃢$(D)]"
-	$(RM) $(FT_PRINTF_PATH)
-	@echo "==> $(GRN)ft_printf folder successfully removed!$(D)\n"
-	$(RM) $(GNL_PATH)
-	@echo "==> $(GRN)get_next_line folder successfully removed!$(D)\n"
 
 re: fclean extra	## Clean and re-compile libft
 	@echo "[$(GRN)SUCCESS$(D) cleaning re-compiling libft! $(YEL)🖔$(D)]"
