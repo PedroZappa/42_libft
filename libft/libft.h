@@ -17,7 +17,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
+
+#ifndef FT_PRINTF_BONUS_H
+# define FT_PRINTF_BONUS_H
 # include "../ft_printf/ft_printf.h"
+#endif
 # include "../get_next_line/get_next_line.h"
 # include "../color_codes/ansi.h"
 # include "../color_codes/hexa.h"
