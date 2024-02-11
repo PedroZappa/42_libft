@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 22:12:46 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/03 22:35:23 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/11 17:41:10 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ double	ft_atod(char *str)
 	while (*str == '-' || *str == '+')
 		if (*str++ == '-')
 			sign *= -1;
-	while ((*str != '.') && ft_isdigit(*str)) 
+	while ((*str != '.') && ft_isdigit(*str))
 		int_part = (int_part * 10) + (*str++ - '0');
 	if (*str == '.')
 		++str;
@@ -41,7 +41,7 @@ double	ft_atod(char *str)
 	}
 	return ((int_part + frac_part) * sign);
 }
-// To test compile with 
+// To test compile with
 //		cc -Wall -Werror -Wextra ft_atod.c ft_isdigit.c ft_isspace.c -o ft_atod
 /*
 int main(int argc, char **argv)

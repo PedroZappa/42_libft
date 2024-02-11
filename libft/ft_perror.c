@@ -6,7 +6,7 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 11:57:58 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/02 12:07:11 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/11 17:39:41 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <unistd.h>
 
 /* Error Handling Functions */
-
 /*	ft_perror : Write a string to STDERR
  *
  *	*/
@@ -26,6 +25,7 @@ int	ft_perror(char *str)
 	write(STDERR_FILENO, str, len);
 	return (len);
 }
+
 /*	ft_p_color : Write a string to STDIN with a color
 *
 *	*/

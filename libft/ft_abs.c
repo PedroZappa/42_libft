@@ -6,11 +6,13 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 18:11:11 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/03 18:11:29 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/11 17:39:57 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_abs(int n)
 {
-	return ((n < 0) ? -n : n);
+	if (n < 0)
+		return (-n);
+	return (n);
 }

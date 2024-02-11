@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 10:12:08 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/04 11:06:45 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/11 17:40:28 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
-int ft_isupper(int c)
+int	ft_isupper(int c)
 {
 	return ((c >= 'A') && (c <= 'Z'));
 }
 
-int ft_islower(int c)
+int	ft_islower(int c)
 {
 	return ((c >= 'a') && (c <= 'z'));
 }
@@ -34,7 +34,7 @@ int ft_islower(int c)
 int main(int argc, char *argv[])
 {
 	char c = '*';
-	
+
 	if (argc == 2)
 		c = argv[argc-1][0];
 

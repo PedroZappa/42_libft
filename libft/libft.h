@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/04 11:07:33 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/11 17:38:26 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 # include <unistd.h>
 # include <stddef.h>
 
-#ifndef FT_PRINTF_BONUS_H
-# define FT_PRINTF_BONUS_H
-# include "../ft_printf/ft_printf.h"
-#endif
+# ifndef FT_PRINTF_BONUS_H
+#  define FT_PRINTF_BONUS_H
+#  include "../ft_printf/ft_printf.h"
+# endif
 # include "../get_next_line/get_next_line.h"
 # include "../color_codes/ansi.h"
 # include "../color_codes/hexa.h"
