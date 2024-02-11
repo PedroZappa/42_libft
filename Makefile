@@ -6,7 +6,7 @@
 #    By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 15:30:06 by passunca          #+#    #+#              #
-#    Updated: 2024/02/05 15:44:30 by passunca         ###   ########.fr        #
+#    Updated: 2024/02/11 20:22:36 by passunca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,6 +92,30 @@ extra: $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft with extras!$(D) $(YEL)🖔$(D)]"
 
+deps:	## Download/Update ft_printf & get_next_line
+	@if test ! -d "$(FT_PRINTF_PATH_PATH)"; then make get_ft_printf; \
+		else echo "$(YEL)[ft_printf]$(D) folder found"; fi
+	@if test ! -d "$(GNL_PATH)"; then make get_gnl; \
+		else echo "$(YEL)[get_next_line]$(D) folder found"; fi
+	@make update_modules
+
+update_modules:	## Update modules
+	@echo "[$(CYA)Updating submodules$(D)]"
+	git submodule init
+	git submodule update --recursive --remote
+	@echo "[$(GRN)Submodules successfully updated$(D)]"
+
+get_ft_printf:
+	@echo "[$(CYA)Getting ft_printf submodule$(D)]"
+	git clone git@github.com:PedroZappa/ft_printf.git $(LIBFT_PATH)
+	@echo "[$(GRN)ft_printf submodule successfully downloaded$(D)]"
+
+get_gnl:
+	@echo "[$(CYA)Getting get_next_line submodule$(D)]"
+	git clone git@github.com:PedroZappa/get_next_line.git $(LIBFT_PATH)
+	@echo "[$(GRN)get_next_line submodule successfully downloaded$(D)]"
+
+
 ##@ Clean-up Rules 󰃢
 
 clean:			## Clean libft binaries
@@ -102,6 +126,13 @@ clean:			## Clean libft binaries
 fclean: clean	## Clean libft archive
 	$(RM) $(NAME)
 	@echo "[$(GRN)SUCCESS$(D) cleaning libft archive! $(YEL)🖔$(D)]"
+
+libclean: fclean	## Remove libft & mlx
+	@echo "[$(RED)Cleaning ft_printf 󰃢$(D)]"
+	$(RM) $(FT_PRINTF_PATH)
+	@echo "==> $(GRN)ft_printf folder successfully removed!$(D)\n"
+	$(RM) $(GNL_PATH)
+	@echo "==> $(GRN)get_next_line folder successfully removed!$(D)\n"
 
 re: fclean extra	## Clean and re-compile libft
 	@echo "[$(GRN)SUCCESS$(D) cleaning re-compiling libft! $(YEL)🖔$(D)]"
@@ -116,6 +147,7 @@ help: 			## Display this help page
 		/^##@/ { \
 			printf "\n=> %s\n", substr($$0, 5) } ' Makefile
 
+.PHONY: all bonus extra clean fclean re help
 
 #==============================================================================#
 #                                  UTILS                                       #
