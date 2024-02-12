@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/12 10:52:10 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/12 18:20:24 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,5 +114,6 @@ void	ft_sep(char bookends, char sep, int len);
 void	ft_sep_color(char bookends, char sep, int len, char *color);
 char	*ft_dtoa(double d);
 double	ft_pow(double base, double exp);
+int		ft_atoi_base(const char *str, int str_base);
 
 #endif
