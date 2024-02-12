@@ -6,16 +6,14 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:18:18 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/11 18:41:41 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/12 10:54:26 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <math.h>
 
 static void	ft_parse_double(double d, char *numstr, long i);
-static int	ft_getlen(double *d, long *int_part);
-// static void	ft_get_fraction(double *d, char *numstr);
+static int	ft_getlen(long *int_part);
 
 /*	Converts a double to a string.
  *	*/
@@ -50,10 +48,10 @@ static void	ft_parse_double(double d, char *numstr, long i)
 
 	int_part = (long)d;
 	d -= int_part;
-	len = ft_getlen(&d, &int_part);
+	len = ft_getlen(&int_part);
 	while (len > 0)
 	{
-		bak = pow(10, (len - 1));
+		bak = ft_pow(10, (len - 1));
 		curr_char = (int_part / bak);
 		numstr[i++] = (curr_char + '0');
 		int_part %= bak;
@@ -70,9 +68,8 @@ static void	ft_parse_double(double d, char *numstr, long i)
 	numstr[i] = '\0';
 }
 
-static int	ft_getlen(double *d, long *int_part)
+static int	ft_getlen(long *int_part)
 {
-	(void)	d;
 	long	maxlen;
 	long	len;
 	long	m;
@@ -80,7 +77,7 @@ static int	ft_getlen(double *d, long *int_part)
 	maxlen = PRECISION;
 	while (maxlen >= 0)
 	{
-		len = pow(10, maxlen);
+		len = ft_pow(10, maxlen);
 		m = *int_part / len;
 		if (m > 0)
 			break ;
@@ -89,24 +86,6 @@ static int	ft_getlen(double *d, long *int_part)
 	len = (maxlen + 1);
 	return (len);
 }
-
-// static void	ft_get_fraction(double *d, char *numstr)
-// {
-// 	long	len;
-// 	long	bak;
-// 	int		i;
-//
-// 	i = 0;
-// 	len = 0;
-// 	while (len++ < PRECISION)
-// 	{
-// 		*d *= 10.0;
-// 		bak = *d;
-// 		numstr[i++] = (bak + '0');
-// 		d -= bak;
-// 	}
-// 	numstr[i] = '\0';
-// }
 /*
 int	main(int argc, char **argv)
 {
