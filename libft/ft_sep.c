@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "../ft_printf/ft_printf.h"
 
 void	ft_sep(char bookends, char sep, int len)
 {

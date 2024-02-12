@@ -40,8 +40,8 @@ EXTRA = $(addprefix $(LIBFT_PATH)/, ft_putendl_fd.c ft_putnchar_fd.c \
 
 PRINTF_PATH	= ./ft_printf
 PRINTF_SRC 	= $(addprefix $(PRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
-			  ft_flags.c ft_parse.c ft_print_c.c ft_print_di.c \
-			  ft_print_hex.c ft_print_p.c ft_print_s.c ft_print_u.c)
+			  ft_flags.c ft_parse.c ft_print_c.c ft_print_di.c ft_print_hex.c \
+			  ft_print_p.c ft_print_s.c ft_print_u.c ft_print_f.c)
 
 GNL_PATH 	= ./get_next_line
 GNL_SRC		= $(addprefix $(GNL_PATH)/, get_next_line.c get_next_line_utils.c)
@@ -59,7 +59,7 @@ GNL_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(GNL_SRC:.c=.o)))
 MAKE		= make -C
 CFLAGS		= -Wall -Wextra -Werror
 CFLAGS		+= -g
-CFLAGS		+= -lm
+# CFLAGS		+= -lm
 INCLUDE 	= -I.
 
 CC 			= cc
@@ -101,7 +101,7 @@ bonus: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
 	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft with bonus!$(D) $(YEL)🖔$(D)]"
 
 extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
-	@echo "[$(YEL)Compiling libft w/ extra:$(D)]"
+	@echo "[$(YEL)Compiling libft w/ extras:$(D)]"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft with extras!$(D) $(YEL)🖔$(D)]"
 

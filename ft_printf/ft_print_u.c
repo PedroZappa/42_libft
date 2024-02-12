@@ -6,11 +6,10 @@
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:40:21 by passunca          #+#    #+#             */
-/*   Updated: 2023/11/03 10:34:06 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/11 12:00:51 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
 #include "ft_printf.h"
 
 int	ft_print_uint(char *nbrstr, t_format p);

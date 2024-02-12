@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_di_bonus.c                                :+:      :+:    :+:   */
+/*   ft_print_f_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 19:33:30 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/11 12:00:15 by passunca         ###   ########.fr       */
+/*   Created: 2024/02/11 11:37:52 by passunca          #+#    #+#             */
+/*   Updated: 2024/02/12 11:09:48 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 static int		ft_print_sign_precision(int n, t_format *p);
-static int		ft_print_integer(char *numstr, int n, t_format *p);
+static int		ft_print_double(char *numstr, int n, t_format *p);
 static int		ft_print_i(char *nbrstr, int n, t_format *p);
 
-int	ft_print_di(int n, t_format *p)
+int	ft_print_f(double n, t_format *p)
 {
 	char		*numstr;
-	long		nbr;
+	double		nbr;
 	int			count;
 
-	nbr = (long)n;
+	nbr = (double)n;
 	count = 0;
 	if (nbr < 0)
 	{
@@ -36,15 +36,15 @@ int	ft_print_di(int n, t_format *p)
 		count += ft_pad_width(p->width, 0, 0);
 		return (count);
 	}
-	numstr = ft_itoa(nbr);
+	numstr = ft_dtoa(nbr);
 	if (!numstr)
 		return (0);
-	count += ft_print_integer(numstr, n, p);
+	count += ft_print_double(numstr, n, p);
 	free(numstr);
 	return (count);
 }
 
-static int	ft_print_integer(char *numstr, int n, t_format *p)
+static int	ft_print_double(char *numstr, int n, t_format *p)
 {
 	int		count;
 
@@ -109,3 +109,4 @@ static int	ft_print_i(char *nbrstr, int n, t_format *p)
 	count += ft_print_str(nbrstr);
 	return (count);
 }
+
