@@ -26,6 +26,18 @@ int	ft_perror(char *str)
 	return (len);
 }
 
+/*	ft_perror_exit : Write a string to STDERR
+ *
+ *	*/
+int	ft_perror_exit(char *str)
+{
+	int	len;
+
+	len = ft_strlen(str);
+	write(STDERR_FILENO, str, len);
+	exit(EXIT_FAILURE);
+}
+
 /*	ft_p_color : Write a string to STDIN with a color
 *
 *	*/

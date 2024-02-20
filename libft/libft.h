@@ -104,6 +104,7 @@ int		ft_get_red(int argb);
 int		ft_get_green(int argb);
 int		ft_get_blue(int argb);
 int		ft_perror(char *str);
+int		ft_perror_exit(char *str);
 int		ft_pout_color(char *str, char *color);
 int		ft_perror_color(char *str, char *color);
 int		ft_isspace(char c);
