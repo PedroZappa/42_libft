@@ -91,17 +91,17 @@ $(BUILD_PATH)/%.o: $(GNL_PATH)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(BUILD_PATH) $(OBJS)
-	@echo "[$(YEL)Compiling libft$(D)]"
+	@echo "[$(YEL)Archive libft$(D)]"
 	$(AR) $(NAME) $(OBJS)
 	@echo "[$(GRN)SUCCESS$(D) creating $(MAG)libft's archive!$(D) $(YEL)🖔$(D)]"
 
 bonus: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
-	@echo "[$(YEL)Compiling libft w/ bonus:$(D)]"
+	@echo "[$(YEL)Archiving libft w/ bonus:$(D)]"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft with bonus!$(D) $(YEL)🖔$(D)]"
 
 extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
-	@echo "[$(YEL)Compiling libft w/ extras:$(D)]"
+	@echo "[$(YEL)Archiving libft w/ extras:$(D)]"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft with extras!$(D) $(YEL)🖔$(D)]"
 
