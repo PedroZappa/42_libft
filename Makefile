@@ -113,6 +113,15 @@ extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OB
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 	@echo "* $(MAG)libft$(D) archived w/ extras: $(_SUCCESS) $(YEL)🖔$(D)"
 
+##@ Test, Debug & Leak Check Rules 󰃢
+
+norm: 		## Run norminette test
+	@printf "${_NORM}\n"
+	@printf "${_NORM_INFO} "
+	@norminette $(SRC_PATH) | wc -l
+	@norminette $(SRC_PATH)
+	@printf "${_NORM_SUCCESS} "
+	@norminette $(SRC_PATH) | grep -wc "OK"
 
 ##@ Clean-up Rules 󰃢
 
