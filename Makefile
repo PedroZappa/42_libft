@@ -104,14 +104,14 @@ $(NAME): $(BUILD_PATH) $(OBJS)
 	@echo "* $(MAG)libft$(D) archived: $(_SUCCESS) 🖔"
 
 bonus: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
-	@echo "[$(YEL)Archiving libft w/ bonus:$(D)]"
+	@echo "* $(YEL)Archiving $(NAME) archive w/ bonus$(D)"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
-	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft with bonus!$(D) $(YEL)🖔$(D)]"
+	@echo "* $(MAG)libft$(D) archived w/ bonus: $(_SUCCESS) 🖔"
 
 extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
-	@echo "[$(YEL)Archiving libft w/ extras:$(D)]"
+	@echo "* $(YEL)Archiving $(NAME) archive w/ extras$(D)"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "[$(GRN)SUCCESS$(D) compiling $(MAG)libft with extras!$(D) $(YEL)🖔$(D)]"
+	@echo "* $(MAG)libft$(D) archived w/ extras: $(_SUCCESS) 🖔"
 
 
 ##@ Clean-up Rules 󰃢
