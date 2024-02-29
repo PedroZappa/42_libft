@@ -99,35 +99,36 @@ $(BUILD_PATH)/%.o: $(GNL_PATH)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(BUILD_PATH) $(OBJS)
-	@echo "* $(YEL)Creating $(NAME) archive$(D)"
+	@echo "* $(YEL)Archiving $(NAME) archive$(D)"
 	$(AR) $(NAME) $(OBJS)
-	@echo "* $(MAG)libft$(D) archived: $(_SUCCESS) 🖔"
+	@echo "* $(MAG)libft$(D) archived: $(_SUCCESS) $(YEL)🖔$(D)"
 
 bonus: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
-	@echo "* $(YEL)Archiving $(NAME) archive w/ bonus$(D)"
+	@echo "* $(YEL)Archiving $(NAME) w/ bonus$(D)"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
-	@echo "* $(MAG)libft$(D) archived w/ bonus: $(_SUCCESS) 🖔"
+	@echo "* $(MAG)libft$(D) archived w/ bonus: $(_SUCCESS) $(YEL)🖔$(D)"
 
 extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
-	@echo "* $(YEL)Archiving $(NAME) archive w/ extras$(D)"
+	@echo "* $(YEL)Archiving $(NAME) w/ extras$(D)"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "* $(MAG)libft$(D) archived w/ extras: $(_SUCCESS) 🖔"
+	@echo "* $(MAG)libft$(D) archived w/ extras: $(_SUCCESS) $(YEL)🖔$(D)"
 
 
 ##@ Clean-up Rules 󰃢
 
 clean:			## Clean libft binaries
-	@echo "[$(RED)Removing libft binaries$(D)]"
+	@echo "* $(YEL)Removing libft binaries$(D)"
 	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "[$(GRN)SUCCESS$(D) cleaning libft binaries! $(YEL)🖔$(D)]"
+	@echo "* Cleaning libft binaries! $(_SUCCESS) $(YEL)🖔$(D)"
 
 fclean: clean	## Clean libft archive
+	@echo "* $(YEL)Removing $(NAME) archive and .build directory$(D)"
 	$(RM) $(NAME)
 	$(RM) $(BUILD_PATH)
-	@echo "[$(GRN)SUCCESS$(D) cleaning libft archive and .build binaries! $(YEL)🖔$(D)]"
+	@echo "* Cleaning $(NAME) archive and .build directory! $(_SUCCESS) $(YEL)🖔$(D)"
 
 re: fclean extra	## Clean and re-compile libft
-	@echo "[$(GRN)SUCCESS$(D) cleaning re-compiling libft! $(YEL)🖔$(D)]"
+	@echo "* Cleaning & re-compiling libft!=: $(_SUCCESS) $(YEL)🖔$(D)"
 
 ##@ Help 󰛵
 
