@@ -52,6 +52,13 @@ EXTRA_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(EXTRA:.c=.o)))
 PRINTF_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(PRINTF_SRC:.c=.o)))
 GNL_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(GNL_SRC:.c=.o)))
 
+### Message Vars
+_SUCCESS 		= [$(GRN)SUCCESS$(D)]
+_INFO 			= [$(BLU)INFO$(D)]
+_NORM 			= [$(YEL)Norminette$(D)]
+_NORM_SUCCESS 	= $(GRN)=== OK:$(D)
+_NORM_INFO 		= $(BLU)File no:$(D)
+
 #==============================================================================#
 #                            FLAGS & CMDS                                      #
 #==============================================================================#
@@ -77,6 +84,7 @@ all: $(NAME)	## Compile Basic libft
 
 $(BUILD_PATH):
 	$(MKDIR_P) $(BUILD_PATH)
+	@echo "* $(YEL)Creating $(BUILD_PATH) folder:$(D) $(_SUCCESS)"
 
 $(BUILD_PATH)/%.o: $(LIBFT_PATH)/%.c
 	@echo -n "$(GRN)█$(D)"
@@ -91,9 +99,9 @@ $(BUILD_PATH)/%.o: $(GNL_PATH)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(BUILD_PATH) $(OBJS)
-	@echo "[$(YEL)Archive libft$(D)]"
+	@echo "* $(YEL)Creating $(NAME) archive$(D)"
 	$(AR) $(NAME) $(OBJS)
-	@echo "[$(GRN)SUCCESS$(D) creating $(MAG)libft's archive!$(D) $(YEL)🖔$(D)]"
+	@echo "* $(MAG)libft$(D) archived: $(_SUCCESS) 🖔"
 
 bonus: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
 	@echo "[$(YEL)Archiving libft w/ bonus:$(D)]"
