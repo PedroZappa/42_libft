@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_f_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_print_f.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 11:37:52 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/12 11:09:48 by passunca         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:53:35 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,4 +109,3 @@ static int	ft_print_i(char *nbrstr, int n, t_format *p)
 	count += ft_print_str(nbrstr);
 	return (count);
 }
-
