@@ -53,6 +53,7 @@ PRINTF_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(PRINTF_SRC:.c=.o)))
 GNL_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(GNL_SRC:.c=.o)))
 
 ### Message Vars
+_NAME	 		= [$(MAG)libft$(D)]
 _SUCCESS 		= [$(GRN)SUCCESS$(D)]
 _INFO 			= [$(BLU)INFO$(D)]
 _NORM 			= [$(YEL)Norminette$(D)]
@@ -101,17 +102,17 @@ $(BUILD_PATH)/%.o: $(GNL_PATH)/%.c
 $(NAME): $(BUILD_PATH) $(OBJS)
 	@echo "* $(YEL)Archiving $(NAME) archive$(D)"
 	$(AR) $(NAME) $(OBJS)
-	@echo "* $(MAG)libft$(D) archived: $(_SUCCESS) $(YEL)🖔$(D)"
+	@echo "* $(_NAME) archived: $(_SUCCESS) $(YEL)🖔$(D)"
 
 bonus: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
 	@echo "* $(YEL)Archiving $(NAME) w/ bonus$(D)"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
-	@echo "* $(MAG)libft$(D) archived w/ bonus: $(_SUCCESS) $(YEL)🖔$(D)"
+	@echo "* $(_NAME) archived w/ bonus: $(_SUCCESS) $(YEL)🖔$(D)"
 
 extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
 	@echo "* $(YEL)Archiving $(NAME) w/ extras$(D)"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "* $(MAG)libft$(D) archived w/ extras: $(_SUCCESS) $(YEL)🖔$(D)"
+	@echo "* $(_NAME) archived w/ extras: $(_SUCCESS) $(YEL)🖔$(D)"
 
 ##@ Test, Debug & Leak Check Rules 󰃢
 
@@ -126,15 +127,15 @@ norm: 		## Run norminette test
 ##@ Clean-up Rules 󰃢
 
 clean:			## Clean libft binaries
-	@echo "* $(YEL)Removing libft binaries$(D)"
+	@echo "* $(RED)Removing libft binaries$(D)"
 	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 	@echo "* $(YEL)Cleaning libft binaries!$(D) $(_SUCCESS) $(YEL)🖔$(D)"
 
 fclean: clean	## Clean libft archive
-	@echo "* $(YEL)Removing $(NAME) archive and .build directory$(D)"
+	@echo "* $(RED)Removing $(NAME) archive and .build directory$(D)"
 	$(RM) $(NAME)
 	$(RM) $(BUILD_PATH)
-	@echo "* Cleaning $(NAME) archive and .build directory! $(_SUCCESS) $(YEL)🖔$(D)"
+	@echo "* $(YEL)Cleaning $(NAME) archive and .build directory!$(D) $(_SUCCESS) $(YEL)🖔$(D)"
 
 re: fclean extra	## Clean and re-compile libft
 	@echo "* Cleaning & re-compiling libft!=: $(_SUCCESS) $(YEL)🖔$(D)"
