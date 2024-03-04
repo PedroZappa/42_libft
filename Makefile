@@ -128,7 +128,7 @@ norm: 		## Run norminette test
 clean:			## Clean libft binaries
 	@echo "* $(YEL)Removing libft binaries$(D)"
 	$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
-	@echo "* Cleaning libft binaries! $(_SUCCESS) $(YEL)🖔$(D)"
+	@echo "* $(YEL)Cleaning libft binaries!$(D) $(_SUCCESS) $(YEL)🖔$(D)"
 
 fclean: clean	## Clean libft archive
 	@echo "* $(YEL)Removing $(NAME) archive and .build directory$(D)"
