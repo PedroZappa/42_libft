@@ -6,22 +6,27 @@
 
 <p>
     <img src="https://img.shields.io/badge/score-125%20%2F%20100-success?style=for-the-badge" />
-    <img src="https://img.shields.io/github/repo-size/PedroZappa/libft?style=for-the-badge&logo=github">
-    <img src="https://img.shields.io/github/languages/count/PedroZappa/libft?style=for-the-badge&logo=" />
-    <img src="https://img.shields.io/github/languages/top/PedroZappa/libft?style=for-the-badge" />
-    <img src="https://img.shields.io/github/last-commit/PedroZappa/libft?style=for-the-badge" />
+    <img src="https://img.shields.io/github/repo-size/PedroZappa/42_libft?style=for-the-badge&logo=github">
+    <img src="https://img.shields.io/github/languages/count/PedroZappa/42_libft?style=for-the-badge&logo=" />
+    <img src="https://img.shields.io/github/languages/top/PedroZappa/42_libft?style=for-the-badge" />
+    <img src="https://img.shields.io/github/last-commit/PedroZappa/42_libft?style=for-the-badge" />
 </p>
 
 ___
 
 <h3 align=center>Table o´Contents</h3>
-	<p>
-		~
-		<a href="#about">About</a> ~
-		<a href="#usage">Usage</a> ~
-		<a href="#implementation">Implementation</a> ~
-		<a href="#license">License</a> ~
-	</p>
+
+<!-- mtoc-start -->
+
+* [About 📌](#about-)
+* [Usage](#usage)
+* [Setup & Compilation 🖇️](#setup--compilation-)
+* [Makefile rules 🔧](#makefile-rules-)
+* [Implementation](#implementation)
+  * [License](#license)
+
+<!-- mtoc-end -->
+
 <div/>
 
 
@@ -45,7 +50,7 @@ The first foundational project of the `Common Core` curriculum at 42, `libft`. A
 1. Clone repository:
 
 ```sh
-git clone git@github.com:PedroZappa/libft.git
+git clone git@github.com:PedroZappa/42_libft.git
 ```
 
 2. Go inside the project folder and run `make`:
