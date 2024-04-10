@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <stddef.h>
 # include <math.h>
+# include <limits.h>
 
 // #ifndef FT_PRINTF
 // # define FT_PRINTF_H
@@ -27,7 +28,6 @@
 # include "../color_codes/ansi.h"
 # include "../color_codes/hexa.h"
 
-# define UINT_MAX	4294967295
 # define PRECISION	6
 
 typedef struct s_list
