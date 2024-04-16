@@ -6,13 +6,13 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 12:45:13 by passunca          #+#    #+#             */
-/*   Updated: 2023/10/11 11:07:01 by passunca         ###   ########.fr       */
+/*   Updated: 2024/04/16 16:28:08 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_min(size_t a, size_t b)
+static size_t	ft_min_len(size_t a, size_t b)
 {
 	if (a < b)
 		return (a);
@@ -23,7 +23,7 @@ static size_t	ft_total_len(size_t s_len, unsigned int start, size_t len)
 {
 	size_t	total;
 
-	total = ft_min(s_len, len);
+	total = ft_min_len(s_len, len);
 	if (start + len > s_len)
 		total = s_len - start;
 	return (total + 1);
