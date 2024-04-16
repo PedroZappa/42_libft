@@ -117,5 +117,7 @@ char	*ft_dtoa(double d);
 double	ft_pow(double base, double exp);
 int		ft_atoi_base(const char *str, int str_base);
 double	ft_absd(double n);
+int		ft_min(int a, int b);
+int		ft_max(int a, int b);
 
 #endif
