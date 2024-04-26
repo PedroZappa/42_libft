@@ -12,6 +12,26 @@
 
 #include "libft.h"
 
+static int		ft_segcount(char const *s, char sep);
+static char		**ft_alloc(char **strs, char const *s, char sep, size_t segs);
+static char		**ft_free(char **strs, size_t seg);
+static size_t	ft_seglen(char const *s, char sep);
+
+char	**ft_split(char const *s, char c)
+{
+	char	**strs;
+	size_t	segs;
+
+	segs = ft_segcount(s, c);
+	strs = malloc((segs + 1) * sizeof(char *));
+	if (!strs)
+		return (0);
+	strs[segs] = 0;
+	if (segs > 0)
+		strs = ft_alloc(strs, s, c, segs);
+	return (strs);
+}
+
 static int	ft_segcount(char const *s, char sep)
 {
 	size_t	segs;
@@ -33,30 +53,6 @@ static int	ft_segcount(char const *s, char sep)
 		++i;
 	}
 	return (segs);
-}
-
-static size_t	ft_seglen(char const *s, char sep)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] && s[i] != sep)
-		++i;
-	return (i);
-}
-
-static	char	**ft_free(char **strs, size_t seg)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < seg)
-	{
-		free(strs[i]);
-		++i;
-	}
-	free(strs);
-	return (0);
 }
 
 static char	**ft_alloc(char **strs, char const *s, char sep, size_t segs)
@@ -87,19 +83,28 @@ static char	**ft_alloc(char **strs, char const *s, char sep, size_t segs)
 	return (strs);
 }
 
-char	**ft_split(char const *s, char c)
+static size_t	ft_seglen(char const *s, char sep)
 {
-	char	**strs;
-	size_t	segs;
+	size_t	i;
 
-	segs = ft_segcount(s, c);
-	strs = malloc((segs + 1) * sizeof(char *));
-	if (!strs)
-		return (0);
-	strs[segs] = 0;
-	if (segs > 0)
-		strs = ft_alloc(strs, s, c, segs);
-	return (strs);
+	i = 0;
+	while (s[i] && s[i] != sep)
+		++i;
+	return (i);
+}
+
+static	char	**ft_free(char **strs, size_t seg)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < seg)
+	{
+		free(strs[i]);
+		++i;
+	}
+	free(strs);
+	return (0);
 }
 /*
 int main(int argc, char *argv[])
