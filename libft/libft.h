@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/14 11:32:39 by passunca         ###   ########.fr       */
+/*   Updated: 2024/05/07 15:33:51 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,5 +119,7 @@ int		ft_atoi_base(const char *str, int str_base);
 double	ft_absd(double n);
 int		ft_min(int a, int b);
 int		ft_max(int a, int b);
+long	ft_atol(const char *nptr);
+int		ft_issign(char c);
 
 #endif
