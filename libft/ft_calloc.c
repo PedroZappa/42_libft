@@ -17,8 +17,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 	size_t	to_alloc;
 
+	if ((nmemb == 0) || (size == 0))
+	{
+		nmemb = 1;
+		size = 1;
+	}
 	to_alloc = (nmemb * size);
-	ptr = malloc(sizeof(char) * to_alloc);
+	ptr = malloc(to_alloc);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, to_alloc);
