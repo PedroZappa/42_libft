@@ -27,7 +27,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, to_alloc);
-	return (ptr);
+	return ((void *)ptr);
 }
 /*
 int main (int argc, char *argv[])
