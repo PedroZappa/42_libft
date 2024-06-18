@@ -6,7 +6,7 @@
 #    By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/05 15:30:06 by passunca          #+#    #+#              #
-#    Updated: 2024/05/07 15:34:36 by passunca         ###   ########.fr        #
+#    Updated: 2024/06/18 16:09:00 by passunca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ EXTRA = $(addprefix $(LIBFT_PATH)/, ft_putendl_fd.c ft_putnchar_fd.c \
 		ft_unumlen.c ft_uitoa.c ft_xtoa.c ft_abs.c ft_argb.c ft_perror.c \
 		ft_atod.c ft_isspace.c ft_strcmp.c ft_stolower.c ft_sep.c ft_dtoa.c \
 		ft_pow.c ft_atoi_base.c ft_absd.c ft_min.c ft_max.c ft_atol.c \
-		ft_issign.c)
+		ft_issign.c ft_free.c)
 
 PRINTF_PATH	= ./ft_printf
 PRINTF_SRC 	= $(addprefix $(PRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
