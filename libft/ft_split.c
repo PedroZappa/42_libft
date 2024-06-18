@@ -6,7 +6,7 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:26:27 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/16 17:40:30 by passunca         ###   ########.fr       */
+/*   Updated: 2024/06/18 16:13:02 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int		ft_segcount(char const *s, char sep);
 static char		**ft_alloc(char **strs, char const *s, char sep, size_t segs);
-static char		**ft_free(char **strs, size_t seg);
+static char		**ft_free_split(char **strs, size_t seg);
 static size_t	ft_seglen(char const *s, char sep);
 
 char	**ft_split(char const *s, char c)
@@ -70,7 +70,7 @@ static char	**ft_alloc(char **strs, char const *s, char sep, size_t segs)
 			++i;
 		strs[seg] = malloc(ft_seglen(&s[i], sep) + 1);
 		if (!strs[seg])
-			return (ft_free(strs, seg));
+			return (ft_free_split(strs, seg));
 		while (s[i] && s[i] != sep)
 		{
 			strs[seg][j] = s[i];
@@ -93,7 +93,7 @@ static size_t	ft_seglen(char const *s, char sep)
 	return (i);
 }
 
-static	char	**ft_free(char **strs, size_t seg)
+static	char	**ft_free_split(char **strs, size_t seg)
 {
 	size_t	i;
 
