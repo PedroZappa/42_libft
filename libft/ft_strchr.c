@@ -6,15 +6,19 @@
 /*   By: zedr0 <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 21:11:48 by zedr0             #+#    #+#             */
-/*   Updated: 2023/10/07 20:32:29 by zedr0            ###   ########.fr       */
+/*   Updated: 2024/06/19 20:12:28 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/// @brief 	Searches for the first occurrence of the character c
+/// @param s The string to be searched
+/// @param c The character to search for
+/// @return A pointer to the first occurrence of the character c in the string s
 char	*ft_strchr(const char *s, int c)
 {
-	return (ft_memchr(s, c, ft_strlen(s) + 1));
+	return (ft_memchr(s, c, (ft_strlen(s) + 1)));
 }
 /*
 int main(int argc, char **argv)
