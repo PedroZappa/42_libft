@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2024/06/18 16:10:04 by passunca         ###   ########.fr       */
+/*   Updated: 2024/06/20 16:36:53 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,5 +122,6 @@ int		ft_max(int a, int b);
 long	ft_atol(const char *nptr);
 int		ft_issign(char c);
 void	ft_free(void *ptr);
+char	*ft_strjoin_free(char *s1, char *s2);
 
 #endif
