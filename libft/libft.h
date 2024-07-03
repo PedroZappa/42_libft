@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2024/07/03 15:14:37 by passunca         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:27:53 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,6 @@ int		ft_issign(char c);
 void	ft_free(void *ptr);
 char	*ft_strjoin_free(char *s1, char *s2);
 void	ft_swapstrs(char **s1, char **s2);
-char	*ft_strcpy(char *dest, const char *src);
+char	*ft_strcpy(char *dest, char *src);
 
 #endif
