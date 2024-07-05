@@ -121,7 +121,7 @@ int		ft_min(int a, int b);
 int		ft_max(int a, int b);
 long	ft_atol(const char *nptr);
 int		ft_issign(char c);
-void	ft_free(void *ptr);
+void	ft_free(char *ptr);
 char	*ft_strjoin_free(char *s1, char *s2);
 void	ft_swapstrs(char **s1, char **s2);
 

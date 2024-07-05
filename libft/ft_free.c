@@ -14,7 +14,7 @@
 
 /// @brief			Free a pointer and set it to NULL
 /// @param ptr		Pointer to free
-void	ft_free(void *ptr)
+void	ft_free(char *ptr)
 {
 	if (ptr)
 	{
