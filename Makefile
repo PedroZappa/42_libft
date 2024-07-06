@@ -47,6 +47,10 @@ PRINTF_SRC 	= $(addprefix $(PRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
 			  ft_print_p.c ft_print_s.c ft_print_u.c ft_print_f.c)
 
 FPRINTF_PATH	= ./ft_fprintf
+FPRINTF_SRC 	= $(addprefix $(FPRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
+			  ft_flags.c ft_parse.c ft_print_c.c ft_print_di.c ft_print_hex.c \
+			  ft_print_p.c ft_print_s.c ft_print_u.c ft_print_f.c)
+
 
 GNL_PATH 	= ./get_next_line
 GNL_SRC		= $(addprefix $(GNL_PATH)/, get_next_line.c get_next_line_utils.c)
@@ -92,6 +96,10 @@ $(BUILD_PATH):
 	$(MKDIR_P) $(BUILD_PATH)
 	@echo "* $(YEL)Creating $(BUILD_PATH) folder:$(D) $(_SUCCESS)"
 
+$(TEMP_PATH):
+	$(MKDIR_P) $(TEMP_PATH)
+	@echo "* $(YEL)Creating $(CYA)$(TEMP_PATH)$(YEL) folder:$(D) $(_SUCCESS)"
+
 $(BUILD_PATH)/%.o: $(LIBFT_PATH)/%.c
 	@echo -n "$(GRN)█$(D)"
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -100,9 +108,9 @@ $(BUILD_PATH)/%.o: $(PRINTF_PATH)/%.c
 	@echo -n "$(GRN)█$(D)"
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(TEMP_PATH):
-	$(MKDIR_P) $(TEMP_PATH)
-	@echo "* $(YEL)Creating $(CYA)$(TEMP_PATH)$(YEL) folder:$(D) $(_SUCCESS)"
+$(BUILD_PATH)/%.o: $(FPRINTF_PATH)/%.c
+	@echo -n "$(GRN)█$(D)"
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_PATH)/%.o: $(GNL_PATH)/%.c
 	@echo -n "$(GRN)█$(D)"
@@ -120,18 +128,10 @@ bonus: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
 
 extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
 	@echo "* $(YEL)Archiving $(_NAME) w/ extras$(D)"
-	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) $(FPRINTF_OBJS)
 	@echo "* $(_NAME) archived w/ extras: $(_SUCCESS) $(YEL)🖔$(D)"
 
 ##@ Test, Debug & Leak Check Rules 󰃢
-
-# norm: 		## Run norminette test
-# 	@printf "${_NORM}\n"
-# 	@printf "${_NORM_INFO} "
-# 	@norminette $(SRC_PATH) | wc -l
-# 	@norminette $(SRC_PATH)
-# 	@printf "${_NORM_SUCCESS} "
-# 	@norminette $(SRC_PATH) | grep -wc "OK"
 
 norm:
 	@make --no-print-directory norm_path IN_PATH=$(LIBFT_PATH)

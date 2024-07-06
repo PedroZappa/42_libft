@@ -4,3 +4,4 @@ a.out
 libft.a
 /.vscode
 .build
+.temp
