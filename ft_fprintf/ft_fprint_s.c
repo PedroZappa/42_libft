@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_fprintf.h"
 
 static int	ft_putstr(const char *str, t_format p, int fd);
 static int	ft_print_s_precision(const char *str, int precision, int fd);

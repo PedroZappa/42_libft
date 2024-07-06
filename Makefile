@@ -47,9 +47,9 @@ PRINTF_SRC 	= $(addprefix $(PRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
 			  ft_print_p.c ft_print_s.c ft_print_u.c ft_print_f.c)
 
 FPRINTF_PATH	= ./ft_fprintf
-FPRINTF_SRC 	= $(addprefix $(FPRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
-			  ft_flags.c ft_parse.c ft_print_c.c ft_print_di.c ft_print_hex.c \
-			  ft_print_p.c ft_print_s.c ft_print_u.c ft_print_f.c)
+FPRINTF_SRC 	= $(addprefix $(FPRINTF_PATH)/, ft_fprintf.c ft_fflag_utils.c \
+			  ft_fflags.c ft_fparse.c ft_fprint_c.c ft_fprint_di.c ft_fprint_hex.c \
+			  ft_fprint_p.c ft_fprint_s.c ft_fprint_u.c ft_fprint_f.c)
 
 
 GNL_PATH 	= ./get_next_line
@@ -59,6 +59,7 @@ OBJS		= $(addprefix $(BUILD_PATH)/, $(notdir $(SRC:.c=.o)))
 BONUS_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(BONUS:.c=.o)))
 EXTRA_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(EXTRA:.c=.o)))
 PRINTF_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(PRINTF_SRC:.c=.o)))
+PRINTF_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(FPRINTF_SRC:.c=.o)))
 GNL_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(GNL_SRC:.c=.o)))
 
 ### Message Vars
@@ -126,7 +127,7 @@ bonus: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 	@echo "* $(_NAME) archived w/ bonus: $(_SUCCESS) $(YEL)🖔$(D)"
 
-extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
+extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) $(FPRINTF_OBJS) ## Compile libft with extra
 	@echo "* $(YEL)Archiving $(_NAME) w/ extras$(D)"
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) $(FPRINTF_OBJS)
 	@echo "* $(_NAME) archived w/ extras: $(_SUCCESS) $(YEL)🖔$(D)"

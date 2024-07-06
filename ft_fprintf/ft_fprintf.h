@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef FT_FPRINTF_H
+# define FT_FPRINTF_H
 
 # include <stdarg.h>
 # include "../libft/libft.h"
@@ -46,7 +46,7 @@ typedef struct s_hexa_meta
 
 /* Function Prototypes */
 /* Formats and prints input 'format' data */
-int			ft_printf(const char *format, ...);
+int			ft_fprintf(int fd, const char *format, ...);
 /* Initializes a t_format struct with all members set to 0 */
 t_format	ft_newformat(void);
 void		ft_resetformat(t_format *prsd);

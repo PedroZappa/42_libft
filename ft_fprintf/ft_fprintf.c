@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_c_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_printf_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 19:33:00 by passunca          #+#    #+#             */
-/*   Updated: 2024/02/11 12:00:04 by passunca         ###   ########.fr       */
+/*   Created: 2023/10/26 19:33:18 by passunca          #+#    #+#             */
+/*   Updated: 2023/11/08 18:32:40 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_fprintf.h"
 
-int	ft_print_c(char c, t_format *p, int fd)
+int	ft_fprintf(int fd, const char *format, ...)
 {
-	int		count;
+	va_list		ap;
+	char		*str;
+	t_format	p;
 
-	count = 0;
-	if (p->minus)
-		count += ft_putchar_fd(c, fd);
-	count += ft_pad_width(p->width, 1, 0, fd);
-	if (!p->minus)
-		count += ft_putchar_fd(c, fd);
-	p->width = 0;
-	return (count);
+	if (!format || *format == '\0')
+		return (0);
+	p = ft_newformat();
+	str = ft_strdup(format);
+	if (!str || *str == '\0')
+		return (0);
+	va_start(ap, format);
+	ft_parse_bonus(str, ap, &p, fd);
+	va_end(ap);
+	free(str);
+	return (p.len);
 }

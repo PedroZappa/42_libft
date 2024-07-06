@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_fprintf.h"
 
 static void		ft_print_arg(t_format *p, char type, va_list ap, int fd);
 static int		ft_parse_flag(const char *str, t_format *p, int i);

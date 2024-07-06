@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_fprintf.h"
 
 static int	ft_print_hexa(char *nbrstr, t_hexa_meta **norm,
 				t_format *p, int fd);
@@ -22,7 +22,8 @@ int	ft_print_x(size_t n, int is_upper, t_format p, int fd)
 	char		*nbrstr;
 	int			count;
 	t_hexa_meta	*norm;
-
+	
+	norm = malloc(sizeof(t_hexa_meta));
 	norm->is_upper = is_upper;
 	norm->n = n;
 	count = 0;
@@ -36,6 +37,7 @@ int	ft_print_x(size_t n, int is_upper, t_format p, int fd)
 		return (0);
 	count += ft_print_hexa(nbrstr, &norm, &p, fd);
 	free(nbrstr);
+	free(norm);
 	return (count);
 }
 
