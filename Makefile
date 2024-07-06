@@ -59,7 +59,7 @@ OBJS		= $(addprefix $(BUILD_PATH)/, $(notdir $(SRC:.c=.o)))
 BONUS_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(BONUS:.c=.o)))
 EXTRA_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(EXTRA:.c=.o)))
 PRINTF_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(PRINTF_SRC:.c=.o)))
-PRINTF_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(FPRINTF_SRC:.c=.o)))
+FPRINTF_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(FPRINTF_SRC:.c=.o)))
 GNL_OBJS	= $(addprefix $(BUILD_PATH)/, $(notdir $(GNL_SRC:.c=.o)))
 
 ### Message Vars
@@ -127,9 +127,9 @@ bonus: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 	@echo "* $(_NAME) archived w/ bonus: $(_SUCCESS) $(YEL)🖔$(D)"
 
-extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) $(FPRINTF_OBJS) ## Compile libft with extra
+extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
 	@echo "* $(YEL)Archiving $(_NAME) w/ extras$(D)"
-	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) $(FPRINTF_OBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
 	@echo "* $(_NAME) archived w/ extras: $(_SUCCESS) $(YEL)🖔$(D)"
 
 ##@ Test, Debug & Leak Check Rules 󰃢
