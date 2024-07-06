@@ -52,3 +52,31 @@ int main(int argc, char *argv[])
 	printf("'%s'\n", trimmed); 
 }
 */
+
+char	*ft_strtrim_lead(char const *s1, char const *set)
+{
+	char	*str;
+
+	if (!s1 || !set)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		++s1;
+	if (!*s1)
+		return (ft_strdup(""));
+	str = ft_substr(s1, 0, ft_strlen(s1));
+	return (str);
+}
+
+char	*ft_strtrim_trail(char const *s1, char const *set)
+{
+	char	*str;
+	size_t	len;
+
+	if (!s1 || !set)
+		return (NULL);
+	len = ft_strlen(s1);
+	while (ft_strchr(set, s1[len - 1]) && (len > 0))
+		--len;
+	str = ft_substr(s1, 0, len);
+	return (str);
+}

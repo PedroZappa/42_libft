@@ -125,5 +125,7 @@ void	ft_free(char *ptr);
 char	*ft_strjoin_free(char *s1, char *s2);
 void	ft_swapstrs(char **s1, char **s2);
 char	*ft_strcpy(char *dest, char *src);
+char	*ft_strtrim_lead(char const *s1, char const *set);
+char	*ft_strtrim_trail(char const *s1, char const *set);
 
 #endif
