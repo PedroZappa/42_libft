@@ -18,7 +18,8 @@
 NAME =	libft.a
 
 BUILD_PATH	= .build
-LIBFT_PATH = ./libft
+TEMP_PATH	= .temp
+LIBFT_PATH	= ./libft
 SRC =	$(addprefix $(LIBFT_PATH)/, ft_isalpha.c ft_isdigit.c ft_isalnum.c \
 		ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
 		ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c \
@@ -44,6 +45,8 @@ PRINTF_PATH	= ./ft_printf
 PRINTF_SRC 	= $(addprefix $(PRINTF_PATH)/, ft_printf.c ft_flag_utils.c \
 			  ft_flags.c ft_parse.c ft_print_c.c ft_print_di.c ft_print_hex.c \
 			  ft_print_p.c ft_print_s.c ft_print_u.c ft_print_f.c)
+
+FPRINTF_PATH	= ./ft_fprintf
 
 GNL_PATH 	= ./get_next_line
 GNL_SRC		= $(addprefix $(GNL_PATH)/, get_next_line.c get_next_line_utils.c)
@@ -97,6 +100,10 @@ $(BUILD_PATH)/%.o: $(PRINTF_PATH)/%.c
 	@echo -n "$(GRN)█$(D)"
 	$(CC) $(CFLAGS) -c $< -o $@
 
+$(TEMP_PATH):
+	$(MKDIR_P) $(TEMP_PATH)
+	@echo "* $(YEL)Creating $(CYA)$(TEMP_PATH)$(YEL) folder:$(D) $(_SUCCESS)"
+
 $(BUILD_PATH)/%.o: $(GNL_PATH)/%.c
 	@echo -n "$(GRN)█$(D)"
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -118,13 +125,48 @@ extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OB
 
 ##@ Test, Debug & Leak Check Rules 󰃢
 
-norm: 		## Run norminette test
-	@printf "${_NORM}\n"
-	@printf "${_NORM_INFO} "
-	@norminette $(SRC_PATH) | wc -l
-	@norminette $(SRC_PATH)
-	@printf "${_NORM_SUCCESS} "
-	@norminette $(SRC_PATH) | grep -wc "OK"
+# norm: 		## Run norminette test
+# 	@printf "${_NORM}\n"
+# 	@printf "${_NORM_INFO} "
+# 	@norminette $(SRC_PATH) | wc -l
+# 	@norminette $(SRC_PATH)
+# 	@printf "${_NORM_SUCCESS} "
+# 	@norminette $(SRC_PATH) | grep -wc "OK"
+
+norm:
+	@make --no-print-directory norm_path IN_PATH=$(LIBFT_PATH)
+	@make --no-print-directory norm_path IN_PATH=$(PRINTF_PATH)
+	@make --no-print-directory norm_path IN_PATH=$(FPRINTF_PATH)
+	@make --no-print-directory norm_path IN_PATH=$(GNL_PATH)
+
+norm_path: $(TEMP_PATH)		## Run norminette test on source files
+	@echo "$(CYA)$(_SEP)$(D)"
+	@printf "${_NORM}: $(YEL)$(IN_PATH)$(D)\n"
+	@ls $(IN_PATH) | wc -l > $(TEMP_PATH)/norm_ls.txt
+	@printf "$(_NORM_INFO) $$(cat $(TEMP_PATH)/norm_ls.txt)\n"
+	@printf "$(_NORM_SUCCESS) "
+	@norminette $(IN_PATH) | grep -wc "OK" > $(TEMP_PATH)/norm.txt; \
+	if [ $$? -eq 1 ]; then \
+		echo "0" > $(TEMP_PATH)/norm.txt; \
+	fi
+	@printf "$$(cat $(TEMP_PATH)/norm.txt)\n"
+	@if ! diff -q $(TEMP_PATH)/norm_ls.txt $(TEMP_PATH)/norm.txt > /dev/null; then \
+		printf "$(_NORM_ERR) "; \
+		norminette $(IN_PATH) | grep -v "OK" > $(TEMP_PATH)/norm_err.txt; \
+		cat $(TEMP_PATH)/norm_err.txt | grep -wc "Error:" > $(TEMP_PATH)/norm_errn.txt; \
+		printf "$$(cat $(TEMP_PATH)/norm_errn.txt)\n"; \
+		printf "$$(cat $(TEMP_PATH)/norm_err.txt)\n"; \
+	else \
+		printf "[$(YEL)Everything is OK$(D)]\n"; \
+	fi
+	@echo "$(CYA)$(_SEP)$(D)"
+
+check_ext_func: all		## Check for external functions
+	@echo "[$(YEL)Checking for external functions$(D)]"
+	@echo "$(YEL)$(_SEP)$(D)"
+	@echo "$(CYA)Reading binary$(D): $(MAG)$(NAME)$(D)"
+	nm ./$(NAME) | grep "U" | grep -v "__" | tee $(TEMP_PATH)/ext_func.txt
+	@echo "$(YEL)$(_SEP)$(D)"
 
 ##@ Clean-up Rules 󰃢
 
