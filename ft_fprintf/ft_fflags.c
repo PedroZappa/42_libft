@@ -12,7 +12,7 @@
 
 #include "ft_fprintf.h"
 
-t_format	ft_newformat(void)
+t_format	ft_fnewformat(void)
 {
 	t_format	new_format;
 
@@ -31,7 +31,7 @@ t_format	ft_newformat(void)
 	return (new_format);
 }
 
-void	ft_resetformat(t_format *prsd)
+void	ft_fresetformat(t_format *prsd)
 {
 	prsd->neg = 0;
 	prsd->specifier = 0;

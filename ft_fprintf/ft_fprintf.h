@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_f printf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -22,8 +22,8 @@
 # define HEX_UPPER	"0123456789ABCDEF"
 
 /* Struct to track format parameters */
-#ifndef FT_FORMAT
-# define FT_FORMAT
+# ifndef FT_FORMAT
+#  define FT_FORMAT
 
 typedef struct s_format
 {
@@ -41,7 +41,7 @@ typedef struct s_format
 	int		sharp;
 }	t_format;
 
-#endif
+# endif
 
 typedef struct s_hexa_meta
 {
@@ -53,31 +53,31 @@ typedef struct s_hexa_meta
 /* Formats and prints input 'format' data */
 int			ft_fprintf(int fd, const char *format, ...);
 /* Initializes a t_format struct with all members set to 0 */
-t_format	ft_newformat(void);
-void		ft_resetformat(t_format *prsd);
+t_format	ft_fnewformat(void);
+void		ft_fresetformat(t_format *prsd);
 /* Parsing */
-int			ft_parse(char *str, va_list ap);
-int			ft_parse_bonus(const char *str, va_list ap, t_format *p, int fd);
+int			ft_fparse(char *str, va_list ap);
+int			ft_fparse_bonus(const char *str, va_list ap, t_format *p, int fd);
 /* Check & Convert */
-int			ft_isflag(int c);
-int			ft_isspecif(int c);
-int			ft_isflag(int c);
-int			ft_isflagtype(int c);
-t_format	ft_flag_minus(t_format prsd);
-int			ft_pad_width(int total_width, int size, int zero, int fd);
-char		*ft_xtoa(unsigned long int nb, int isupper);
+int			ft_fisflag(int c);
+int			ft_fisspecif(int c);
+int			ft_fisflag(int c);
+int			ft_fisflagtype(int c);
+t_format	ft_fflag_minus(t_format prsd);
+int			ft_fpad_width(int total_width, int size, int zero, int fd);
+char		*ft_fxtoa(unsigned long int nb, int isupper);
 /* Printing */
-int			ft_print_specifier(const char *format, t_format prsd, va_list ap,
+int			ft_fprint_specifier(const char *format, t_format prsd, va_list ap,
 				int fd);
-int			ft_print_c(char c, t_format *prsd, int fd);
-int			ft_print_s(const char *str, t_format prsd, int fd);
-int			ft_print_str(const char *str, int fd);
-int			ft_print_di(int n, t_format *p, int fd);
-int			ft_print_f(double n, t_format *p, int fd);
-int			ft_print_u(unsigned n, t_format prsd, int fd);
-int			ft_print_p(unsigned long int n, t_format prsd, int fd);
-int			ft_print_hex(t_format prsd, va_list ap, int fd);
-int			ft_print_x(size_t n, int isupper, t_format p, int fd);
-int			ft_flags(t_format prsd, int nbr);
+int			ft_fprint_c(char c, t_format *prsd, int fd);
+int			ft_fprint_s(const char *str, t_format prsd, int fd);
+int			ft_fprint_str(const char *str, int fd);
+int			ft_fprint_di(int n, t_format *p, int fd);
+int			ft_fprint_f(double n, t_format *p, int fd);
+int			ft_fprint_u(unsigned n, t_format prsd, int fd);
+int			ft_fprint_p(unsigned long int n, t_format prsd, int fd);
+int			ft_fprint_hex(t_format prsd, va_list ap, int fd);
+int			ft_fprint_x(size_t n, int isupper, t_format p, int fd);
+int			ft_fflags(t_format prsd, int nbr);
 
 #endif

@@ -14,7 +14,7 @@
 
 int	ft_isflag(int c)
 {
-	return (ft_isdigit(c) || ft_isspecif(c) || ft_isflagtype(c));
+	return (ft_isdigit(c) || ft_fisspecif(c) || ft_fisflagtype(c));
 }
 
 int	ft_isspecif(int c)
