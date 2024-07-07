@@ -58,6 +58,8 @@ void		ft_fresetformat(t_format *prsd);
 /* Parsing */
 int			ft_fparse(char *str, va_list ap);
 int			ft_fparse_bonus(const char *str, va_list ap, t_format *p, int fd);
+void		ft_fparse_width(const char *str, t_format *p, int i);
+void		ft_fparse_prec(const char *str, t_format *p, int i);
 /* Check & Convert */
 int			ft_fisflag(int c);
 int			ft_fisspecif(int c);

@@ -12,10 +12,10 @@
 
 #include "ft_fprintf.h"
 
-static int	ft_putstr(const char *str, t_format p, int fd);
-static int	ft_print_s_precision(const char *str, int precision, int fd);
+static int	ft_fputstr(const char *str, t_format p, int fd);
+static int	ft_fprint_s_precision(const char *str, int precision, int fd);
 
-int	ft_print_s(const char *str, t_format p, int fd)
+int	ft_fprint_s(const char *str, t_format p, int fd)
 {
 	int		count;
 
@@ -27,32 +27,32 @@ int	ft_print_s(const char *str, t_format p, int fd)
 	if ((p.precision >= 0) && ((size_t)p.precision > ft_strlen(str)))
 		p.precision = ft_strlen(str);
 	if (p.minus)
-		count += ft_putstr(str, p, fd);
+		count += ft_fputstr(str, p, fd);
 	if (p.precision >= 0)
-		count += ft_pad_width(p.width, p.precision, 0, fd);
+		count += ft_fpad_width(p.width, p.precision, 0, fd);
 	else
-		count += ft_pad_width(p.width, ft_strlen(str), 0, fd);
+		count += ft_fpad_width(p.width, ft_strlen(str), 0, fd);
 	if (!p.minus)
-		count += ft_putstr(str, p, fd);
+		count += ft_fputstr(str, p, fd);
 	return (count);
 }
 
-static int	ft_putstr(const char *str, t_format p, int fd)
+static int	ft_fputstr(const char *str, t_format p, int fd)
 {
 	int		count;
 
 	count = 0;
 	if (p.precision >= 0)
 	{
-		count += ft_pad_width(p.precision, ft_strlen(str), 0, fd);
-		count += ft_print_s_precision(str, p.precision, fd);
+		count += ft_fpad_width(p.precision, ft_strlen(str), 0, fd);
+		count += ft_fprint_s_precision(str, p.precision, fd);
 	}
 	else
-		count += ft_print_s_precision(str, ft_strlen(str), fd);
+		count += ft_fprint_s_precision(str, ft_strlen(str), fd);
 	return (count);
 }
 
-static int	ft_print_s_precision(const char *str, int precision, int fd)
+static int	ft_fprint_s_precision(const char *str, int precision, int fd)
 {
 	int	count;
 
@@ -62,7 +62,7 @@ static int	ft_print_s_precision(const char *str, int precision, int fd)
 	return (count);
 }
 
-int	ft_print_str(const char *str, int fd)
+int	ft_fprint_str(const char *str, int fd)
 {
 	int	len;
 

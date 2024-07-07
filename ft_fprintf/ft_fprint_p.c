@@ -12,11 +12,11 @@
 
 #include "ft_fprintf.h"
 
-int		ft_print_ptr(unsigned long int n, int fd);
-void	ft_print_address(unsigned long int n, int fd);
-int		ft_ptrlen(unsigned long int n);
+int		ft_fprint_ptr(unsigned long int n, int fd);
+void	ft_fprint_address(unsigned long int n, int fd);
+int		ft_fptrlen(unsigned long int n);
 
-int	ft_print_p(unsigned long int n, t_format p, int fd)
+int	ft_fprint_p(unsigned long int n, t_format p, int fd)
 {
 	int	count;
 
@@ -26,35 +26,35 @@ int	ft_print_p(unsigned long int n, t_format p, int fd)
 	else
 		p.width -= 2;
 	if (p.minus)
-		count += ft_print_ptr(n, fd);
-	count += ft_pad_width(p.width, ft_ptrlen(n), 0, fd);
+		count += ft_fprint_ptr(n, fd);
+	count += ft_fpad_width(p.width, ft_fptrlen(n), 0, fd);
 	if (!p.minus)
-		count += ft_print_ptr(n, fd);
+		count += ft_fprint_ptr(n, fd);
 	return (count);
 }
 
-int	ft_print_ptr(unsigned long int n, int fd)
+int	ft_fprint_ptr(unsigned long int n, int fd)
 {
 	int	count;
 
 	count = 0;
 	if (n == 0)
 	{
-		count += ft_print_str("(nil)", fd);
+		count += ft_fprint_str("(nil)", fd);
 		return (count);
 	}
-	count += ft_print_str("0x", fd);
-	ft_print_address(n, fd);
-	count += ft_ptrlen(n);
+	count += ft_fprint_str("0x", fd);
+	ft_fprint_address(n, fd);
+	count += ft_fptrlen(n);
 	return (count);
 }
 
-void	ft_print_address(unsigned long int n, int fd)
+void	ft_fprint_address(unsigned long int n, int fd)
 {
 	if (n >= 16)
 	{
-		ft_print_address((n / 16), fd);
-		ft_print_address((n % 16), fd);
+		ft_fprint_address((n / 16), fd);
+		ft_fprint_address((n % 16), fd);
 	}
 	else
 	{
@@ -65,7 +65,7 @@ void	ft_print_address(unsigned long int n, int fd)
 	}
 }
 
-int	ft_ptrlen(unsigned long int n)
+int	ft_fptrlen(unsigned long int n)
 {
 	int	len;
 

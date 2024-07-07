@@ -12,11 +12,11 @@
 
 #include "ft_fprintf.h"
 
-static int		ft_print_sign_precision(int n, t_format *p, int fd);
-static int		ft_print_double(char *numstr, int n, t_format *p, int fd);
-static int		ft_print_i(char *nbrstr, int n, t_format *p, int fd);
+static int		ft_fprint_sign_precision(int n, t_format *p, int fd);
+static int		ft_fprint_double(char *numstr, int n, t_format *p, int fd);
+static int		ft_fprint_i(char *nbrstr, int n, t_format *p, int fd);
 
-int	ft_print_f(double n, t_format *p, int fd)
+int	ft_fprint_f(double n, t_format *p, int fd)
 {
 	char		*numstr;
 	double		nbr;
@@ -33,18 +33,18 @@ int	ft_print_f(double n, t_format *p, int fd)
 	}
 	if (p->precision == 0 && n == 0)
 	{
-		count += ft_pad_width(p->width, 0, 0, fd);
+		count += ft_fpad_width(p->width, 0, 0, fd);
 		return (count);
 	}
 	numstr = ft_dtoa(nbr);
 	if (!numstr)
 		return (0);
-	count += ft_print_double(numstr, n, p, fd);
+	count += ft_fprint_double(numstr, n, p, fd);
 	free(numstr);
 	return (count);
 }
 
-static int	ft_print_double(char *numstr, int n, t_format *p, int fd)
+static int	ft_fprint_double(char *numstr, int n, t_format *p, int fd)
 {
 	int		count;
 
@@ -52,25 +52,25 @@ static int	ft_print_double(char *numstr, int n, t_format *p, int fd)
 	if ((p->neg || p->plus || p->space) && !p->zero)
 		--p->width;
 	if (p->zero)
-		count += ft_print_sign_precision(n, p, fd);
+		count += ft_fprint_sign_precision(n, p, fd);
 	if (p->minus)
-		count += ft_print_i(numstr, n, p, fd);
+		count += ft_fprint_i(numstr, n, p, fd);
 	if ((p->precision >= 0) && ((size_t)p->precision < ft_strlen(numstr)))
 		p->precision = ft_strlen(numstr);
 	if (p->precision >= 0)
 	{
 		p->width -= p->precision;
-		count += ft_pad_width(p->width, 0, 0, fd);
+		count += ft_fpad_width(p->width, 0, 0, fd);
 	}
 	else
-		count += ft_pad_width((p->width - p->plus - p->space),
+		count += ft_fpad_width((p->width - p->plus - p->space),
 				ft_strlen(numstr), p->zero, fd);
 	if (!p->minus)
-		count += ft_print_i(numstr, n, p, fd);
+		count += ft_fprint_i(numstr, n, p, fd);
 	return (count);
 }
 
-static int	ft_print_sign_precision(int n, t_format *p, int fd)
+static int	ft_fprint_sign_precision(int n, t_format *p, int fd)
 {
 	int	count;
 
@@ -90,7 +90,7 @@ static int	ft_print_sign_precision(int n, t_format *p, int fd)
 	return (count);
 }
 
-static int	ft_print_i(char *nbrstr, int n, t_format *p, int fd)
+static int	ft_fprint_i(char *nbrstr, int n, t_format *p, int fd)
 {
 	int	count;
 
@@ -105,8 +105,8 @@ static int	ft_print_i(char *nbrstr, int n, t_format *p, int fd)
 	else if (p->space && !p->zero)
 		count += ft_putchar_fd(' ', fd);
 	if (p->precision >= 0)
-		count += ft_pad_width((p->precision - 1),
+		count += ft_fpad_width((p->precision - 1),
 				(ft_strlen(nbrstr) - 1), 1, fd);
-	count += ft_print_str(nbrstr, fd);
+	count += ft_fprint_str(nbrstr, fd);
 	return (count);
 }

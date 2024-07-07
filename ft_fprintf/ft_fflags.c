@@ -46,7 +46,7 @@ void	ft_fresetformat(t_format *prsd)
 	prsd->sharp = 0;
 }
 
-t_format	ft_flag_minus(t_format prsd)
+t_format	ft_fflag_minus(t_format prsd)
 {
 	prsd.minus = 1;
 	prsd.zero = 0;

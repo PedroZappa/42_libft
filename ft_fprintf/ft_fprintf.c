@@ -20,12 +20,12 @@ int	ft_fprintf(int fd, const char *format, ...)
 
 	if (!format || *format == '\0')
 		return (0);
-	p = ft_newformat();
+	p = ft_fnewformat();
 	str = ft_strdup(format);
 	if (!str || *str == '\0')
 		return (0);
 	va_start(ap, format);
-	ft_parse_bonus(str, ap, &p, fd);
+	ft_fparse_bonus(str, ap, &p, fd);
 	va_end(ap);
 	free(str);
 	return (p.len);

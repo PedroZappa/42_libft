@@ -12,14 +12,14 @@
 
 #include "ft_fprintf.h"
 
-int	ft_print_c(char c, t_format *p, int fd)
+int	ft_fprint_c(char c, t_format *p, int fd)
 {
 	int		count;
 
 	count = 0;
 	if (p->minus)
 		count += ft_putchar_fd(c, fd);
-	count += ft_pad_width(p->width, 1, 0, fd);
+	count += ft_fpad_width(p->width, 1, 0, fd);
 	if (!p->minus)
 		count += ft_putchar_fd(c, fd);
 	p->width = 0;
