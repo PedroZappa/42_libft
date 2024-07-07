@@ -17,7 +17,7 @@ int	ft_isflag(int c)
 	return (ft_isdigit(c) || ft_fisspecif(c) || ft_fisflagtype(c));
 }
 
-int	ft_isspecif(int c)
+int	ft_fisspecif(int c)
 {
 	if (c == 'c' || c == 's' || c == 'd' || c == 'i' || c == 'u'
 		|| c == 'x' || c == 'X' || c == 'p' || c == '%' || c == 'f')
@@ -25,14 +25,14 @@ int	ft_isspecif(int c)
 	return (0);
 }
 
-int	ft_isflagtype(int c)
+int	ft_fisflagtype(int c)
 {
 	if (c == '-' || c == '0' || c == '.' || c == '#' || c == ' ' || c == '+')
 		return (1);
 	return (0);
 }
 
-int	ft_pad_width(int total_width, int size, int zero, int fd)
+int	ft_fpad_width(int total_width, int size, int zero, int fd)
 {
 	int	count;
 
