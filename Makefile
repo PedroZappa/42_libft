@@ -127,9 +127,9 @@ bonus: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS)	## Compile libft with bonus
 	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 	@echo "* $(_NAME) archived w/ bonus: $(_SUCCESS) $(YEL)🖔$(D)"
 
-extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) ## Compile libft with extra
+extra: $(BUILD_PATH) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) $(FPRINTF_OBJS) ## Compile libft with extra
 	@echo "* $(YEL)Archiving $(_NAME) w/ extras$(D)"
-	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS)
+	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS) $(GNL_OBJS) $(PRINTF_OBJS) $(FPRINTF_OBJS)
 	@echo "* $(_NAME) archived w/ extras: $(_SUCCESS) $(YEL)🖔$(D)"
 
 ##@ Test, Debug & Leak Check Rules 󰃢
