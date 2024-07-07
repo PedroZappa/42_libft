@@ -12,7 +12,7 @@
 
 #include "ft_fprintf.h"
 
-int	ft_isflag(int c)
+int	ft_fisflag(int c)
 {
 	return (ft_isdigit(c) || ft_fisspecif(c) || ft_fisflagtype(c));
 }
