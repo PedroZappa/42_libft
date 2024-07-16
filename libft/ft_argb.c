@@ -23,6 +23,10 @@
  *				and blue. this operation concatenated the bits of the shiftend
  *				values with the bits of blue;
  *	*/
+/// @brief			Create a color from RGB values 
+/// @param	red		Red value
+/// @param	green	Green value
+/// @param	blue	Blue value
 int	ft_argb(int alpha, int red, int green, int blue)
 {
 	return (alpha << 24 | red << 16 | green << 8 | blue);
@@ -32,21 +36,33 @@ int	ft_argb(int alpha, int red, int green, int blue)
  *		Extract integer values from a encoded ARGB integer;
  *
  *	*/
+/// @brief			Extract transparency value from a encoded ARGB integer
+/// @param	argb	ARGB integer
+/// @return			Transparency value
 int	ft_get_alpha(int argb)
 {
 	return ((argb >> 24) & 0xFF);
 }
 
+/// @brief			Extract red value from a encoded ARGB integer
+/// @param	argb	ARGB integer
+/// @return			Red value
 int	ft_get_red(int argb)
 {
 	return ((argb >> 16) & 0xFF);
 }
 
+/// @brief			Extract green value from a encoded ARGB integer
+/// @param	argb	ARGB integer
+/// @return			Green value
 int	ft_get_green(int argb)
 {
 	return ((argb >> 8) & 0xFF);
 }
 
+/// @brief			Extract blue value from a encoded ARGB integer
+/// @param	argb	ARGB integer
+/// @return			Blue value
 int	ft_get_blue(int argb)
 {
 	return (argb & 0xFF);

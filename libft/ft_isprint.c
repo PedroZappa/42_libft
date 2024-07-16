@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief		Checks if character is printable
+/// @param c	character to check
+/// @return		SUCCESS(1)
+/// @return		FAILURE(0)
 int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);

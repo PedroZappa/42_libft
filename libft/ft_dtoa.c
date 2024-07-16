@@ -15,8 +15,10 @@
 static void	ft_parse_double(double d, char *numstr, long i);
 static int	ft_getlen(long *int_part);
 
-/*	Converts a double to a string.
- *	*/
+/// @brief		Converts a double to a string
+/// @param d	double to convert
+/// @return		SUCCESS(char*)
+/// @return		FAILURE(NULL)
 char	*ft_dtoa(double d)
 {
 	long	i;
@@ -39,6 +41,10 @@ char	*ft_dtoa(double d)
 	return (numstr);
 }
 
+/// @brief			Converts a double to a string
+/// @param d		double to convert
+/// @param numstr	string to store the result
+/// @param i		iterator
 static void	ft_parse_double(double d, char *numstr, long i)
 {
 	long	int_part;
@@ -68,6 +74,9 @@ static void	ft_parse_double(double d, char *numstr, long i)
 	numstr[i] = '\0';
 }
 
+/// @brief			Computes the length of the integer
+/// @param int_part	Pointer to a long integer
+/// @return			Length of the integer
 static int	ft_getlen(long *int_part)
 {
 	long	maxlen;

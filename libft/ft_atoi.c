@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief		Converts a string to an integer
+/// @param str	string to convert
+/// @return		SUCCESS(integer)
 int	ft_atoi(const char *nptr)
 {
 	int	nb;

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief		returns the absolute value of an integer
+/// @param	n
+/// @return		absolute value of n
 int	ft_abs(int n)
 {
 	if (n < 0)

@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief		Checks if character is alphabetic
+/// @param c	character to check
+/// @return		SUCCESS(c)
+/// @return		FAILURE(0)
 int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
@@ -18,11 +22,19 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
+/// @brief		Checks if character is uppercase
+/// @param c	character to check
+/// @return		SUCCESS(1)
+/// @return		FAILURE(0)
 int	ft_isupper(int c)
 {
 	return ((c >= 'A') && (c <= 'Z'));
 }
 
+/// @brief		Checks if character is lowercase
+/// @param c	character to check
+/// @return		SUCCESS(1)
+/// @return		FAILURE(0)
 int	ft_islower(int c)
 {
 	return ((c >= 'a') && (c <= 'z'));

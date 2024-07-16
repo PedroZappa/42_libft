@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief		Sets the first n bytes of the memory area pointed to by s to 0.
+/// @param s	Memory area
+/// @param n	Number of bytes to be set to 0
 void	ft_bzero(void *s, size_t n)
 {
 	char	*ptr;

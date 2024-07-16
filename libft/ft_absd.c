@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief		returns the absolute value of a double
+/// @param n	double
+/// @return		absolute value of n
 double	ft_absd(double n)
 {
 	if (n < 0)

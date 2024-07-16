@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief			Adds a new node at the end of a list
+/// @param lst		Pointer to the list
+/// @param new		Pointer to the new node
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;

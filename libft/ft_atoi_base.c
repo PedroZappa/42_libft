@@ -23,6 +23,10 @@ static int		is_hexalpha(char c);
  *			Multiply 'num' by base and add 'digit' multiplied by the sign
  *	return 'num'
  *	*/
+/// @brief			Converts a string to an integer
+/// @param str		string to convert
+/// @param str_base	base
+/// @return			SUCCESS(integer)
 int	ft_atoi_base(const char *str, int str_base)
 {
 	int	digit;
@@ -62,6 +66,11 @@ int	ft_atoi_base(const char *str, int str_base)
  *	else
  *		return (-1)
  *	*/
+/// @brief				Converts a character to an integer
+/// @param c			character to convert
+/// @param base_len		base to convert to	
+/// @return				SUCCESS(integer)
+/// @return				FAILURE(-1)
 static int	get_digit(char c, int base_len)
 {
 	int	base_ascii;
@@ -78,6 +87,10 @@ static int	get_digit(char c, int base_len)
 		return (-1);
 }
 
+/// @brief		Converts a character to lowercase
+/// @param c	character to convert
+/// @return		SUCCESS(lowercase character)
+/// @return		FAILURE(c)
 static char	to_lower(char c)
 {
 	if ((c >= 'A') && (c <= 'Z'))
@@ -85,11 +98,19 @@ static char	to_lower(char c)
 	return (c);
 }
 
+/// @brief		Checks if character is a digit
+/// @param c	character to check
+/// @return		SUCCESS(1)
+/// @return		FAILURE(0)
 static int	is_digit(char c)
 {
 	return ((c >= '0') && (c <= '9'));
 }
 
+/// @brief		Checks if character is a hexalpha
+/// @param c	character to check
+/// @return		SUCCESS(1)
+/// @return		FAILURE(0)
 static int	is_hexalpha(char c)
 {
 	return (((c >= 'a') && (c <= 'f')) || ((c >= 'A') && (c <= 'F')));

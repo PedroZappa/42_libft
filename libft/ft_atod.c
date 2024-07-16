@@ -12,8 +12,9 @@
 
 #include "libft.h"
 
-/*	Converts a string to a double.
- *	*/
+/// @brief		Converts a string to a double.
+/// @param str	string to convert
+/// @return		SUCCESS(double)
 double	ft_atod(char *str)
 {
 	long	int_part;

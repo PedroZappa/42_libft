@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief		Checks if character is a space
+/// @param c	character to check
+/// @return		SUCCESS(1)
+/// @return		FAILURE(0)
 int	ft_isspace(int c)
 {
 	return ((c == ' ') || ((c >= 9) && (c <= 13)));

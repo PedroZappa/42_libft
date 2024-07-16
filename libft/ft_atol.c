@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief		Converts a string to a long integer
+/// @param nptr	Pointer to the string to convert
+/// @return		SUCCESS(long integer)
 long	ft_atol(const char *nptr)
 {
 	int			sign;

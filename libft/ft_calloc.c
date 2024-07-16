@@ -12,6 +12,11 @@
 
 #include "libft.h" 
 
+/// @brief			Alloc memory for an array of nmemb elements of size bytes each
+/// @param nmemb	Number of elements
+/// @param size		Size of each element
+/// @return			SUCCESS(Pointer to the allocated memory)
+/// @return			FAILURE(NULL)
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;

@@ -12,6 +12,42 @@
 
 #include "libft.h"
 
+static char	*ft_char(char *str, unsigned int nb, long int len);
+static long int	ft_nlen(int n);
+
+/// @brief			Converts an integer to a string
+/// @param n		number to convert
+/// @return			SUCCESS(Pointer to the string)
+/// @return			FAILURE(NULL)
+char	*ft_itoa(int n)
+{
+	unsigned int	nb;
+	long int		len;
+	char			*str;
+
+	len = ft_nlen(n);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len--] = '\0';
+	if (n == 0)
+		str[0] = '0';
+	if (n < 0)
+	{
+		nb = -n;
+		str[0] = '-';
+	}
+	else
+		nb = n;
+	str = ft_char(str, nb, len);
+	return (str);
+}
+///
+/// @brief			Converts an integer to a string
+/// @param str		Pointer to string to convert
+/// @param nb		number to convert
+/// @param len		length of the string
+/// @return			SUCCESS(Pointer to the string)
 static char	*ft_char(char *str, unsigned int nb, long int len)
 {
 	while (nb > 0)
@@ -37,29 +73,6 @@ static long int	ft_nlen(int n)
 	return (len);
 }
 
-char	*ft_itoa(int n)
-{
-	unsigned int	nb;
-	long int		len;
-	char			*str;
-
-	len = ft_nlen(n);
-	str = malloc(sizeof(char) * (len + 1));
-	if (!str)
-		return (NULL);
-	str[len--] = '\0';
-	if (n == 0)
-		str[0] = '0';
-	if (n < 0)
-	{
-		nb = -n;
-		str[0] = '-';
-	}
-	else
-		nb = n;
-	str = ft_char(str, nb, len);
-	return (str);
-}
 /*
 int main(int argc, char *argv[])
 {

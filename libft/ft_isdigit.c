@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief		Checks if character is a digit
+/// @param d	character to check
+/// @return		SUCCESS(d)
+/// @return		FAILURE(0)
 int	ft_isdigit(int d)
 {
 	if (d >= '0' && d <= '9')

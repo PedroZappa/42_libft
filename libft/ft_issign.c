@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief		Checks if character is a sign
+/// @param c	character to check
+/// @return		if c == '-' -> -1
+/// @return		if c == '+' -> 1
+/// @return		otherwise -> 0
 int	ft_issign(char c)
 {
 	if (c == '-')
