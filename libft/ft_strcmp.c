@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief		Compares string s1 and s2
+/// @param s1	Pointer to the first string
+/// @param s2	Pointer to the second string
+/// @return		SUCCESS(0)
+/// @return		FAILURE(Lexicographical difference)
 int	ft_strcmp(const char *s1, const char *s2)
 {
 	int	i;

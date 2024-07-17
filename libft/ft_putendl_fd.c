@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief		Writes \n terminated string to the given file descriptor
+/// @param s	string to write
+/// @param fd	file descriptor
 void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s)

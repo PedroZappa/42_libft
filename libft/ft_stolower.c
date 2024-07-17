@@ -12,8 +12,9 @@
 
 #include "libft.h"
 
-/*	Converts a string to lowercase.
- *	*/
+/// @brief		Converts a string to lowercase
+/// @param str	Pointer to the string
+/// @return		SUCCESSS(Pointer to the string)
 char	*ft_stolower(char *str)
 {
 	int		i;

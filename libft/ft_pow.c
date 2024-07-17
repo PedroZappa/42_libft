@@ -12,9 +12,10 @@
 
 #include "libft.h"
 
-/*	Calculates (base^exp)
- *
- *	*/
+/// @brief			Calculate the power of a number
+/// @param base		base
+/// @param exp		exponent
+/// @return			base^exp
 double	ft_pow(double base, double exp)
 {
 	double	pow;

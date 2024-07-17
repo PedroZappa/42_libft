@@ -17,6 +17,11 @@ static char		**ft_alloc(char **strs, char const *s, char sep, size_t segs);
 static char		**ft_free_split(char **strs, size_t seg);
 static size_t	ft_seglen(char const *s, char sep);
 
+/// @brief		Splits a string into an array of strings
+/// @param s	Pointer to the string
+/// @param c	Separator
+/// @return		SUCCESSS(Pointer to the array of strings)
+/// @return		FAILURE(0)
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
@@ -32,6 +37,10 @@ char	**ft_split(char const *s, char c)
 	return (strs);
 }
 
+/// @brief		Count the number of segments
+/// @param s	Pointer to the string
+/// @param sep	Separator
+/// @return		SUCCESS(Number of segments)
 static int	ft_segcount(char const *s, char sep)
 {
 	size_t	segs;
@@ -55,6 +64,13 @@ static int	ft_segcount(char const *s, char sep)
 	return (segs);
 }
 
+/// @brief		Allocate memory for each segment
+/// @param strs	Pointer to the array of strings
+/// @param s	Pointer to the string
+/// @param sep	Separator
+/// @param segs	Number of segments
+/// @return		SUCCESS(Pointer to the array of strings)
+/// @return		FAILURE(0)
 static char	**ft_alloc(char **strs, char const *s, char sep, size_t segs)
 {
 	size_t	i;
@@ -83,6 +99,10 @@ static char	**ft_alloc(char **strs, char const *s, char sep, size_t segs)
 	return (strs);
 }
 
+/// @brief		Count the number of segments in string
+/// @param s	Pointer to the string
+/// @param sep	Separator
+/// @return		Number of segments
 static size_t	ft_seglen(char const *s, char sep)
 {
 	size_t	i;
@@ -93,6 +113,10 @@ static size_t	ft_seglen(char const *s, char sep)
 	return (i);
 }
 
+/// @brief		Free Memory
+/// @param strs	Pointer to the array of strings
+/// @param seg	Number of strings
+/// @return		0
 static	char	**ft_free_split(char **strs, size_t seg)
 {
 	size_t	i;

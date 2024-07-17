@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/// @brief		Copies size bytes from src to dest string
+/// @param dest	Pointer to the destination string
+/// @param src	Pointer to the source string
+/// @param size	Maximum number of bytes to be copied
+/// @return		SUCCESS(Number of bytes copied)
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;

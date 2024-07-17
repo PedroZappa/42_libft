@@ -13,10 +13,9 @@
 #include "libft.h"
 #include <unistd.h>
 
-/* Error Handling Functions */
-/*	ft_perror : Write a string to STDERR
- *
- *	*/
+/// @brief			Write a string to STDERR
+/// @param str		string to write
+/// @return			SUCCESS(length of the string)
 int	ft_perror(char *str)
 {
 	int	len;
@@ -26,9 +25,9 @@ int	ft_perror(char *str)
 	return (len);
 }
 
-/*	ft_perror_exit : Write a string to STDERR
- *
- *	*/
+/// @brief			Write a string to STDERR and exit
+/// @param str		string to write
+/// @return			EXIT_FAILURE
 int	ft_perror_exit(char *str)
 {
 	int	len;
@@ -38,9 +37,10 @@ int	ft_perror_exit(char *str)
 	exit(EXIT_FAILURE);
 }
 
-/*	ft_p_color : Write a string to STDIN with a color
-*
-*	*/
+/// @brief			Write a string to STDOUT with a color
+/// @param str		string to write
+/// @param color	color string
+/// @return			length of the string
 int	ft_pout_color(char *str, char *color)
 {
 	write(STDOUT_FILENO, color, ft_strlen(color));
@@ -52,6 +52,10 @@ int	ft_pout_color(char *str, char *color)
 /*	ft_perror_color : Write a string to STDERR with a color
 *
 *	*/
+/// @brief			Write a string to STDERR with a color
+/// @param str		string to write
+/// @param color	color string
+/// @return			length of the string
 int	ft_perror_color(char *str, char *color)
 {
 	write(STDERR_FILENO, color, ft_strlen(color));

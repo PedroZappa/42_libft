@@ -13,6 +13,10 @@
 #include "libft.h"
 #include "../ft_printf/ft_printf.h"
 
+/// @brief			Writes a separator
+/// @param bookends	bookends of the separator
+/// @param sep		separator
+/// @param len		length of the separator
 void	ft_sep(char bookends, char sep, int len)
 {
 	len -= 2;
@@ -22,6 +26,11 @@ void	ft_sep(char bookends, char sep, int len)
 	ft_printf("%c\n", bookends);
 }
 
+/// @brief			Writes a separator with a color
+/// @param bookends	bookends of the separator
+/// @param sep		separator
+/// @param len		length of the separator
+/// @param color		color of the separator
 void	ft_sep_color(char bookends, char sep, int len, char *color)
 {
 	len -= 2;

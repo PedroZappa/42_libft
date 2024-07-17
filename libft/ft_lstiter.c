@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief			Applies the function f to the content of each node
+/// @param lst		Pointer to the list
+/// @param f		Pointer to the function to apply
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)

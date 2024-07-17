@@ -15,6 +15,11 @@
 static size_t	ft_hexlen(long nb);
 static char		*ft_xtos(unsigned long int nb, char *str, size_t len);
 
+/// @brief			Converts an unsigned integer to a string
+/// @param nb		Number to convert
+/// @param is_upper	1 if the string should be in uppercase
+/// @return			SUCCESS(Pointer to the string)
+/// @return			FAILURE(NULL)
 char	*ft_xtoa(unsigned long int nb, int is_upper)
 {
 	size_t	len;
@@ -39,6 +44,9 @@ char	*ft_xtoa(unsigned long int nb, int is_upper)
 	return (str);
 }
 
+/// @brief		Length of a string containing the hexadecimal representation
+/// @param nb	Number to convert
+/// @return		Length of the string
 static size_t	ft_hexlen(long nb)
 {
 	size_t	len;
@@ -54,6 +62,12 @@ static size_t	ft_hexlen(long nb)
 	return (len);
 }
 
+/// @brief		Converts an unsigned integer to a string
+/// @param nb	Number to convert
+/// @param str	Pointer to the string
+/// @param len	Length of the string
+/// @return		SUCCESS(Pointer to the string)
+/// @return		FAILURE(NULL)
 static char	*ft_xtos(unsigned long int nb, char *str, size_t len)
 {
 	int	mod;

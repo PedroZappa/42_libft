@@ -12,23 +12,15 @@
 
 #include "libft.h"
 
-static size_t	ft_min_len(size_t a, size_t b)
-{
-	if (a < b)
-		return (a);
-	return (b);
-}
+static size_t	ft_min_len(size_t a, size_t b);
+static size_t	ft_total_len(size_t s_len, unsigned int start, size_t len);
 
-static size_t	ft_total_len(size_t s_len, unsigned int start, size_t len)
-{
-	size_t	total;
-
-	total = ft_min_len(s_len, len);
-	if (start + len > s_len)
-		total = s_len - start;
-	return (total + 1);
-}
-
+/// @brief			Creates a substring from a given string
+/// @param s		Pointer to the string
+/// @param start	Start index
+/// @param len		Length of the substring
+/// @return			SUCCESS(Pointer to the substring)
+/// @return			FAILURE(NULL)
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
@@ -54,6 +46,32 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	sub[i] = '\0';
 	return (sub);
+}
+
+/// @brief		Minimum between two values
+/// @param a	First value
+/// @param b	Second value
+/// @return		Minimum of a and b
+static size_t	ft_min_len(size_t a, size_t b)
+{
+	if (a < b)
+		return (a);
+	return (b);
+}
+
+/// @brief			Total length of the substring
+/// @param s_len	Length of the string
+/// @param start	Start index
+/// @param len		Length of the substring
+/// @return			SUCCESS(Total length)
+static size_t	ft_total_len(size_t s_len, unsigned int start, size_t len)
+{
+	size_t	total;
+
+	total = ft_min_len(s_len, len);
+	if (start + len > s_len)
+		total = s_len - start;
+	return (total + 1);
 }
 /*
 int main(int argc, char *argv[])

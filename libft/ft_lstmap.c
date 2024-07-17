@@ -12,23 +12,14 @@
 
 #include "libft.h"
 
-static t_list	*ft_mklst(t_list *list, void *(*f)(void *), void (*del)(void *))
-{
-	t_list	*n_list;
-	void	*content;
+static t_list	*ft_mklst(t_list *list, void *(*f)(void *),
+					void (*del)(void *));
 
-	if (!list || !f || !del)
-		return (NULL);
-	content = f(list->content);
-	n_list = ft_lstnew(content);
-	if (!n_list)
-	{
-		del(content);
-		return (NULL);
-	}
-	return (n_list);
-}
-
+/// @brief			Applies the function f to each content of the list
+/// @param lst		Pointer to the list
+/// @param f		Pointer to the function to apply
+/// @param del		Pointer to the function to delete the content
+/// @return			Pointer to the start of the new list
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*n_list;
@@ -54,6 +45,28 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		lst = lst->next;
 	}
 	return (list_start);
+}
+
+/// @brief			Creates a new list
+/// @param list		Pointer to the list
+/// @param f		Pointer to the function to apply
+/// @param del		Pointer to the function to delete the content
+static t_list	*ft_mklst(t_list *list, void *(*f)(void *),
+					void (*del)(void *))
+{
+	t_list	*n_list;
+	void	*content;
+
+	if (!list || !f || !del)
+		return (NULL);
+	content = f(list->content);
+	n_list = ft_lstnew(content);
+	if (!n_list)
+	{
+		del(content);
+		return (NULL);
+	}
+	return (n_list);
 }
 /*
 void ft_print_list(t_list *node)
@@ -104,7 +117,7 @@ int main(int argc, char *argv[])
 	}
 	content = ft_atoi(argv[1]);
 	node_n = ft_atoi(argv[2]);
-	
+
 	//// Create List
 	int *content_ptr = malloc(sizeof(int));
 	*content_ptr = content;
@@ -113,14 +126,14 @@ int main(int argc, char *argv[])
 		return (1);
 	i = node_n;
 	while (i-- > 1)
-		ft_lstadd_back(&list, ft_lstnew(content_ptr));	
+		ft_lstadd_back(&list, ft_lstnew(content_ptr));
 
-	//// Test 
+	//// Test
     printf("Testing ft_lstiter with list:\n");
     ft_print_list(list);
 	printf("Applying function...\n");
 
-	mapped = ft_lstmap(list, ft_42, ft_del);	
+	mapped = ft_lstmap(list, ft_42, ft_del);
 
     printf("\nAfter applying function:\n\n");
     ft_print_list(list);

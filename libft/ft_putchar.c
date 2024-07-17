@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief			Write a character to STDOUT
+/// @param c		character to write
+/// @return			Number of characters written
 int	ft_putchar(char c)
 {
 	return ((int)write(1, &c, 1));

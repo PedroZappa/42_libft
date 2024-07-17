@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/// @brief		Applies the function f to each character of the string
+/// @param s	Pointer to the string
+/// @param f	Pointer to the function to apply
+/// @return		SUCCESSS(Pointer to the new string)
+/// @return		FAILURE(NULL)
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;

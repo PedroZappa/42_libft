@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/// @brief		Locates the first occurrence of c in the s
+/// @param s	Place in memory to search
+/// @param c	Character to search
+/// @param n	Maximum number of bytes to search
+/// @return		SUCCESS(Pointer to the first occurrence of c in s)
+/// @return		FAILURE(NULL)
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;

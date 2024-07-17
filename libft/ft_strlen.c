@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief		Take length of the string
+/// @param s	Pointer to the string
+/// @return		SUCCESS(length of the string)
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;

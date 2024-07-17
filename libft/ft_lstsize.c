@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/// @brief			Returns the number of elements in a list
+/// @param lst		Pointer to the list
+/// @return			SUCCESS(count)
+/// @return			FAILURE(0)
 int	ft_lstsize(t_list *lst)
 {
 	int	count;

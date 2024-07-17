@@ -13,13 +13,13 @@
 #include "libft.h"
 
 /// @brief			Join two strings and free 
+/// @details		- Join two strings
+///					- Free the first string
+///					- Free the second string
 /// @param s1		First string
 /// @param s2		Second string
 /// @var new		Pointer to the new string
 /// @return			Pointer to the new string
-/// @details		- Join two strings
-///					- Free the first string
-///					- Free the second string
 char	*ft_strjoin_free(char *s1, char *s2)
 {
 	char	*new;

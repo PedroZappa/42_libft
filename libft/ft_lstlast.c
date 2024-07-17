@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief			Returns the last node of a list
+/// @param lst		Pointer to the list
+/// @return			Pointer to the last node
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)

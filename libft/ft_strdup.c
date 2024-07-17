@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/// @brief		Duplicate a string
+/// @param s	Pointer to a string
+/// @return		SUCCESS(Pointer to the duplicated string)
+/// @return		FAILURE(NULL)
 char	*ft_strdup(const char *s)
 {
 	char	*dst;

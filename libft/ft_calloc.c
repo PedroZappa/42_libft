@@ -12,7 +12,7 @@
 
 #include "libft.h" 
 
-/// @brief			Alloc memory for an array of nmemb elements of size bytes each
+/// @brief			Alloc memory for an array of nmemb of size bytes each
 /// @param nmemb	Number of elements
 /// @param size		Size of each element
 /// @return			SUCCESS(Pointer to the allocated memory)

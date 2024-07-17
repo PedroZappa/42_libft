@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief			Deletes and frees a given node
+/// @param list		Pointer to the node to be deleted
+/// @param del		Pointer to the function used to delete the content
 void	ft_lstdelone(t_list *list, void (*del)(void*))
 {
 	if (!list || !del)

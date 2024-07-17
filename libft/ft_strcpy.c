@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/// @brief		Copies the string pointed to by src into dest
+/// @param dest	Pointer to the destination string
+/// @param src	Pointer to the source string
+/// @return		SUCCESS(dest)
 char	*ft_strcpy(char *dest, char *src)
 {
 	size_t	i;

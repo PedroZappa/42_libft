@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/// @brief		Compares the first n bytes of s1 and s2
+/// @param s1	Pointer to the first string
+/// @param s2	Pointer to the second string
+/// @param n	Number of bytes to compare
+/// @return		SUCCESS(0)
+/// @return		FAILURE(Lexicographical difference)
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/// @brief		Writes a string to the given file descriptor
+/// @param s	string to write
+/// @param fd	file descriptor
+///	@return		SUCCESS(number of characters written)
+///	@return		FAILURE(0)
 int	ft_putstr_fd(char *s, int fd)
 {
 	int	len;

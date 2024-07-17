@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/// @brief		Trim leading and trailing characters from a string
+/// @param s1	Pointer to the string to be trimmed
+/// @param set	Pointer to the set of characters to trim
+/// @return		SUCCESS(Pointer to the trimmed string)
+/// @return		FAILURE(NULL)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;

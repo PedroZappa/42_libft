@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief			Returns the maximum of two integers
+/// @param a		First integer
+/// @param b		Second integer
+/// @return			Maximum of a and b
 int	ft_max(int a, int b)
 {
 	if (a >= b)

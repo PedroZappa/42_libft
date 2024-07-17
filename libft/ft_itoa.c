@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static char	*ft_char(char *str, unsigned int nb, long int len);
+static char		*ft_char(char *str, unsigned int nb, long int len);
 static long int	ft_nlen(int n);
 
 /// @brief			Converts an integer to a string
@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 	str = ft_char(str, nb, len);
 	return (str);
 }
-///
+
 /// @brief			Converts an integer to a string
 /// @param str		Pointer to string to convert
 /// @param nb		number to convert

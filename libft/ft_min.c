@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/// @brief			Returns the minimum of two integers
+/// @param a		First integer
+/// @param b		Second integer
+/// @return			Minimum of a and b
 int	ft_min(int a, int b)
 {
 	if (a <= b)

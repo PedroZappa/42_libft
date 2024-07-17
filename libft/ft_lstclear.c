@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief			Frees all nodes and contents of a given list
+/// @param lst		Pointer to the list
+/// @param del		Pointer to the function used to delete the content
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;

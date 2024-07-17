@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief			Creates a new list
+/// @param content	Pointer to the content
+/// @return			Pointer to the new list
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;	

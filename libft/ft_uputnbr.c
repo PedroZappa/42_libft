@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief		Writes an unsigned integer to the standard output
+/// @param n	Number to write
+/// @return		SUCCESS(number of characters written)
 int	ft_uputnbr(unsigned int n)
 {
 	int	len;

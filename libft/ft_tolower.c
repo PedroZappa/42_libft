@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/// @brief		Converts a character to lowercase
+/// @param c	Character to convert
+/// @return		Character in lowercase
 char	ft_tolower(char c)
 {
 	if ((c >= 'A') && (c <= 'Z'))

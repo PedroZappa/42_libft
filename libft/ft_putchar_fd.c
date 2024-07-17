@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/// @brief		Writes the character c to the given file descriptor
+/// @param c	character to write
+/// @param fd	file descriptor
+/// @return		Number of characters written
 int	ft_putchar_fd(char c, int fd)
 {
 	return ((int)write(fd, &c, 1));

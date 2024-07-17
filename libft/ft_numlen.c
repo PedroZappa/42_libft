@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/// @brief		Calculates the length of an integer
+/// @param n	Number to measure
+/// @param base	base of the number
+/// @return		SUCCESS(length of the number)
 int	ft_numlen(int n, int base)
 {
 	int	len;

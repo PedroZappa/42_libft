@@ -12,13 +12,17 @@
 
 #include "libft.h"
 
+/// @brief			Converts an unsigned integer to a string
+/// @param n		number to convert
+/// @return			SUCCESS(Pointer to the string)
+/// @return			FAILURE(NULL)
 char	*ft_uitoa(unsigned int n)
 {
 	char	*str;
 	int		len;
 
 	len = ft_unumlen(n, 10);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
