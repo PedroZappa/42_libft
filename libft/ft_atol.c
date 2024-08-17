@@ -22,6 +22,8 @@ long	ft_atol(const char *nptr)
 
 	sign = 1;
 	nbr = 0;
+	if (!nptr)
+		return (0);
 	while (ft_isspace(*nptr))
 		nptr++;
 	if (ft_issign(*nptr))

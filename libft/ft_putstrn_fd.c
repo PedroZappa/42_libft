@@ -20,7 +20,7 @@
 /// @return		FAILURE(0)
 int	ft_putstrn_fd(char *str, int fd, int n)
 {
-	if (n < 0)
+	if (!str || (fd < 0) || (n < 0))
 		return (0);
 	if (str)
 		return ((int)write(fd, str, n));

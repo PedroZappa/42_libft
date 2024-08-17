@@ -14,7 +14,6 @@
 * @{
 ***/
 
-
 #include "libft.h" 
 
 /// @brief			Alloc memory for an array of nmemb of size bytes each

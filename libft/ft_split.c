@@ -27,10 +27,12 @@ char	**ft_split(char const *s, char c)
 	char	**strs;
 	size_t	segs;
 
+	if (!s)
+		return (NULL);
 	segs = ft_segcount(s, c);
 	strs = malloc((segs + 1) * sizeof(char *));
 	if (!strs)
-		return (0);
+		return (NULL);
 	strs[segs] = 0;
 	if (segs > 0)
 		strs = ft_alloc(strs, s, c, segs);
@@ -50,6 +52,8 @@ static int	ft_segcount(char const *s, char sep)
 	i = 0;
 	segs = 0;
 	counting = 0;
+	if (!s)
+		return (0);
 	while (s[i])
 	{
 		if (s[i] != sep && !counting)

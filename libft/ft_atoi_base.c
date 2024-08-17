@@ -35,6 +35,8 @@ int	ft_atoi_base(const char *str, int str_base)
 
 	sign = 1;
 	num = 0;
+	if (!str)
+		return (0);
 	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
