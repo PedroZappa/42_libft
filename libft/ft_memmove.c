@@ -23,7 +23,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char		*pd;
 	const char	*ps;
 
-	if (!dest && !src)
+	if (!dest || !src)
 		return (dest);
 	pd = dest;
 	ps = src;

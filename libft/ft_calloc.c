@@ -9,6 +9,10 @@
 /*   Updated: 2023/10/09 12:17:50 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/**
+* @defgroup ft_calloc	ft_calloc
+* @{
+***/
 
 #include "libft.h" 
 
@@ -52,3 +56,5 @@ int main (int argc, char *argv[])
 			(calloced + ft_atoi(argv[2])));
 }
 */
+
+/** @} */

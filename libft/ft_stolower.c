@@ -19,6 +19,8 @@ char	*ft_stolower(char *str)
 {
 	int		i;
 
+	if (!str)
+		return (NULL);
 	i = -1;
 	while (str[++i])
 		if (ft_isupper(str[i]))

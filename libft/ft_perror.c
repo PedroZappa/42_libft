@@ -20,6 +20,8 @@ int	ft_perror(char *str)
 {
 	int	len;
 
+	if (!str)
+		return (0);
 	len = ft_strlen(str);
 	write(STDERR_FILENO, str, len);
 	return (len);
@@ -32,6 +34,8 @@ int	ft_perror_exit(char *str)
 {
 	int	len;
 
+	if (!str)
+		return (EXIT_FAILURE);
 	len = ft_strlen(str);
 	write(STDERR_FILENO, str, len);
 	exit(EXIT_FAILURE);
@@ -43,6 +47,8 @@ int	ft_perror_exit(char *str)
 /// @return			length of the string
 int	ft_pout_color(char *str, char *color)
 {
+	if (!str || !color)
+		return (0);
 	write(STDOUT_FILENO, color, ft_strlen(color));
 	write(STDOUT_FILENO, str, ft_strlen(str));
 	write(STDOUT_FILENO, NC, ft_strlen(NC));
@@ -58,6 +64,8 @@ int	ft_pout_color(char *str, char *color)
 /// @return			length of the string
 int	ft_perror_color(char *str, char *color)
 {
+	if (!str || !color)
+		return (0);
 	write(STDERR_FILENO, color, ft_strlen(color));
 	write(STDERR_FILENO, str, ft_strlen(str));
 	write(STDERR_FILENO, NC, ft_strlen(NC));

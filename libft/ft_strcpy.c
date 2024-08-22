@@ -20,6 +20,8 @@ char	*ft_strcpy(char *dest, char *src)
 {
 	size_t	i;
 
+	if (!dest || !src)
+		return (NULL);
 	i = 0;
 	while (src[i] != '\0')
 	{

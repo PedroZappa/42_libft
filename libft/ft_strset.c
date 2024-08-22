@@ -18,7 +18,7 @@
 /// @return The first occurence of one of the characters in the set
 char	ft_strset(char *str, char *set)
 {
-	if (str || !*str || !set)
+	if (!str || !*str || !set)
 		return ('\0');
 	while (*set && !ft_strchr(str, *set))
 		++set;
