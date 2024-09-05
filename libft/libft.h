@@ -6,7 +6,7 @@
 /*   By: passunca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:18:48 by passunca          #+#    #+#             */
-/*   Updated: 2024/07/03 15:27:53 by passunca         ###   ########.fr       */
+/*   Updated: 2024/09/05 11:43:18 by passunca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,5 +127,6 @@ void	ft_swapstrs(char **s1, char **s2);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strtrim_lead(char const *s1, char const *set);
 char	*ft_strtrim_trail(char const *s1, char const *set);
+int		ft_isnum(char *str);
 
 #endif
